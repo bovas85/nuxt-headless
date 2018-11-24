@@ -1,0 +1,165 @@
+/* ****************************************************************************
+ * NOTIFICATION STYLES
+ *
+ * The styles are identical with the WPMUDEV dashboard CSS (section 22)
+ * Any changes made here should also be made to the dashboard CSS!
+ */
+
+.wrap .frash-notice.notice {
+	padding: 0;
+	margin: 5px 0 10px;
+	border: 1px solid #E5E5E5;
+	background: #FFF;
+	overflow: hidden;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+	position: relative;
+	z-index: 1;
+	min-height: 80px;
+	display: table; /* The magic ingredient! */
+	font: 13px "Open Sans", sans-serif;
+}
+.wrap .frash-notice.notice.loading:before {
+	content: attr(data-message);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(255, 255, 255, 0.7);
+	z-index: 5;
+	text-align: center;
+	line-height: 80px;
+	font-size: 22px;
+	font-weight: bold;
+}
+.frash-notice > div {
+	display: table-cell; /* The magic ingredient! */
+	vertical-align: middle;
+	cursor: default;
+}
+.frash-notice.notice.loading > div {
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-o-filter: blur(2px);
+	-ms-filter: blur(2px);
+	filter: blur(2px);
+}
+.frash-notice-logo {
+	background-color: #0B2F3F;
+	background-image: url(data:image/png;base64,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);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+.frash-notice-logo span {
+	display: block;
+	width: 80px;
+}
+.frash-notice-message {
+	width: 100%;
+	padding: 10px 20px;
+	color: #444;
+}
+.frash-notice-message strong {
+	color: #000;
+}
+.frash-notice-cta {
+	border-left: 1px solid #E5E5E5;
+	background: #F8F8F8;
+	padding: 0 30px;
+	position: relative;
+	white-space: nowrap;
+}
+.wp-core-ui .frash-notice-cta button,
+.wp-core-ui .frash-notice-cta .button-primary:active {
+	vertical-align: middle;
+}
+.wp-core-ui .frash-notice-cta input[type="email"] {
+	vertical-align: middle;
+	line-height: 20px;
+	margin: 0;
+	min-width: 50px;
+	max-width: 320px;
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+}
+.frash-notice-dismiss {
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	color: #BBB;
+}
+.frash-notice-dismiss:hover {
+	color: #666;
+}
+
+@media only all and (max-width: 1200px) {
+	.frash-notice-dismiss {
+		display: block;
+		margin: 0 auto;
+		line-height: 18px;
+		padding-top: 8px;
+		padding-bottom: 2px;
+	}
+}
+
+@media only all and (max-width: 1000px) {
+	.wrap .frash-notice.notice {
+		display: block;
+		font-size: 13px;
+	}
+	.frash-notice > .frash-notice-logo {
+		float: left;
+		display: inline-block;
+		height: 80px;
+		margin: 10px;
+		border-radius: 4px;
+	}
+	.frash-notice > .frash-notice-message {
+		width: auto;
+		display: block;
+		padding: 10px;
+		min-height: 80px;
+	}
+	.frash-notice > .frash-notice-cta {
+		display: block;
+		border-top: 1px solid #E5E5E5;
+		border-left: 0;
+		text-align: center;
+		white-space: normal;
+		line-height: 30px;
+		padding: 10px 20px;
+	}
+	.wp-core-ui .frash-notice > .frash-notice-cta > input[type="email"],
+	.frash-notice > .frash-notice-cta > button {
+		font-size: 14px;
+	}
+	.frash-notice > .frash-notice-cta > .frash-notice-dismiss {
+		display: inline-block;
+		float: none;
+		line-height: 26px;
+		padding-top: 0;
+		padding-bottom: 0;
+		font-size: 13px;
+	}
+}
+
+@media only all and (max-width: 500px) {
+	.wp-core-ui .frash-notice > .frash-notice-cta > input[type="email"],
+	.frash-notice > .frash-notice-cta > button {
+		display: block;
+		width: 100% !important;
+		max-width: none;
+		margin-bottom: 4px;
+		font-size: 16px;
+		height: 34px;
+	}
+	.frash-notice > .frash-notice-cta > .frash-notice-dismiss {
+		margin-top: 5px;
+		font-size: 14px;
+		height: 23px;
+	}
+}

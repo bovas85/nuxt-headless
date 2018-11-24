@@ -1,0 +1,96 @@
+/*!
+ * Naked Ideas CSS Grid Framework (https://nakedideas.com)
+ * Copyright 2017-2018 Alessandro Giordo
+ * Licensed under MIT (https://styleguide.nakedtesting.com/license)
+ */
+@import '~bulma/sass/utilities/_all';
+
+// Breakpoints
+$mobile: 576px !default; // used for max-width only
+
+// mobile-first breakpoints (min-width: $x)
+$mobile-large: 577px !default;
+$tablet: 768px !default;
+$desktop: 1024px !default;
+$widescreen: 1200px !default;
+$fullhd: 1392px !default;
+
+@import '~bulma/sass/base/helpers';
+
+@import './variables';
+@import './grid_base';
+@import './fonts';
+@import './helpers';
+@import './animations';
+
+// Initial Styles + resets
+html,
+body {
+  font-family: $family-primary;
+  font-size: $font-size;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  transition: all 1s ease-in-out;
+  // font-size: responsive 14px 21px; /* min-size, max-size */
+  // font-range: 480px 1280px; /* viewport widths between which font-size is fluid */
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@import './elements';
+
+// Main pages Layout
+@import './layout';
+
+// rule of thirds
+.jumbo {
+  line-height: 1;
+  font-weight: 800;
+  @include size(jumbo);
+  padding: 0 0 $gap * 1.5;
+
+  @include media(md) {
+    padding: 0 0 $gap * 3;
+  }
+}
+
+h1 {
+  line-height: 1;
+  font-weight: 800;
+  @include size(h1);
+  padding: 0 0 $gap * 1.5;
+
+  @include media(md) {
+    padding: 0 0 $gap * 3;
+  }
+}
+
+h2 {
+  line-height: 1.1;
+  font-weight: 800;
+  @include size(h2);
+}
+
+h3 {
+  font-weight: 400;
+  @include size(h3);
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  @include size(h4);
+}
+
+img {
+  max-width: 100%;
+}

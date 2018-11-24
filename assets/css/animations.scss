@@ -1,0 +1,369 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .8s ease-in-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+  position: absolute;
+  opacity: 0;
+}
+
+.rotate-enter,
+.rotate-leave-to {
+  opacity: 0;
+}
+
+.rotate {
+  transition: opacity .6s ease-in-out;
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Splitting animations */
+
+.stagger-it {
+  .char {
+    transition: color 0.5s linear;
+    transition-delay: calc(0.04s * var(--char-index));
+  }
+  &:hover {
+    color: $primary;
+  }
+}
+
+/* ---------------------------------- */
+
+.color-cycle:hover .char {
+  animation: color-cycle 1s cubic-bezier(.5, 0, .5, 1) infinite alternate;
+  animation-delay: calc(0.03s * var(--char-index));
+  animation-duration: calc(0.04s * calc(var(--char-total)));
+}
+
+@keyframes color-cycle {
+  25% {
+    color: $yellow;
+  }
+  50% {
+    color: $primary;
+  }
+  75% {
+    color: $red;
+  }
+  100% {
+    color: $primary;
+  }
+}
+
+/* ---------------------------------- */
+
+.pop-out-color {
+  .char {
+    color: #000;
+    animation-timing-function: cubic-bezier(.5, 0, .5, 1), linear;
+    animation-iteration-count: infinite;
+    animation-duration: calc(0.08s * calc(var(--char-total)));
+    animation-delay: calc(0.08s * var(--char-index));
+
+    &:before,
+    &:after {
+      visibility: visible;
+      color: #fff;
+      z-index: 1;
+      animation: inherit;
+    }
+
+    &:after {
+      color: #fff;
+      z-index: 2;
+    }
+  }
+
+  &:hover .char {
+    animation-name: color-cycle;
+  }
+  &:hover .char:after {
+    animation-name: pop-char-out;
+  }
+  &:hover .char:before {
+    animation-name: pop-char-out2, color-cycle;
+  }
+}
+@keyframes pop-char-out2 {
+  0%,
+  70%,
+  100% {
+    transform: translate(0em, 0em);
+  }
+  35% {
+    transform: translate(0.025em, -0.05em);
+  }
+}
+
+/* ---------------------------------- */
+
+.page-enter-active {
+  animation: acrossIn .40s ease-out both;
+}
+
+.page-leave-active {
+  display: block;
+  animation: acrossOut .80s ease-in both;
+}
+
+@keyframes acrossIn {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes acrossOut {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.pageRight-enter-active {
+  transition: transform 800ms cubic-bezier(0.4, 0.1, 0.7, 0.95);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.pageRight-enter {
+  transform: translateX(100%);
+}
+
+.pageRight-leave-active {
+  display: block;
+}
+
+.pageLeft-enter-active {
+  transition: transform 800ms cubic-bezier(0.4, 0.1, 0.7, 0.95);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.pageLeft-enter {
+  transform: translateX(-100%);
+}
+
+.pageLeft-leave-active {
+  display: block;
+}
+
+.fadeIn-leave-active {
+  animation: fadeOut 0.6s ease-in both;
+  overflow-y: hidden !important;
+}
+
+.fadeIn-enter-active {
+  animation: fadeIn 0.6s ease-in both;
+  overflow-y: hidden !important;
+}
+
+.fadeIn-leave-active {
+  animation: fadeOut 0.6s ease-in both 0.2s;
+  overflow-y: hidden !important;
+}
+
+.fadeIn-enter-active {
+  animation: fadeIn 0.6s ease-in both 0.2s;
+}
+
+.slide-leave-active {
+  animation: slideOut 1s ease-in 1s both;
+  overflow-y: hidden !important;
+}
+
+.slide-enter-active {
+  animation: slideIn 1s ease-in 1s both;
+}
+
+@keyframes blurOut {
+  from {
+    filter: blur(0px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(15px);
+    opacity: 1;
+  }
+}
+
+@keyframes blurIn {
+  from {
+    filter: blur(15px);
+  }
+  to {
+    filter: blur(0px);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-101%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes nudgeLeft {
+  0% {
+    right: 0;
+  }
+  10% {
+    right: 5px;
+  }
+  20% {
+    right: 10px;
+  }
+  30% {
+    right: 15px;
+  }
+  40% {
+    right: 20px;
+  }
+  50% {
+    right: 25px;
+  }
+  60% {
+    right: 30px;
+  }
+  70% {
+    right: 35px;
+  }
+  80% {
+    right: 40px;
+  }
+  90% {
+    right: 45px;
+  }
+  100% {
+    right: 50px;
+  }
+}
+
+@keyframes nudgeRight {
+  0% {
+    right: 50px;
+  }
+  10% {
+    right: 45px;
+  }
+  20% {
+    right: 40px;
+  }
+  30% {
+    right: 35px;
+  }
+  40% {
+    right: 30px;
+  }
+  50% {
+    right: 25px;
+  }
+  60% {
+    right: 20px;
+  }
+  70% {
+    right: 15px;
+  }
+  80% {
+    right: 10px;
+  }
+  90% {
+    right: 5px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes ghostLogoAnim {
+  0% {
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes viLogoAnim {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

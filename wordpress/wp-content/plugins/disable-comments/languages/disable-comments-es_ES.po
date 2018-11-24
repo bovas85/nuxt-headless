@@ -1,0 +1,110 @@
+# Copyright (C) 2013 Disable Comments
+# This file is distributed under the same license as the Disable Comments package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Disable Comments 0.9.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/disable-comments\n"
+"POT-Creation-Date: 2013-06-19 05:01:50+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-10-14 09:39+0100\n"
+"Last-Translator: David Bravo <dbravo@dimensionmultimedia.com>\n"
+"Language-Team: Dimensión multimedia <dbravo@dimensionmultimedia.com>\n"
+"Plural-Forms: s\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: disable-comments.php:38
+msgid "Disable Comments requires WordPress version %s or greater."
+msgstr "Es necesario una versión de WordPress %s o superior para Desactivar Comentarios."
+
+#: disable-comments.php:169
+msgid "Note: The <em>Disable Comments</em> plugin is currently active, and comments are completely disabled on: %s. Many of the settings below will not be applicable for those post types."
+msgstr "Nota: El plugin <em>Desactivar Comentarios</em> está activo actualmente, y los comentarios están completamente desactivados en: %s. Muchos de los parámetros de abajo no serán aplicables para estos tipos de entradas."
+
+#: disable-comments.php:169
+msgid ", "
+msgstr ","
+
+#: disable-comments.php:183
+msgid "The <em>Disable Comments</em> plugin is active, but isn't configured to do anything yet. Visit the <a href=\"%s\">configuration page</a> to choose which post types to disable comments on."
+msgstr "El plugin <em>Desactivar Comentarios</em> está activo, pero no está configurado para hacer nada aún. Visita la <a href=\"%s\">página de configuración</a> para elegir en qué tipo de entradas quieres deshabilitar los comentarios."
+
+#: disable-comments.php:225
+#: disable-comments.php:269
+msgid "Disable Comments"
+msgstr "Desactivar Comentarios"
+
+#: disable-comments.php:262
+msgid "If a caching/performance plugin is active, please invalidate its cache to ensure that changes are reflected immediately."
+msgstr "Si hay activo un plugin de cacheo/rendimiento, por faror, invalida su caché para asegurarte de que los cambios se reflejan inmediatamente."
+
+#: disable-comments.php:263
+msgid "Options updated. Changes to the Admin Menu and Admin Bar will not appear until you leave or reload this page."
+msgstr "Opciones actualizadas. Los cambios del Menú de Administración o de la Barra de Administración no aparecerán hasta que abandones o recargues esta página."
+
+#: disable-comments.php:272
+msgid "<em>Disable Comments</em> is Network Activated. The settings below will affect <strong>all sites</strong> in this network."
+msgstr "<em>Desactivar Comentarios</em> está Activado en Red. Los parámetros de abajo afectarán a <strong>todos los sitios</strong> de esta red."
+
+#: disable-comments.php:274
+msgid "It seems that a caching/performance plugin is active on this site. Please manually invalidate that plugin's cache after making any changes to the settings below."
+msgstr "Parece que hay un plugin de caché/rendimiento activo en este sitio. Por favor, invalida manualmente la caché de ese plugin tras hacer cualquier cambio en los parámetros de abajo."
+
+#: disable-comments.php:278
+msgid "Everywhere"
+msgstr "En todos los sitios"
+
+#: disable-comments.php:278
+msgid "Disable all comment-related controls and settings in WordPress."
+msgstr "Deshabilitar todos los controles y configuraciones relacionadas con comentarios de WordPress."
+
+#: disable-comments.php:279
+msgid "%s: This option is global and will affect your entire site. Use it only if you want to disable comments <em>everywhere</em>. A complete description of what this option does is <a href=\"%s\" target=\"_blank\">available here</a>."
+msgstr "%s: Esta opción es global y afectará a todo tu sitio. Utilízala sólo si quieres deshabilitar los comentarios <em>en todos los sitios</em>. Puedes encontrar una descripción completa sobre lo que hace esta opción  <a href=\"%s\" target=\"_blank\">aquí</a>."
+
+#: disable-comments.php:279
+#: disable-comments.php:295
+#: disable-comments.php:297
+#: disable-comments.php:325
+msgid "Warning"
+msgstr "Aviso"
+
+#: disable-comments.php:281
+msgid "On certain post types"
+msgstr "En determinados tipos de entradas"
+
+#: disable-comments.php:286
+msgid "Disabling comments will also disable trackbacks and pingbacks. All comment-related fields will also be hidden from the edit/quick-edit screens of the affected posts. These settings cannot be overridden for individual posts."
+msgstr "Deshabilitando los comentarios tambien deshabilitará los trackbacks y pingbacks. Todos los campos relacionados con comentarios también serán ocultados desde las pantallas de edición y edición rápida de las entradas afectadas. Estos parámetros no pueden ser sobreescritos para entradas individuales."
+
+#: disable-comments.php:289
+msgid "Other options"
+msgstr "Otras opciones"
+
+#: disable-comments.php:294
+msgid "Use persistent mode"
+msgstr "Usar modo persistente"
+
+#: disable-comments.php:295
+msgid "%s: <strong>This will make persistent changes to your database &mdash; comments will remain closed even if you later disable the plugin!</strong> You should not use it if you only want to disable comments temporarily. Please <a href=\"%s\" target=\"_blank\">read the FAQ</a> before selecting this option."
+msgstr "%s: <strong>Esto hará cambios permanentes a tu base de datos &mdash; ¡los comentarios permanecerán cerrados incluso si después desactivas el plugin! No deberías utilizar esta opción si sólo quieres deshabilitar los comentarios temporalmente. Por favor, <a href=\"%s\" target=\"_blank\">consulta las FAQ</a> antes de seleccionar esta opción. "
+
+#: disable-comments.php:297
+msgid "%s: Entering persistent mode on large multi-site networks requires a large number of database queries and can take a while. Use with caution!"
+msgstr "%s: Activar el modo permanente en redes multisitio grandes requiere un gran número de peticiones a la base de datos y puede tardar un buen rato. ¡Utilízalo con precaución!"
+
+#: disable-comments.php:300
+msgid "Persistent mode has been manually disabled. See the <a href=\"%s\" target=\"_blank\">FAQ</a> for more information."
+msgstr "El modo permanente ha sido manualmente deshabilitado. Por favor, consulta las <a href=\"%s\" target=\"_blank\">FAQ</a> para más información."
+
+#: disable-comments.php:305
+msgid "Save Changes"
+msgstr "Guardar Cambios"
+
+#: disable-comments.php:325
+msgid "%s: Selecting this option will make persistent changes to your database. Are you sure you want to enable it?"
+msgstr "%s: Selecionando esta opción hará cambios permanentes en tu base de datos. ¿Estás seguro de querer habilitarlo?"
+

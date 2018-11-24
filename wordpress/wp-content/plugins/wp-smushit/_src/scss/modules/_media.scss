@@ -1,0 +1,152 @@
+/* ****************************************************************************
+ * MEDIA AREA SCSS FILE
+ */
+@import "~@wpmudev/shared-ui/scss/functions";
+@import "~@wpmudev/shared-ui/scss/colors";
+@import "~@wpmudev/shared-ui/scss/variables";
+// Override body class
+$sui-version: 'smush-media';
+$sui-wrap-class: false;
+@import "~@wpmudev/shared-ui/scss/mixins";
+@import "~@wpmudev/shared-ui/scss/tooltips";
+
+/* ****************************************************************************
+ * MEDIA AREA STYLES
+ */
+
+// Set column width.
+.manage-column.column-smushit {
+	width: 260px;
+}
+
+// Margin for buttons.
+.sui-smush-media {
+	.button {
+		margin-right: 5px;
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}
+
+// Smush button loading icon.
+#ngg-listimages,
+.column-smushit {
+	.spinner {
+		float: none;
+
+		&.visible {
+			visibility: visible;
+		}
+	}
+}
+
+// Stats table.
+.sui-smush-media {
+	table.wp-smush-stats-holder {
+		width: 100%;
+		border: 1px solid #E6E6E6;
+		border-radius: 4px;
+		margin-top: 6px;
+		border-collapse: separate;
+		border-spacing: 0;
+		thead {
+			th.smush-stats-header {
+				padding: 8px 10px;
+				border-bottom: 1px solid #E6E6E6 !important;
+				color: #32373D;
+				font-size: 12px;
+				font-weight: bold;
+				letter-spacing: -0.23px;
+				line-height: 16px;
+			}
+		}
+		td {
+			vertical-align: middle;
+			padding: 8px 10px;
+			color: #555555;
+			font-size: 11px;
+			letter-spacing: -0.21px;
+			line-height: 16px;
+			border-bottom: 1px solid #E6E6E6;
+			&:first-of-type {
+				max-width: 110px;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+// Override !important set from WordPress.
+#the-list {
+	.sui-smush-media {
+		thead {
+			th.smush-stats-header {
+				border-bottom: 1px solid #E6E6E6 !important;
+			}
+		}
+	}
+}
+
+// Responsive table for list mode.
+@media screen and (max-width: 1024px) {
+	.wp-list-table .smushit {
+		table.wp-smush-stats-holder {
+			th {
+				display: table-cell;
+				box-sizing: border-box;
+			}
+			tr td {
+				word-wrap: break-word;
+				display: table-cell !important;
+				&:first-child {
+					border-right: none;
+					box-sizing: border-box;
+				}
+				&:last-child {
+					box-sizing: border-box;
+					float: none;
+					overflow: visible;
+				}
+			}
+		}
+	}
+}
+
+// NextGen Integration.
+.iedit .wp-smush-action,
+.iedit .smush-stats-details {
+	font-size: 11px;
+}
+
+/*NextGen Gallery stats*/
+#ngg-listimages {
+	table.wp-smush-stats-holder {
+		table-layout: fixed;
+		border: 1px solid lightgray;
+		border-collapse: collapse;
+		width: 100%;
+		td,
+		th {
+			border: 1px solid #CECECE;
+		}
+	}
+	.column-7 {
+		width: 300px;
+	}
+	.spinner {
+		width: auto;
+		padding-left: 30px;
+	}
+}
+
+/** NextGen Gallery tr height, to show the progress bar properly for alternate rows **/
+.alternate.iedit {
+	height: 120px;
+}
+
+/** Allows to click on button, otherwise row-actions from NextGen interferes **/
+.wp-smush-nextgen-send {
+	position: relative;
+	z-index: 2;
+}

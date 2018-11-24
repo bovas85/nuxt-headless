@@ -1,0 +1,39 @@
+html,
+body {
+  @media (max-width: $mobile) {
+    height: 100%;
+  }
+}
+
+// Now declaring container widths
+.container-fluid {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  @media (min-width: $mobile-large) {
+    max-width: calc(100% - 64px);
+    width: calc(100% - 64px);
+    margin: 0 auto;
+  }
+  @media (min-width: $tablet) {
+    max-width: 700px;
+    width: 700px;
+  }
+  @media (min-width: $desktop) {
+    max-width: 960px;
+    width: 960px;
+  }
+  @media (min-width: $widescreen) {
+    max-width: 1168px;
+    width: 1168px;
+  }
+  @media (min-width: $fullhd) {
+    max-width: 1380px;
+    width: 1380px;
+  }
+}

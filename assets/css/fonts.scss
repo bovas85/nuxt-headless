@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900');
+
+.social {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-image: url('/images/icons.svg');
+  background-repeat: no-repeat;
+
+  // mobile defaults to orange
+  &--behance {
+    background-position: -0px -24px;
+  }
+
+  &--linkedin {
+    background-position: -24px -24px;
+  }
+
+  &--dribbble {
+    background-position: -48px -24px;
+  }
+
+  &--instagram {
+    background-position: -72px -24px;
+  }
+
+  @include media(md) {
+    // transition from white to orange on small +
+    transition: background-position 0.2s ease;
+
+    &--behance {
+      background-position: -0px -0px;
+    }
+
+    &--linkedin {
+      background-position: -24px -0px;
+    }
+
+    &--dribbble {
+      background-position: -48px -0px;
+    }
+
+    &--instagram {
+      background-position: -72px -0px;
+    }
+  }
+}
+
+// override for mobile footer only
+.social-and-logos {
+  .social {
+    &--behance {
+      background-position: -0px -0px;
+    }
+
+    &--linkedin {
+      background-position: -24px -0px;
+    }
+
+    &--dribbble {
+      background-position: -48px -0px;
+    }
+
+    &--instagram {
+      background-position: -72px -0px;
+    }
+
+    &--behance:hover,
+    &--behance:focus,
+    &--behance:active {
+      background-position: -0px -24px;
+    }
+
+    &--linkedin:hover,
+    &--linkedin:focus,
+    &--linkedin:active {
+      background-position: -24px -24px;
+    }
+
+    &--dribbble:hover,
+    &--dribbble:focus,
+    &--dribbble:active {
+      background-position: -48px -24px;
+    }
+
+    &--instagram:hover,
+    &--instagram:focus,
+    &--instagram:active {
+      background-position: -72px -24px;
+    }
+  }
+}
+
+.social-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-start;
+  padding-left: 0;
+  margin-top: $gap / 2;
+
+  li {
+    margin: 0 $gap / 3;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include media(sm) {
+    justify-content: space-between;
+    max-width: 200px;
+    margin-top: 0;
+  }
+}

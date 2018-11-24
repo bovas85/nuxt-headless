@@ -1,0 +1,323 @@
+// helpers
+.is-flex {
+  display: flex;
+}
+.is-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.align-start {
+  display: grid;
+  align-self: start;
+}
+.align-center {
+  display: grid;
+  align-self: center;
+}
+.align-end {
+  display: grid;
+  align-self: end;
+}
+.align-content-start {
+  display: grid;
+  align-items: flex-start;
+  align-content: start;
+}
+.align-content-center {
+  display: grid;
+  align-items: center;
+  align-content: center;
+}
+.align-content-end {
+  display: grid;
+  align-items: flex-end;
+  align-content: end;
+}
+.align-content-center {
+  display: grid;
+  align-content: center;
+}
+.is-left {
+  justify-self: flex-start;
+  justify-self: start;
+}
+.is-center {
+  justify-self: center;
+  justify-self: center;
+}
+.is-right {
+  justify-self: flex-end;
+  justify-self: end;
+}
+.is-row-start {
+  align-self: start;
+}
+.is-row-center {
+  align-self: center;
+}
+.is-row-end {
+  align-self: end;
+}
+.has-content-left {
+  justify-content: flex-start;
+  justify-content: start;
+}
+
+.has-content-center {
+  justify-content: center;
+  justify-content: center;
+}
+
+.has-content-right {
+  justify-content: flex-end;
+  justify-content: end;
+}
+@media (max-width: $mobile) {
+  .hidden-mobile {
+    display: none !important;
+  }
+  .align-center-mobile {
+    display: grid;
+    align-items: center;
+  }
+  .align-content-center-mobile {
+    display: grid;
+    align-content: center;
+  }
+  .is-left-mobile {
+    justify-self: flex-start !important;
+    justify-self: start !important;
+  }
+  .is-center-mobile {
+    justify-self: center !important;
+    justify-self: center !important;
+  }
+  .is-right-mobile {
+    justify-self: flex-end !important;
+    justify-self: end !important;
+  }
+  .is-row-start-mobile {
+    align-self: start !important;
+  }
+  .is-row-center-mobile {
+    align-self: center !important;
+  }
+  .is-row-end-mobile {
+    align-self: end !important;
+  }
+  .has-content-left-mobile {
+    justify-content: flex-start !important;
+    justify-content: start !important;
+  }
+
+  .has-content-center-mobile {
+    justify-content: center !important;
+    justify-content: center !important;
+  }
+
+  .has-content-right-mobile {
+    justify-content: flex-end !important;
+    justify-content: end !important;
+  }
+}
+@media (max-width: $tablet - 1) {
+  .is-hidden-mobile-large-only {
+    display: none !important;
+  }
+}
+@media (min-width: $mobile-large) {
+  .is-hidden-mobile-large {
+    display: none !important;
+  }
+  .align-center-mobile-large {
+    display: grid;
+    align-items: center;
+  }
+  .align-content-center-mobile-large {
+    display: grid;
+    align-content: center;
+  }
+  .is-left-mobile-large {
+    justify-self: flex-start !important;
+    justify-self: start !important;
+  }
+  .is-center-mobile-large {
+    justify-self: center !important;
+    justify-self: center !important;
+  }
+  .is-right-mobile-large {
+    justify-self: flex-end !important;
+    justify-self: end !important;
+  }
+  .is-row-start-mobile-large {
+    align-self: start !important;
+  }
+  .is-row-center-mobile-large {
+    align-self: center !important;
+  }
+  .is-row-end-mobile-large {
+    align-self: end !important;
+  }
+  .has-content-left-mobile-large {
+    justify-content: flex-start !important;
+    justify-content: start !important;
+  }
+
+  .has-content-center-mobile-large {
+    justify-content: center !important;
+    justify-content: center !important;
+  }
+
+  .has-content-right-mobile-large {
+    justify-content: flex-end !important;
+    justify-content: end !important;
+  }
+}
+@media (min-width: $tablet) {
+  .align-center-tablet {
+    display: grid;
+    align-items: center;
+  }
+  .align-content-center-tablet {
+    display: grid;
+    align-content: center;
+  }
+  .is-left-tablet {
+    justify-self: flex-start !important;
+    justify-self: start !important;
+  }
+  .is-center-tablet {
+    justify-self: center !important;
+    justify-self: center !important;
+  }
+
+  .is-right-tablet {
+    justify-self: flex-end !important;
+    justify-self: end !important;
+  }
+  .is-row-start-tablet {
+    align-self: start !important;
+  }
+  .is-row-center-tablet {
+    align-self: center !important;
+  }
+  .is-row-end-tablet {
+    align-self: end !important;
+  }
+  .has-content-left-tablet {
+    justify-content: flex-start !important;
+    justify-content: start !important;
+  }
+
+  .has-content-center-tablet {
+    justify-content: center !important;
+    justify-content: center !important;
+  }
+
+  .has-content-right-tablet {
+    justify-content: flex-end !important;
+    justify-content: end !important;
+  }
+}
+
+@media (min-width: $desktop) {
+  .align-center-desktop {
+    display: grid;
+    align-items: center;
+  }
+  .align-content-center-desktop {
+    display: grid;
+    align-content: center;
+  }
+  .is-left-desktop {
+    justify-self: flex-start !important;
+    justify-self: start !important;
+  }
+  .is-center-desktop {
+    justify-self: center !important;
+    justify-self: center !important;
+  }
+
+  .is-right-desktop {
+    justify-self: flex-end !important;
+    justify-self: end !important;
+  }
+  .is-row-start-desktop {
+    align-self: start !important;
+  }
+  .is-row-center-desktop {
+    align-self: center !important;
+  }
+  .is-row-end-desktop {
+    align-self: end !important;
+  }
+  .has-content-left-desktop {
+    justify-content: flex-start !important;
+    justify-content: start !important;
+  }
+
+  .has-content-center-desktop {
+    justify-content: center !important;
+    justify-content: center !important;
+  }
+
+  .has-content-right-desktop {
+    justify-content: flex-end !important;
+    justify-content: end !important;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.blurry {
+  object-fit: cover;
+  object-position: center;
+  filter: blur(15px);
+  transform: scale(1.05);
+  opacity: 1;
+  transition: all .3s ease 1s;
+  &.animate-out {
+    opacity: 0;
+    z-index: -1;
+    max-height: 0;
+    max-width: 0;
+  }
+}
+
+// Accessibility
+.is-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.is-sr-focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+// Font helpers
+.is-size-normal {
+  font-size: $font-size !important;
+}
+.is-size-medium {
+  font-size: $font-medium !important;
+}
+.is-size-small {
+  font-size: $font-small !important;
+}

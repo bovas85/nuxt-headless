@@ -1,0 +1,200 @@
+# Copyright (C) 2013 Disable Comments
+# This file is distributed under the same license as the Disable Comments package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Disable Comments 1.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/disable-comments\n"
+"POT-Creation-Date: 2015-02-03 08:04:31+00:00\n"
+"PO-Revision-Date: 2015-09-02 13:00+0430\n"
+"Last-Translator: fxbenard | FxB <fx@fxbenard.com>\n"
+"Language-Team: faraed.com <support@faraed.com>\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: disable-comments.php:38
+msgid "Disable Comments requires WordPress version %s or greater."
+msgstr "غیر فعال کردن نظرات مورد  نیاز  وردپرس نسخه %s یا بیشتر."
+
+#: disable-comments.php:210
+msgid ""
+"Note: The <em>Disable Comments</em> plugin is currently active, and comments "
+"are completely disabled on: %s. Many of the settings below will not be "
+"applicable for those post types."
+msgstr ""
+"توجه: <em>غیر فعال کردن نظرات </em> پلاگین در حال حاضر فعال است و نظرات و  "
+"کاملا بقیه موارد غیر فعال است در: %s. بسیاری از تنظیمات برای انواع پست ها قابل "
+"ارائه است."
+
+#: disable-comments.php:210
+msgid ", "
+msgstr ","
+
+#: disable-comments.php:230
+msgid ""
+"The <em>Disable Comments</em> plugin is active, but isn't configured to do "
+"anything yet. Visit the <a href=\"%s\">configuration page</a> to choose which "
+"post types to disable comments on."
+msgstr ""
+"افزونه <em>غیر فعال کردن نظرات</em> فعال است، اما  هنوز پیکربندی انجام  نشده "
+"است.  بازدید <a href=\"%s\"> صفحه پیکربندی</a> انواع موارد برای غیر فعال شدن "
+"نظرات را لطفا انتخاب نمایید."
+
+#: disable-comments.php:237
+msgid "Comments are closed."
+msgstr "نظرات بسته شده است"
+
+#: disable-comments.php:290
+msgid "Settings"
+msgstr "تنظیمات"
+
+#. Plugin Name of the plugin/theme
+#: disable-comments.php:298 disable-comments.php:350
+msgid "Disable Comments"
+msgstr "غیر فعال کردن نظرات"
+
+#: disable-comments.php:343
+msgid ""
+"If a caching/performance plugin is active, please invalidate its cache to "
+"ensure that changes are reflected immediately."
+msgstr ""
+"اگر پلاگین کش (ذخیره/عملکرد) فعال باشد.  لطفا افزونه کش خود را غیر فعال نمایید. "
+"چون در کار افزونه تداخل ایجاد می کند."
+
+#: disable-comments.php:344
+msgid ""
+"Options updated. Changes to the Admin Menu and Admin Bar will not appear until "
+"you leave or reload this page."
+msgstr ""
+"قابلیت بروز رسانی . منوی مدیریت و یا نوار مدیریت آن را تغییر دهید تا این پیغام "
+"در این صفحه ظاهر نشود."
+
+#: disable-comments.php:353
+msgid ""
+"<em>Disable Comments</em> is Network Activated. The settings below will affect "
+"<strong>all sites</strong> in this network."
+msgstr ""
+"<em>غیر فعال کردن نظرات</em> فعال شبکه است. تنظیمات زیر <strong>همه سایت ها</"
+"strong> در شبکه تاثیر می گذارد."
+
+#: disable-comments.php:355
+msgid ""
+"It seems that a caching/performance plugin is active on this site. Please "
+"manually invalidate that plugin's cache after making any changes to the "
+"settings below."
+msgstr ""
+"به نظر می رسد که پلاگین کش (ذخیره/عملکرد) در این سایت فعال است. لطفا تا ذخیره "
+"تنظمیات افزونه کش را غیر فعال نمایید."
+
+#: disable-comments.php:359
+msgid "Everywhere"
+msgstr "همه جا"
+
+#: disable-comments.php:359
+msgid "Disable all comment-related controls and settings in WordPress."
+msgstr "غیر فعال کردن تمام کنترل های مربوط به نظر و تنظیمات وردپرس."
+
+#: disable-comments.php:360
+msgid ""
+"%s: This option is global and will affect your entire site. Use it only if you "
+"want to disable comments <em>everywhere</em>. A complete description of what "
+"this option does is <a href=\"%s\" target=\"_blank\">available here</a>."
+msgstr ""
+"% s: گزینه این همگانی  است و تمام سایت خود تاثیر می گذارد. فقط به نظر <em>همه "
+"جا</em> غیر فعال کردن آن استفاده کنید. شرح کامل این گزینه چه <a href=\"%s\" "
+"target=\"_blank\"> در اینجا در دسترس</a> است."
+
+#: disable-comments.php:360 disable-comments.php:380 disable-comments.php:382
+#: disable-comments.php:409
+msgid "Warning"
+msgstr "اخطار"
+
+#: disable-comments.php:362
+msgid "On certain post types"
+msgstr "در برخی انواع پست ها"
+
+#: disable-comments.php:368
+msgid ""
+"Only the built-in post types appear above. If you want to disable comments on "
+"other custom post types on the entire network, you can supply a comma-separated "
+"list of post types below (use the slug that identifies the post type)."
+msgstr ""
+"تنها نوع پست ساخته شده است به نظر بالا می رسد . اگر می خواهید برای غیر فعال "
+"کردن نظر در مورد سایر انواع پست سفارشی در کل شبکه شما می توانید با کاما از هم "
+"جدا کنید  لیست از پست انواع زیر (استفاده از مثل حلزون حرکت است که برای شناسایی "
+"نوع پست) عرضه می شود."
+
+#: disable-comments.php:371
+msgid ""
+"Disabling comments will also disable trackbacks and pingbacks. All comment-"
+"related fields will also be hidden from the edit/quick-edit screens of the "
+"affected posts. These settings cannot be overridden for individual posts."
+msgstr ""
+"با غیر فعال کردن نظرات نیز بازتاب ها و شکلک ها غیر فعال می شود. همه زمینه های "
+"مربوط به نظر نیز از نمایشگرهای ویرایش/سریع ویرایش پست آسیب دیده پنهان خواهد شد. "
+"این تنظیمات را نمی توان برای فرد خاصی  باطل کرد."
+
+#: disable-comments.php:374
+msgid "Other options"
+msgstr "تنظیمات دیگر"
+
+#: disable-comments.php:379
+msgid "Use persistent mode"
+msgstr "استفاده حالت مداوم "
+
+#: disable-comments.php:380
+msgid ""
+"%s: <strong>This will make persistent changes to your database &mdash; comments "
+"will remain closed even if you later disable the plugin!</strong> You should "
+"not use it if you only want to disable comments temporarily. Please <a href=\"%s"
+"\" target=\"_blank\">read the FAQ</a> before selecting this option."
+msgstr ""
+"% s: <strong>این تغییرات مداوم به پایگاه داده خود را &mdash; نظرات باقی خواهد "
+"ماند بسته می شود  حتی اگر شما بعد از  غیر فعال کردن این افزونه!</strong> اگر "
+"شما فقط می خواهید به نظرات به طور موقت غیر فعال کنید  از این نباید استفاده "
+"کرد<a href=\"%s\" target=\"_blank\"> پرسش و پاسخ را بخوانید</a> لطفا قبل از "
+"انتخاب این گزینه."
+
+#: disable-comments.php:382
+msgid ""
+"%s: Entering persistent mode on large multi-site networks requires a large "
+"number of database queries and can take a while. Use with caution!"
+msgstr ""
+"% s: ورود حالت  مداوم در شبکه های چند سایت بزرگ نیاز به تعداد زیادی از پایگاه "
+"داده نمایش داده شد و مدتی طول می کشد. با احتیاط استفاده کنید!"
+
+#: disable-comments.php:388
+msgid "Save Changes"
+msgstr "ذخیره تغییرات"
+
+#: disable-comments.php:409
+msgid ""
+"%s: Selecting this option will make persistent changes to your database. Are "
+"you sure you want to enable it?"
+msgstr ""
+"% s: با انتخاب این گزینه قادر به ایجاد تغییرات مداوم در بانک اطلاعاتی شما خواهد "
+"شد. آیا مطمئن هستید که می خواهید آن را فعال کنید؟"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/disable-comments/"
+msgstr "http://wordpress.org/extend/plugins/disable-comments/"
+
+#. Description of the plugin/theme
+msgid ""
+"Allows administrators to globally disable comments on their site. Comments can "
+"be disabled according to post type."
+msgstr ""
+"اجازه می دهد تا مدیران  به  نظرات در سایت خود همگانی را غیر فعال کنند. نظرات را "
+"می توان با توجه به نوع پست خاصی غیر فعال کرد."
+
+#. Author of the plugin/theme
+msgid "Samir Shah"
+msgstr "Samir Shah"
+
+#. Author URI of the plugin/theme
+msgid "http://rayofsolaris.net/"
+msgstr "http://rayofsolaris.net/"

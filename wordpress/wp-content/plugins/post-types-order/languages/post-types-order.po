@@ -1,0 +1,201 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Post Types Order\n"
+"POT-Creation-Date: 2017-07-17 16:03+0200\n"
+"PO-Revision-Date: 2017-07-17 16:03+0200\n"
+"Last-Translator: NspCode <contact@nsp-code.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: include/class.cpto.php:207
+msgid "Post Types Order must be configured. Please go to"
+msgstr ""
+
+#: include/class.cpto.php:207
+msgid "Settings Page"
+msgstr ""
+
+#: include/class.cpto.php:207
+msgid "make the configuration and save"
+msgstr ""
+
+#: include/class.cpto.php:485 include/class.cpto.php:487
+#: include/class.cpto.php:490 include/class.cpto.php:501
+msgid "Re-Order"
+msgstr ""
+
+#: include/class.cpto.php:509
+msgid ""
+"This plugin can't work without javascript, because it's use drag and drop "
+"and AJAX."
+msgstr ""
+
+#: include/class.cpto.php:522
+msgid "Update"
+msgstr ""
+
+#: include/class.cpto.php:543
+msgid "Items Order Updated"
+msgstr ""
+
+#: include/class.functions.php:104
+msgid ""
+"Did you find this plugin useful? Please support our work by purchasing the "
+"advanced version or write an article about this plugin in your blog with a "
+"link to our site"
+msgstr ""
+
+#: include/class.functions.php:105
+msgid "Did you know there is available an Advanced version of this plug-in?"
+msgstr ""
+
+#: include/class.functions.php:105
+msgid "Read more"
+msgstr ""
+
+#: include/class.functions.php:106
+msgid "Check our"
+msgstr ""
+
+#: include/class.functions.php:106
+msgid ""
+"plugin which allow to custom sort categories and custom taxonomies terms"
+msgstr ""
+
+#: include/class.functions.php:107
+msgid "Check out"
+msgstr ""
+
+#: include/class.functions.php:107
+msgid ""
+"the easy way to completely hide your WordPress core files, theme and plugins"
+msgstr ""
+
+#: include/class.functions.php:142 include/class.functions.php:221
+#, php-format
+msgid "Use commas instead of %s to separate excluded terms."
+msgstr ""
+
+#: include/class.options.php:40
+msgid "Settings Saved"
+msgstr ""
+
+#: include/class.options.php:57
+msgid "General Settings"
+msgstr ""
+
+#: include/class.options.php:63
+msgid "General"
+msgstr ""
+
+#: include/class.options.php:67
+msgid "Show / Hide re-order interface"
+msgstr ""
+
+#: include/class.options.php:94
+msgid "Show"
+msgstr ""
+
+#: include/class.options.php:95
+msgid "Hide"
+msgstr ""
+
+#: include/class.options.php:102
+msgid "Minimum Level to use this plugin"
+msgstr ""
+
+#: include/class.options.php:105
+msgid "Subscriber"
+msgstr ""
+
+#: include/class.options.php:106
+msgid "Contributor"
+msgstr ""
+
+#: include/class.options.php:107
+msgid "Author"
+msgstr ""
+
+#: include/class.options.php:108
+msgid "Editor"
+msgstr ""
+
+#: include/class.options.php:109
+msgid "Administrator"
+msgstr ""
+
+#: include/class.options.php:116
+msgid "Auto Sort"
+msgstr ""
+
+#: include/class.options.php:118
+msgid ""
+"If checked, the plug-in automatically update the WordPress queries to use "
+"the new order (<b>No code update is necessarily</b>)"
+msgstr ""
+
+#: include/class.options.php:119
+msgid ""
+"If only certain queries need to use the custom sort, keep this unchecked and "
+"include 'orderby' => 'menu_order' into query parameters"
+msgstr ""
+
+#: include/class.options.php:121
+msgid "Additional Description and Examples"
+msgstr ""
+
+#: include/class.options.php:128
+msgid "Admin Sort"
+msgstr ""
+
+#: include/class.options.php:132
+msgid ""
+"To affect the admin interface, to see the post types per your new sort, this "
+"need to be checked"
+msgstr ""
+
+#: include/class.options.php:137
+msgid "Use query ASC / DESC parameter "
+msgstr ""
+
+#: include/class.options.php:141
+msgid ""
+"If the query include an Ascending or Descending order paramether, use that. "
+"If query order is set to DESC the order will be reversed."
+msgstr ""
+
+#: include/class.options.php:146
+msgid "Archive Drag&Drop "
+msgstr ""
+
+#: include/class.options.php:150
+msgid ""
+"Allow sortable drag & drop functionality within default WordPress post type "
+"archive. Admin Sort need to be active."
+msgstr ""
+
+#: include/class.options.php:155
+msgid "Next / Previous Apply"
+msgstr ""
+
+#: include/class.options.php:159
+msgid "Apply the sort on Next / Previous site-wide navigation."
+msgstr ""
+
+#: include/class.options.php:159
+msgid "This can also be controlled through"
+msgstr ""
+
+#: include/class.options.php:159
+msgid "code"
+msgstr ""
+
+#: include/class.options.php:167
+msgid "Save Settings"
+msgstr ""

@@ -1,0 +1,94 @@
+/**
+ * All of the CSS for your dashboard-specific functionality should be
+ * included in this file.
+ */
+
+/* Settings Tabs */
+.rae-settings-tab {
+	display: none;
+}
+
+.rae-settings-tab.active {
+	display: block;
+}
+
+.rae-settings-tab label {
+	white-space: nowrap;
+}
+
+.rae-description {
+	white-space: normal;
+	overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+/* Fade In/Out and Visibility */
+.rae-fadeable-display,
+.rae-fadeable-opacity {
+	overflow: hidden;
+	visibility: visible;
+	max-height: 9999px;
+	opacity: 1;
+	filter: alpha(opacity=100);
+
+	-webkit-transition: opacity .25s ease, visibility .25s ease, max-height .25s ease;
+	   -moz-transition: opacity .25s ease, visibility .25s ease, max-height .25s ease;
+	    -ms-transition: opacity .25s ease, visibility .25s ease, max-height .25s ease;
+	     -o-transition: opacity .25s ease, visibility .25s ease, max-height .25s ease;
+	        transition: opacity .25s ease, visibility .25s ease, max-height .25s ease;
+}
+
+.rae-fadeable-display.rae-hidden {
+	max-height: 0;
+}
+
+.rae-fadeable-display.rae-hidden,
+.rae-fadeable-opacity.rae-hidden {
+	visibility: hidden;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+/* Post Meta Settings */
+.rae-post-meta-check-buttons {
+	display: block;
+	margin-bottom: 1em;
+}
+
+* + .rae-post-meta-check-buttons {
+	margin-top: 1em;
+}
+
+.rae-post-meta-check-buttons a.button {
+	display: inline-block;
+	margin-right: 0.5em !important;
+}
+
+.rae-post-meta-check-buttons .dashicons {
+	line-height: inherit;
+}
+
+.rae-post-meta-checkboxes {
+	overflow: hidden;
+	margin-bottom: 1em;
+}
+
+@media ( min-width: 768px ) {
+
+	.rae-col {
+		float: left;
+		width: 33%;
+		padding-right: 1em;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+	}
+
+}

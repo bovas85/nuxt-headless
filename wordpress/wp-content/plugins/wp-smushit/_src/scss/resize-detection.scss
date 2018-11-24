@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import "modules/variables";
+
+@font-face {
+	font-family: "wpmudev-plugin-icons";
+	src: url('#{$font--path}/wpmudev-plugin-icons.eot?');
+	src: url('#{$font--path}/wpmudev-plugin-icons.eot?') format('embedded-opentype'),
+	 	 url('#{$font--path}/wpmudev-plugin-icons.ttf') format('truetype'),
+		 url('#{$font--path}/wpmudev-plugin-icons.woff') format('woff'),
+		 url('#{$font--path}/wpmudev-plugin-icons.woff2') format('woff2'),
+		 url('#{$font--path}/wpmudev-plugin-icons.svg') format('svg');
+	font-weight: 400;
+	font-style: normal
+}
+
+@media screen and ( max-width: 800px ) {
+	#smush-image-bar-toggle,
+	#smush-image-bar {
+		display: none;
+	}
+}
+
+@media screen and ( min-width: 800px ) {
+	.smush-detected-img {
+		border: 5px solid #FECF2F;
+		border-radius: 5px;
+		transition: all 0.5s ease;
+	}
+
+	#smush-image-bar-toggle {
+		position: fixed;
+		top: 82px;
+		right: 330px;
+		height: 50px;
+		width: 60px;
+		z-index: 20;
+		border-radius: 4px 0 0 4px;
+		background-color: #FFF;
+		box-shadow: inset 2px 0 0 0 #FECF2F, -13px 5px 20px 0 rgba(0, 0, 0, 0.1);
+		text-align: center;
+		cursor: pointer;
+		transition-property: all;
+		transition-duration: .5s;
+		transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+		&.closed {
+			right: 0;
+		}
+
+		i.sui-icon-info {
+			font-family: "wpmudev-plugin-icons" !important;
+			font-style: normal;
+			font-size: 16px;
+			line-height: 50px;
+			color: #FECF2F;
+
+			&:before {
+				content: "I";
+			}
+		}
+	}
+
+	#smush-image-bar {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 330px;
+		height: 100%;
+		background-color: #FFF;
+		box-shadow: 0 0 40px 0 rgba(0,0,0,0.1);
+		z-index: 10;
+		padding: 32px 0 20px;
+		overflow-y: scroll;
+		max-width: 330px;
+		transition-property: all;
+		transition-duration: .5s;
+		transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+		&.closed {
+			max-width: 0;
+		}
+
+		h3, p, strong, span {
+			font-family: 'Roboto', sans-serif;
+			letter-spacing: -0.25px;
+		}
+
+		h3 {
+			color: #333333;
+			font-size: 15px;
+			font-weight: bold;
+			line-height: 30px;
+			background-color: #FAFAFA;
+			padding: 15px 20px;
+		}
+
+		p {
+			color: #888888;
+			font-size: 13px;
+			line-height: 22px;
+			padding: 0 20px;
+		}
+
+		strong {
+			color: #AAAAAA;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 22px;
+			padding: 0 20px;
+		}
+
+		.smush-resize-box {
+			background-color: #F8F8F8;
+
+			&:first-of-type {
+				border-top: 1px solid #E6E6E6;
+				margin-top: 5px;
+			}
+
+			&:last-of-type {
+				margin-bottom: 20px;
+			}
+
+			span:first-of-type {
+				color: #888;
+				height: 34px;
+				width: 40px;
+				font-size: 13px;
+				font-weight: bold;
+				line-height: 32px;
+				text-align: center;
+				border: 1px solid #DDDDDD;
+				border-radius: 50%;
+				margin-right: 10px;
+			}
+
+			.smush-image-info {
+				background-color: #FFF;
+				display: flex;
+				align-items: center;
+				align-content: center;
+				justify-content: space-between;
+				padding: 17px 20px;
+				border-bottom: 1px solid #E6E6E6;
+				cursor: pointer;
+			}
+
+			.smush-front-icons {
+				margin: 0 10px;
+				line-height: 12px;
+
+				&:before {
+					font-family: "wpmudev-plugin-icons" !important;
+					speak: none;
+					font-size: 12px;
+					font-style: normal;
+					font-weight: 400;
+					font-variant: normal;
+					text-transform: none;
+					text-rendering: auto;
+					color: #AAA;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+				}
+
+				&.smush-front-icon-arrows-in {
+					&:before {
+						content: '\2264';
+					}
+				}
+			}
+
+			.smush-tag {
+				background-color: #fecf2f;
+				color: #333;
+				border-radius: 13px;
+				height: 26px;
+				width: 116px;
+				font-size: 12px;
+				letter-spacing: -0.25px;
+				line-height: 16px;
+				font-weight: 500;
+				display: flex;;
+				align-items: center;
+				justify-content: center;
+
+				&.smush-tag-success {
+					background-color: #1abc9c;
+					color: #fff;
+				}
+			}
+
+			&.smush-tooltip {
+				position: relative;
+
+				&:before,
+				&:after {
+					content: "";
+					opacity: 0;
+					backface-visibility: hidden;
+					pointer-events: none;
+					position: absolute;
+					z-index: 1;
+					transition: margin .2s, opacity .2s;
+				}
+
+				&:before {
+					border: 5px solid transparent;
+					bottom: 100%;
+					left: 50%;
+					border-top-color: #000000;
+					transform: translateX(-50%);
+				}
+
+				&:after {
+					content: attr(data-tooltip);
+					min-width: 40px;
+					padding: 8px 12px;
+					border-radius: 4px;
+					background: #000000;
+					box-sizing: border-box;
+					color: #FFFFFF;
+					font: 400 12px/18px "Roboto", Arial, sans-serif;
+					text-transform: none;
+					text-align: center;
+					white-space: nowrap;
+					bottom: 100%;
+					left: 50%;
+					margin: 0 0 10px;
+					transform: translateX(-50%);
+				}
+
+				&.smush-tooltip-constrained {
+					&:after {
+						min-width: 240px;
+						white-space: normal;
+					}
+				}
+
+				&:not(.show-description):hover {
+					&:before,
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+
+			&:not(.show-description):hover,
+			&.show-description {
+				.smush-image-info { background-color: #F8F8F8; }
+
+				span:first-of-type {
+					background-color: #E6E6E6;
+					color: transparent;
+					&:before {
+						font-family: "wpmudev-plugin-icons" !important;
+						font-weight: 400;
+						content: "";
+						color: #666;
+						margin-right: -7px;
+					}
+				}
+			}
+
+			.smush-image-description {
+				display: none;
+				border-radius: 4px;
+				background-color: #FFFFFF;
+				box-shadow: 0 2px 0 0 #DDDDDD;
+				margin: 0 20px 20px;
+				padding: 20px;
+				color: #888888;
+				font-family: 'Roboto', sans-serif;
+				font-size: 13px;
+				letter-spacing: -0.25px;
+				line-height: 22px;
+			}
+
+			&.show-description {
+				padding-bottom: 1px;
+				border-bottom: 1px solid #E6E6E6;
+
+				.smush-image-info { border-bottom: 0; }
+				.smush-image-description { display: block; }
+
+				span:first-of-type {
+					background-color: #FECF2F;
+					border-color: #FECF2F;
+					&:before { color: #333; }
+				}
+			}
+		}
+	}
+}

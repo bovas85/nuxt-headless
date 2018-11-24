@@ -1,0 +1,108 @@
+
+
+    msgid ""
+    msgstr ""
+    "Project-Id-Version: Duplicate Page\n"
+    "Report-Msgid-Bugs-To: \n"
+    "POT-Creation-Date: 2016-12-19 12:43+0000\n"
+    "PO-Revision-Date: 2016-12-19 12:52+0000\n"
+    "Last-Translator: admin <munishthedeveloper48@gmail.com>\n"
+    "Language-Team: Hindi\n"
+    "Language: hi-IN\n"
+    "Plural-Forms: nplurals=2; plural=n != 1\n"
+    "MIME-Version: 1.0\n"
+    "Content-Type: text/plain; charset=UTF-8\n"
+    "Content-Transfer-Encoding: 8bit\n"
+    "X-Generator: Loco - https://localise.biz/"
+    #: admin-settings.php:3
+    msgid "Duplicate Page Settings"
+    msgstr "डुप्लिकेट पृष्ठ सेटिंग"
+    #: admin-settings.php:8
+    msgid "<strong>Saving Please wait...</strong>"
+    msgstr "<strong>सुरक्षित कर रहा है कृपया प्रतीक्षा करें...</strong>"
+    #: admin-settings.php:27
+    msgid ""
+    "<div class=\"updated settings-error notice is-dismissible\" id=\"setting-"
+    "error-settings_updated\"> \n"
+    "<p><strong>Settings saved.</strong></p><button class=\"notice-dismiss\" "
+    "type=\"button\"><span class=\"screen-reader-text\">Dismiss this notice."
+    "</span></button></div>"
+    msgstr ""
+    "<div class=\"updated settings-error notice is-dismissible\" id=\"setting-"
+    "error-settings_updated\"> \n"
+    "<p><strong>सेटिंग्स को सहेजा गया।</strong></p><button class=\"notice-"
+    "dismiss\" type=\"button\"><span class=\"screen-reader-text\">इस नोटिस को "
+    "खारिज करें।</span></button></div>"
+    #: admin-settings.php:30
+    msgid ""
+    "<div class=\"error settings-error notice is-dismissible\" id=\"setting-error-"
+    "settings_updated\"> \n"
+    "<p><strong>Settings not saved.</strong></p><button class=\"notice-dismiss\" "
+    "type=\"button\"><span class=\"screen-reader-text\">Dismiss this notice."
+    "</span></button></div>"
+    msgstr ""
+    "<div class=\"error settings-error notice is-dismissible\" id=\"setting-error-"
+    "settings_updated\"> \n"
+    "<p><strong>सेटिंग सहेजा नहीं।</strong></p><button class=\"notice-dismiss\" "
+    "type=\"button\"><span class=\"screen-reader-text\">इस नोटिस को खारिज "
+    "करें।</span></button></div>"
+    #: admin-settings.php:43
+    msgid "Duplicate Post Status"
+    msgstr "पोस्ट की स्थिति डुप्लिकेट"
+    #: admin-settings.php:50
+    msgid ""
+    "Please select any post status you want to assign for duplicate post. <strong>"
+    "Default:</strong> Draft."
+    msgstr ""
+    "कृपया किसी भी पोस्ट की स्थिति आप दोहरे पद के लिए प्रदान करना चाहते हैं का "
+    "चयन करें।<strong>चूक:</strong> प्रारूप।"
+    #: admin-settings.php:54
+    msgid "Redirect to after click on <strong>Duplicate This Link</strong>"
+    msgstr ""
+    "पर क्लिक करने के बाद पुन: निर्देशित करने के लिए <strong> डुप्लिकेट इस लिंक "
+    "</ strong>"
+    #: admin-settings.php:56
+    msgid "To All Posts List"
+    msgstr "सभी पदों की सूची के लिए"
+    #: admin-settings.php:57
+    msgid "To Duplicate Edit Screen"
+    msgstr "स्क्रीन संपादित करने के लिए डुप्लिकेट"
+    #: admin-settings.php:59
+    msgid ""
+    "Please select any post redirection, redirect you to selected after click on "
+    "duplicate this link. <strong>Default:</strong> To current list."
+    msgstr ""
+    "कृपया किसी भी पद पुनर्निर्देशन का चयन करें, आप इस लिंक पर क्लिक करने के बाद "
+    "नकल चयनित करने के लिए भेज दें। <Strong> डिफ़ॉल्ट: </ strong> वर्तमान सूची पर।"
+    #: admin-settings.php:63
+    msgid "Duplicate Post Suffix"
+    msgstr "दोहरे पद प्रत्यय"
+    #: admin-settings.php:66
+    msgid ""
+    "Add a suffix for duplicate or clone post as Copy, Clone etc. It will show "
+    "after title."
+    msgstr ""
+    "कॉपी, क्लोन आदि के रूप में डुप्लिकेट या क्लोन के बाद यह खिताब के बाद दिखाएगा "
+    "के लिए एक प्रत्यय जोड़ें।"
+    #: admin-settings.php:76
+    msgid ""
+    "Contribute some donation, to make plugin more stable. You can pay amount of "
+    "your choice."
+    msgstr ""
+    "कुछ दान योगदान, प्लगइन अधिक स्थिर बनाने के लिए। आप अपनी पसंद की राशि का "
+    "भुगतान कर सकते हैं।"
+    #. Name of the plugin
+    msgid "Duplicate Page"
+    msgstr "डुप्लिकेट पृष्ठ"
+    #. Description of the plugin
+    msgid "Duplicate Posts, Pages and Custom Posts using single click."
+    msgstr "डुप्लिकेट पोस्ट, पन्ने और कस्टम पदों सिंगल क्लिक का उपयोग कर"
+    #. URI of the plugin
+    msgid "https://wordpress.org/plugins/duplicate-page/"
+    msgstr ""
+    #. Author of the plugin
+    msgid "mndpsingh287"
+    msgstr ""
+    #. Author URI of the plugin
+    msgid "https://profiles.wordpress.org/mndpsingh287/"
+    msgstr ""

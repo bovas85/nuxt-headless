@@ -1,0 +1,45 @@
+### IDE ###
+project.xml
+project.properties
+/nbproject/private/
+.buildpath
+.project
+.settings*
+sftp-config.json
+.idea/
+.iml
+.floo
+.flooignore
+
+### Node ###
+/node_modules/
+/deploy/
+
+### Bower ###
+/bower_components
+
+### Sass ###
+.sass-cache/
+
+### Composer ###
+/vendor/
+composer.lock
+
+### Unit tests ###
+/tmp
+/tests/bin/tmp
+
+### Logs ###
+/logs
+
+### VCS ###
+.svn
+/svn
+
+### OS crap ###
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+.tmp
+.temp

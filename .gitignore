@@ -1,0 +1,35 @@
+# dependencies
+node_modules/*
+dist
+build/*
+package-lock.json
+.htaccess
+.idea
+
+# logs
+npm-debug.log
+logs
+logs/*
+
+# Nuxt build
+.nuxt
+
+# trash
+.DS_Store
+Thumbs.db
+
+# Intellij idea
+.idea
+*iml
+
+npm_output.txt
+generate_pending
+
+# VSCode
+.vscode
+
+# Generated files
+static/manifest*.json
+static/sw.js
+static/workbox-sw*.js
+

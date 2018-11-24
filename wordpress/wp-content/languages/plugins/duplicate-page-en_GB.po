@@ -1,0 +1,126 @@
+# Translation of Plugins - Duplicate Page - Development (trunk) in English (UK)
+# This file is distributed under the same license as the Plugins - Duplicate Page - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-04-22 07:11:13+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: en_GB\n"
+"Project-Id-Version: Plugins - Duplicate Page - Development (trunk)\n"
+
+#: admin-settings.php:45
+msgid "Draft"
+msgstr "Draft"
+
+#: admin-settings.php:48
+msgid "Pending"
+msgstr "Pending"
+
+#: admin-settings.php:47
+msgid "Private"
+msgstr "Private"
+
+#: admin-settings.php:46
+msgid "Publish"
+msgstr "Publish"
+
+#: admin-settings.php:66
+msgid "Add a suffix for duplicate or clone post as Copy, Clone etc. It will show after title."
+msgstr "Add a suffix for duplicate or clone post as Copy, Clone etc. It will show after title."
+
+#: admin-settings.php:76
+msgid "Contribute some donation, to make plugin more stable. You can pay amount of your choice."
+msgstr "Contribute some donation, to make plugin more stable. You can pay amount of your choice."
+
+#: duplicatepage.php:56
+msgid "Donate"
+msgstr "Donate"
+
+#. #-#-#-#-#  duplicate-page-code.pot (Duplicate Page 2.7)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: duplicatepage.php:67
+msgid "Duplicate Page"
+msgstr "Duplicate Page"
+
+#: admin-settings.php:63
+msgid "Duplicate Post Suffix"
+msgstr "Duplicate Post Suffix"
+
+#. Description of the plugin/theme
+msgid "Duplicate Posts, Pages and Custom Posts using single click."
+msgstr "Duplicate Posts, Pages and Custom Posts using single click."
+
+#: duplicatepage.php:179 duplicatepage.php:192
+msgid "Duplicate This"
+msgstr "Duplicate This"
+
+#. Author URI of the plugin/theme
+msgid "https://profiles.wordpress.org/mndpsingh287/"
+msgstr "https://profiles.wordpress.org/mndpsingh287/"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/duplicate-page/"
+msgstr "https://wordpress.org/plugins/duplicate-page/"
+
+#. Author of the plugin/theme
+msgid "mndpsingh287"
+msgstr "mndpsingh287"
+
+#: duplicatepage.php:55
+msgid "Settings"
+msgstr "Settings"
+
+#: admin-settings.php:30
+msgid ""
+"<div class=\"error settings-error notice is-dismissible\" id=\"setting-error-settings_updated\"> \n"
+"<p><strong>Settings not saved.</strong></p><button class=\"notice-dismiss\" type=\"button\"><span class=\"screen-reader-text\">Dismiss this notice.</span></button></div>"
+msgstr ""
+"<div class=\"error settings-error notice is-dismissible\" id=\"setting-error-settings_updated\"> \n"
+"<p><strong>Settings not saved.</strong></p><button class=\"notice-dismiss\" type=\"button\"><span class=\"screen-reader-text\">Dismiss this notice.</span></button></div>"
+
+#: admin-settings.php:27
+msgid ""
+"<div class=\"updated settings-error notice is-dismissible\" id=\"setting-error-settings_updated\"> \n"
+"<p><strong>Settings saved.</strong></p><button class=\"notice-dismiss\" type=\"button\"><span class=\"screen-reader-text\">Dismiss this notice.</span></button></div>"
+msgstr ""
+"<div class=\"updated settings-error notice is-dismissible\" id=\"setting-error-settings_updated\"> \n"
+"<p><strong>Settings saved.</strong></p><button class=\"notice-dismiss\" type=\"button\"><span class=\"screen-reader-text\">Dismiss this notice.</span></button></div>"
+
+#: admin-settings.php:8
+msgid "<strong>Saving Please wait...</strong>"
+msgstr "<strong>Saving Please wait...</strong>"
+
+#: admin-settings.php:3
+msgid "Buy PRO"
+msgstr "Buy PRO"
+
+#: admin-settings.php:3
+msgid "Duplicate Page Settings "
+msgstr "Duplicate Page Settings "
+
+#: admin-settings.php:42
+msgid "Duplicate Post Status"
+msgstr "Duplicate Post Status"
+
+#: admin-settings.php:59
+msgid "Please select any post redirection, redirect you to selected after click on duplicate this link. <strong>Default:</strong> To current list."
+msgstr "Please select any post redirection, redirect you to selected after clicking on duplicate this link. <strong>Default:</strong> To current list."
+
+#: admin-settings.php:50
+msgid "Please select any post status you want to assign for duplicate post. <strong>Default:</strong> Draft."
+msgstr "Please select any post status you want to assign for duplicate post. <strong>Default:</strong> Draft."
+
+#: admin-settings.php:54
+msgid "Redirect to after click on <strong>Duplicate This Link</strong>"
+msgstr "Redirect to after click on <strong>Duplicate This Link</strong>"
+
+#: admin-settings.php:56
+msgid "To All Posts List"
+msgstr "To All Posts List"
+
+#: admin-settings.php:57
+msgid "To Duplicate Edit Screen"
+msgstr "To Duplicate Edit Screen"

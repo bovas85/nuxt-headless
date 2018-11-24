@@ -1,0 +1,160 @@
+.container,
+.grid-wrapper,
+.container-fluid {
+  > div {
+    float: left;
+  }
+} // fallback
+
+@supports (display: grid) {
+  .container,
+  .grid-wrapper,
+  .container-fluid {
+    display: grid;
+    grid-template-columns: repeat(
+      12,
+      [col-start] 1fr
+    ); // [col-start] is the name of the first column in the grid, it can be used as reference
+    position: relative;
+    grid-gap: 0;
+    @media (min-width: $mobile-large) {
+      grid-row-gap: $gap;
+      grid-column-gap: $gap;
+      &.is-gapless {
+        grid-gap: 0px;
+      }
+    }
+    &.is-flex {
+      display: flex !important;
+    }
+    > div {
+      float: none;
+    }
+  }
+
+  .container > *,
+  .grid-wrapper > *,
+  .container-fluid > * {
+    grid-column: col-start / span 12; // variable col-start defined in the template above
+    > img {
+      display: block;
+      max-width: 100%;
+      align-self: stretch;
+      justify-self: stretch;
+    }
+  }
+
+  .col {
+    margin: 0;
+    padding: 0;
+    &--auto {
+      grid-column: auto;
+      justify-content: stretch;
+    }
+    &--stretch {
+      grid-column-end: 12;
+    }
+    &--fit {
+      grid-column: fit-content;
+    }
+    > img {
+      display: block;
+      max-width: 100%;
+      align-self: stretch;
+      justify-self: stretch;
+    }
+  }
+
+  .flex-wrapper {
+    display: flex;
+    width: 100%;
+    grid-column: span 12;
+    justify-content: space-between;
+  }
+
+  $class-slug: col !default; // iterable classname
+
+  @media (min-width: $mobile-large) {
+    @for $i from 1 through 13 {
+      // example col--1 spans 1 column
+      .#{$class-slug}--#{$i} {
+        grid-column: span #{$i};
+      }
+      // @for $y from 1 through 13 {
+      //   .#{$class-slug}--#{$i}to#{$y} {
+      //     grid-column-start: #{$i};
+      //     grid-column-end: #{$y};
+      //   }
+      // }
+    }
+  }
+
+  // @media (max-width: $mobile) {
+  //   @for $i from 1 through 13 {
+  //     .#{$class-slug}--#{$i}-mobile-only {
+  //       grid-column: span #{$i};
+  //     }
+  //     // @for $y from 1 through 13 {
+  //     //   .#{$class-slug}--#{$i}to#{$y}-mobile-only {
+  //     //     grid-column-start: #{$i};
+  //     //     grid-column-end: #{$y};
+  //     //   }
+  //     // }
+  //   }
+  // }
+
+  //mobile first columns
+  @for $i from 1 through 13 {
+    .#{$class-slug}--#{$i}-mobile {
+      grid-column: span #{$i};
+    }
+    // @for $y from 1 through 13 {
+    //   .#{$class-slug}--#{$i}to#{$y}-mobile {
+    //     grid-column-start: #{$i};
+    //     grid-column-end: #{$y};
+    //   }
+    // }
+  }
+
+  // @media (min-width: $mobile-large) {
+  //   @for $i from 1 through 13 {
+  //     .#{$class-slug}--#{$i}-mobile-large {
+  //       grid-column: span #{$i};
+  //     }
+  //     // @for $y from 1 through 13 {
+  //     //   .#{$class-slug}--#{$i}to#{$y}-mobile-large {
+  //     //     grid-column-start: #{$i};
+  //     //     grid-column-end: #{$y};
+  //     //   }
+  //     // }
+  //   }
+  // }
+
+  @media (min-width: $tablet) {
+    @for $i from 1 through 13 {
+      .#{$class-slug}--#{$i}-tablet {
+        grid-column: span #{$i};
+      }
+      // @for $y from 1 through 13 {
+      //   .#{$class-slug}--#{$i}to#{$y}-tablet {
+      //     grid-column-start: #{$i};
+      //     grid-column-end: #{$y};
+      //   }
+      // }
+    }
+  }
+
+  @media (min-width: $desktop) {
+    @for $i from 1 through 13 {
+      .#{$class-slug}--#{$i}-desktop {
+        grid-column: span #{$i};
+      }
+      // @for $y from 1 through 13 {
+      //   .#{$class-slug}--#{$i}to#{$y}-desktop {
+      //     grid-column-start: #{$i};
+      //     grid-column-end: #{$y};
+      //   }
+      // }
+    }
+  }
+}

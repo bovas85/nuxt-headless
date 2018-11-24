@@ -1,0 +1,17 @@
+{
+    "name"          : "nsp-code/post-types-order",
+    "description"   : "Posts Order and Post Types Objects Order using a Drag and Drop Sortable javascript capability",
+    "keywords"      : ["post order" , "posts order", "sort", "post sort", "posts sort", "post type order", "custom order", "admin posts order"],
+    "homepage"      : "http://www.nsp-code.com/",
+    "authors"       : [
+                        {
+                          "name": "Nsp Code",
+                          "email": "contact@nsp-code.com",
+                          "homepage": "http://www.nsp-code.com/"
+                        }
+                      ],
+    "type"          : "wordpress-plugin",
+    "require"       : {
+                            "composer/installers": "~1.0"
+                        }
+}

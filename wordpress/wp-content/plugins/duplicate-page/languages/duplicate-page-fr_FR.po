@@ -1,0 +1,124 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Duplicate Page\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-23 14:05+0100\n"
+"PO-Revision-Date: 2018-02-23 14:16+0100\n"
+"Language-Team: Hindi\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: \n"
+"Language: fr_FR\n"
+
+#: admin-settings.php:3
+msgid "Duplicate Page Settings"
+msgstr "Réglages \"DUPLICATE PAGE\""
+
+#: admin-settings.php:8
+msgid "<strong>Saving Please wait...</strong>"
+msgstr "<strong>Enregistrement, patientez...</strong>"
+
+#: admin-settings.php:27
+msgid ""
+"<div class=\"updated settings-error notice is-dismissible\" id=\"setting-"
+"error-settings_updated\"> \n"
+"<p><strong>Settings saved.</strong></p><button class=\"notice-dismiss\" type="
+"\"button\"><span class=\"screen-reader-text\">Dismiss this notice.</span></"
+"button></div>"
+msgstr ""
+"<div class=\"updated settings-error notice is-dismissible\" id=\"setting-"
+"error-settings_updated\"> \n"
+"<p><strong>Paramètres enregistrés</strong></p><button class=\"notice-dismiss"
+"\" type=\"button\"><span class=\"screen-reader-text\">Fermer la notice</"
+"span></button></div>"
+
+#: admin-settings.php:30
+msgid ""
+"<div class=\"error settings-error notice is-dismissible\" id=\"setting-error-"
+"settings_updated\"> \n"
+"<p><strong>Settings not saved.</strong></p><button class=\"notice-dismiss\" "
+"type=\"button\"><span class=\"screen-reader-text\">Dismiss this notice.</"
+"span></button></div>"
+msgstr ""
+"<div class=\"error settings-error notice is-dismissible\" id=\"setting-error-"
+"settings_updated\"> \n"
+"<p><strong>Settings not saved.</strong></p><button class=\"notice-dismiss\" "
+"type=\"button\"><span class=\"screen-reader-text\">Fermer la notice</span></"
+"button></div>"
+
+#: admin-settings.php:43
+msgid "Duplicate Post Status"
+msgstr "Statut \"DUPLICATE PAGE\""
+
+#: admin-settings.php:50
+msgid ""
+"Please select any post status you want to assign for duplicate post. "
+"<strong>Default:</strong> Draft."
+msgstr ""
+"Veuillez sélectionner un statut de publication que vous souhaitez attribuer "
+"pour une page dubliqué<strong> Par défaut: </ strong> Brouillon."
+
+#: admin-settings.php:54
+msgid "Redirect to after click on <strong>Duplicate This Link</strong>"
+msgstr "Rediriger après avoir cliquer sur <strong>Dupliquer ce lien</strong>"
+
+#: admin-settings.php:56
+msgid "To All Posts List"
+msgstr "Sur la liste de tout les articles"
+
+#: admin-settings.php:57
+msgid "To Duplicate Edit Screen"
+msgstr "Sur l’écran de duplication"
+
+#: admin-settings.php:59
+msgid ""
+"Please select any post redirection, redirect you to selected after click on "
+"duplicate this link. <strong>Default:</strong> To current list."
+msgstr ""
+"S'il vous plaît sélectionner chaque redirection d'article, afin de "
+"déterminer l’action après avoir cliqué sur dupliquer ce lien. <strong>Par "
+"défaut:</strong> Sur la liste de tous les articles"
+
+#: admin-settings.php:63
+msgid "Duplicate Post Suffix"
+msgstr "Dupliquer le suffixe de l'article"
+
+#: admin-settings.php:66
+msgid ""
+"Add a suffix for duplicate or clone post as Copy, Clone etc. It will show "
+"after title."
+msgstr ""
+"Ajoute un suffixe lorsque vous dupliquez ou clonez. Il sera mis après le "
+"titre"
+
+#: admin-settings.php:76
+msgid ""
+"Contribute some donation, to make plugin more stable. You can pay amount of "
+"your choice."
+msgstr ""
+"Contribuer à un don, pour rendre le plugin plus stable. Vous pouvez donner "
+"le montant de votre choix."
+
+#. Name of the plugin
+msgid "Duplicate Page"
+msgstr "Dupliquer les Pages"
+
+#. Description of the plugin
+msgid "Duplicate Posts, Pages and Custom Posts using single click."
+msgstr ""
+"Dupliquer les articles, pages, et articles personnalisé juste en cliquant"
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/duplicate-page/"
+msgstr "https://wordpress.org/plugins/duplicate-page/"
+
+#. Author of the plugin
+msgid "mndpsingh287"
+msgstr "mndpsingh287"
+
+#. Author URI of the plugin
+msgid "https://profiles.wordpress.org/mndpsingh287/"
+msgstr "https://profiles.wordpress.org/mndpsingh287/"

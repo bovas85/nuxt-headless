@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="15px" viewBox="0 0 18 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>folder-closed</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Folder-22px-Solid-3-Closed" fill="#888888">
+            <path d="M0,1 C0,0.44771525 0.45303631,0 0.99703014,0 L7.00296986,0 C7.5536144,0 8,0.44386482 8,1 L8,2 L0,2 L0,1 Z M0,3 L18,3 L18,15 L0,15 L0,3 Z" id="folder-closed"></path>
+        </g>
+    </g>
+</svg>

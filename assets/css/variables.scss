@@ -1,0 +1,221 @@
+// Initial variables //
+$primary: #fa7921;
+$secondary: #000;
+$subtitle: #9b9b9b;
+$success: #94d500;
+$yellow: #f2d636;
+$grey: #686868;
+$lightgrey: #e4e3e3;
+$lightergrey: #fafafa;
+$info: #fff;
+$danger: #df4661;
+$red: #ef664f;
+$link: #fff;
+$link-hover: $primary;
+$border-radius: 100px;
+
+// Fonts //
+$family-primary: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+
+// Font sizes //
+$font-size: 16px;
+$font-medium: 14px;
+$font-small: 11px;
+
+a,
+.link {
+  text-decoration: none;
+  &--is-underlined {
+    text-decoration: underline;
+  }
+}
+
+p,
+figcaption {
+  font-size: responsive(18px 22px);
+}
+
+strong {
+  font-weight: bold;
+}
+
+.is-success {
+  color: $success;
+}
+
+.is-grey {
+  color: $grey;
+}
+
+.is-danger {
+  color: $danger;
+}
+
+// Breakpoints
+$mobile: 576px;
+$mobile-large: 577px;
+$tablet: 768px;
+$desktop: 1008px;
+$widescreen: 1200px;
+$fullhd: 1440px;
+
+// Gutter
+$gap: 32px;
+
+$rule: 1.4;
+
+// ==========================================================================
+// Base – Mixins
+// ==========================================================================
+@mixin line-clamp($numLines, $lineHeight: 1.412) {
+  overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  display: block;
+  /* autoprefixer: off */
+  display: -webkit-box;
+  -webkit-line-clamp: $numLines;
+  -moz-binding: url('/ellipsis.xml#ellipsis');
+  -webkit-box-orient: vertical;
+  max-height: $numLines * $lineHeight + unquote('em');
+}
+
+// wrap words if too long
+@mixin word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+// set ellipsis
+@mixin ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// fadeInUp animation
+.animated {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+@mixin fadeInUp {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.15, 0.46, 0.21, 0.93),
+    opacity 0.5s ease-in-out;
+}
+
+// Breakpoint sizes
+// Example usage @include breakpoint(x) { ... }; - where x is the device
+// $mobile-large: 577px;
+// $tablet: 768px;
+// $desktop: 1008px;
+// $widescreen: 1200px;
+// $fullhd: 1440px;
+//
+// @include media(sm);
+@mixin media($bp) {
+  @if $bp == xxl {
+    @media only screen and (min-width: $fullhd) {
+      @content;
+    }
+  } @else if $bp == xl {
+    @media only screen and (min-width: $widescreen) {
+      @content;
+    }
+  } @else if $bp == lg {
+    @media only screen and (min-width: $desktop) {
+      @content;
+    }
+  } @else if $bp == md {
+    @media only screen and (min-width: $tablet) {
+      @content;
+    }
+  } @else if $bp == sm {
+    @media only screen and (min-width: $mobile-large) {
+      @content;
+    }
+  }
+}
+
+// Arrows
+// Example Usage @mixin arrow(4px, #000, up);
+@mixin arrow($size: 5px, $color: #333, $direction: right) {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    border: $size solid transparent;
+    z-index: -1;
+    @if $direction == right {
+      top: 50%;
+      left: 100%;
+      border-left-color: $color;
+      transform: translate3d(0, -50%, 0);
+    } @else if $direction == left {
+      top: 50%;
+      left: 0;
+      border-right-color: $color;
+      transform: translate3d(-100%, -50%, 0);
+    } @else if $direction == down {
+      top: 100%;
+      left: 50%;
+      border-top-color: $color;
+      transform: translate3d(-50%, 0, 0);
+    } @else if $direction == up {
+      top: 0;
+      left: 50%;
+      border-bottom-color: $color;
+      transform: translate3d(-50%, -100%, 0);
+    }
+  }
+}
+
+@mixin size($heading) {
+  @if $heading == jumbo {
+    font-size: 70px;
+    @supports (display: grid) {
+      font-size: responsive(
+        round($font-size * $rule * 2),
+        round($font-size * $rule * 4)
+      );
+    }
+    font-range: 320px #{$tablet};
+  } @else if $heading == h1 {
+    font-size: 40px;
+    font-size: responsive(
+      round($font-size * $rule * 1.8) round($font-size * $rule * 3)
+    );
+    font-range: 320px #{$tablet};
+  } @else if $heading == h2 {
+    font-size: 30px;
+    font-size: responsive(
+      round($font-size * $rule * 1.4) round($font-size * $rule * 2)
+    );
+    font-range: 320px #{$tablet};
+  } @else if $heading == h3 {
+    font-size: 24px;
+    font-size: responsive(
+      round($font-size * $rule) round($font-size * $rule * $rule)
+    );
+    font-range: 320px #{$tablet};
+  } @else if $heading == h4 {
+    font-size: 22px;
+    font-size: round($font-size * $rule);
+  }
+}
+
+// force hardware accelleration on any item
+@mixin accellerate($name) {
+  will-change: $name;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}

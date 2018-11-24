@@ -1,0 +1,46 @@
+.button {
+  &--contact,
+  &--sent {
+    margin-top: $gap;
+    margin-bottom: $gap;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-shadow: 0 0 0 1px $secondary;
+    cursor: pointer;
+    min-width: 110px;
+    height: auto;
+    padding: 5px 20px;
+    transition: all 0.3s ease-in-out;
+
+    &:focus,
+    &:hover,
+    &:active {
+      box-shadow: 0 0 0 2px $secondary;
+    }
+  }
+
+  &--sent {
+    color: black;
+    text-decoration: none;
+  }
+
+  &--is-white {
+    color: white;
+    min-width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out !important;
+    box-shadow: 0 0 0 1px white;
+
+    &:focus,
+    &:hover,
+    &:active {
+      box-shadow: 0 0 0 2px white;
+      font-weight: 600;
+    }
+  }
+}

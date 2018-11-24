@@ -1,0 +1,1105 @@
+# Translation of Plugins - Smush Image Compression and Optimization - Stable (latest release) in English (UK)
+# This file is distributed under the same license as the Plugins - Smush Image Compression and Optimization - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-07-12 19:35:12+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: en_GB\n"
+"Project-Id-Version: Plugins - Smush Image Compression and Optimization - Stable (latest release)\n"
+
+#: lib/class-wp-smush-ui.php:1152
+msgid "Note: Image resizing happens automatically when you upload attachments. This setting does not apply to images smushed using Directory Smush feature. To support retina devices, we recommend using 2x the dimensions of your image size."
+msgstr "Note: Image resizing happens automatically when you upload attachments. This setting does not apply to images smushed using Directory Smush feature. To support retina devices, we recommend using 2x the dimensions of your image size."
+
+#: lib/class-wp-smush-ui.php:871
+msgid "DASHBOARD"
+msgstr "DASHBOARD"
+
+#: lib/class-wp-smush-recommender.php:67
+msgid "Customize Titles & Meta Data, OpenGraph, Twitter & Pinterest Support, Auto-Keyword Linking, SEO & Readability Analysis, Sitemaps, URL Crawler & more."
+msgstr "Customise Titles & Meta Data, OpenGraph, Twitter & Pinterest Support, Auto-Keyword Linking, SEO & Readability Analysis, Sitemaps, URL Crawler & more."
+
+#: lib/class-wp-smush-recommender.php:66
+msgid "SmartCrawl Search Engine Optimization"
+msgstr "SmartCrawl Search Engine Optimisation"
+
+#: lib/class-wp-smush-recommender.php:61
+msgid "Security Tweaks & Recommendations, File & Malware Scanning, Login & 404 Lockout Protection, Two-Factor Authentication & more."
+msgstr "Security Tweaks & Recommendations, File & Malware Scanning, Login & 404 Lockout Protection, Two-Factor Authentication & more."
+
+#: lib/class-wp-smush-recommender.php:60
+msgid "Defender Security, Monitoring, and Hack Protection"
+msgstr "Defender Security, Monitoring, and Hack Protection"
+
+#: lib/class-wp-smush-recommender.php:55
+msgid "Performance Tests, File Optimization & Compression, Page, Browser & Gravatar Caching, GZIP Compression, CloudFlare Integration & more."
+msgstr "Performance Tests, File Optimisation & Compression, Page, Browser & Gravatar Caching, GZIP Compression, CloudFlare Integration & more."
+
+#: lib/class-wp-smush-recommender.php:54
+msgid "Hummingbird Page Speed Optimization"
+msgstr "Hummingbird Page Speed Optimisation"
+
+#: lib/class-wp-smush-recommender.php:50
+msgid "Check out our other free wordpress.org plugins!"
+msgstr "Check out our other free wordpress.org plugins!"
+
+#: lib/class-wp-smush-dir.php:1403
+msgid "Directory smushing requires custom tables and it seems there was an error creating tables. For help, please contact our team on the support forums"
+msgstr "Directory smushing requires custom tables and it seems there was an error creating tables. For help, please contact our team on the support forums"
+
+#. #-#-#-#-#  wp-smushit-code.pot (Smush 2.7.9.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: lib/class-wp-smush-admin.php:294 lib/class-wp-smush-admin.php:2266
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:81
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:101
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:103
+msgid "Smush"
+msgstr "Smush"
+
+#: lib/class-wp-smush-admin.php:294 lib/class-wp-smush-admin.php:2014
+#: lib/class-wp-smush-dir.php:287 lib/class-wp-smush-ui.php:732
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:81
+msgid "Smush Pro"
+msgstr "Smush Pro"
+
+#: lib/class-wp-smush-admin.php:261
+msgid "Save a ton of space by not storing over-sized images on your server. Set a maximum height and width for all images uploaded to your site so that any unnecessarily large images are automatically resized before they are added to the media gallery."
+msgstr "Save a ton of space by not storing over-sized images on your server. Set a maximum height and width for all images uploaded to your site so that any unnecessarily large images are automatically resized before they are added to the media gallery."
+
+#: lib/class-wp-smush.php:2553
+msgid "Smush uses a third-party email service (Drip) to send informational emails to the site administrator. The administrator's email address is sent to Drip and a cookie is set by the service. Only administrator information is collected by Drip."
+msgstr "Smush uses a third-party email service (Drip) to send informational emails to the site administrator. The administrator's email address is sent to Drip and a cookie is set by the service. Only administrator information is collected by Drip."
+
+#: lib/class-wp-smush.php:2548
+msgid "Smush sends images to the WPMU DEV servers to optimize them for web use. This includes the transfer of EXIF data. The EXIF data will either be stripped or returned as it is. It is not stored on the WPMU DEV servers."
+msgstr "Smush sends images to the WPMU DEV servers to optimise them for web use. This includes the transfer of EXIF data. The EXIF data will either be stripped or returned as it is. It is not stored on the WPMU DEV servers."
+
+#: lib/class-wp-smush.php:2546
+msgid "Note: Smush does not interact with end users on your website. The only input option Smush has is to a newsletter subscription for site admins only. If you would like to notify your users of this in your privacy policy, you can use the information below."
+msgstr "Note: Smush does not interact with end users on your website. The only input option Smush has is to a newsletter subscription for site admins only. If you would like to notify your users of this in your privacy policy, you can use the information below."
+
+#: lib/class-wp-smush.php:2544
+msgid "Plugin: Smush"
+msgstr "Plugin: Smush"
+
+#: lib/class-wp-smush-ui.php:1266
+msgid "Get all of this including 200% faster smushing, Amazon S3 support and heaps more as part of a WPMU DEV membership."
+msgstr "Get all of this including 200% faster smushing, Amazon S3 support and heaps more as part of a WPMU DEV membership."
+
+#: lib/class-wp-smush-ui.php:1263
+msgid "Using the NextGen Gallery plugin? The Pro version allows you to compress images directly through NextGen Gallery’s settings."
+msgstr "Using the NextGen Gallery plugin? The Pro version allows you to compress images directly through NextGen Gallery’s settings."
+
+#: lib/class-wp-smush-ui.php:1262
+msgid "Integration with NextGen Gallery"
+msgstr "Integration with NextGen Gallery"
+
+#: lib/class-wp-smush-ui.php:1258
+msgid "If any of your non-transparent PNGs can be made smaller by converting to JPEG, Smush will automatically convert them to JPEGs so they load faster for your visitors."
+msgstr "If any of your non-transparent PNGs can be made smaller by converting to JPEG, Smush will automatically convert them to JPEGs so they load faster for your visitors."
+
+#: lib/class-wp-smush-ui.php:1257
+msgid "Convert PNGs to JPEGs"
+msgstr "Convert PNGs to JPEGs"
+
+#: lib/class-wp-smush-ui.php:1253
+msgid "The free version of Smush only compresses your automatically generated image thumbnails. With Pro you can compress your original size images too - in case you want to use them in your theme."
+msgstr "The free version of Smush only compresses your automatically generated image thumbnails. With Pro you can compress your original size images too - in case you want to use them in your theme."
+
+#: lib/class-wp-smush-ui.php:1252
+msgid "Include your originals"
+msgstr "Include your originals"
+
+#: lib/class-wp-smush-ui.php:1248
+msgid "The free version allows you to Smush up to 1Mb images, and 50 at a time. The Pro version releases all those limits so you can smush all the things."
+msgstr "The free version allows you to Smush up to 1Mb images, and 50 at a time. The Pro version releases all those limits so you can smush all the things."
+
+#: lib/class-wp-smush-ui.php:1247
+msgid "No limits"
+msgstr "No limits"
+
+#: lib/class-wp-smush-ui.php:1243
+msgid "Optimize images 2x more than regular smushing and with no visible loss in quality using Smush’s intelligent multi-pass lossy compression."
+msgstr "Optimise images 2x more than regular smushing and with no visible loss in quality using Smush’s intelligent multi-pass lossy compression."
+
+#: lib/class-wp-smush-ui.php:1242
+msgid "Double the compression"
+msgstr "Double the compression"
+
+#: lib/class-wp-smush-ui.php:1238
+msgid "Here’s what you’ll get by uprading to Smush Pro."
+msgstr "Here’s what you’ll get by upgrading to Smush Pro."
+
+#: lib/class-wp-smush-ui.php:1237 lib/class-wp-smush-ui.php:1267
+msgid "LEARN MORE"
+msgstr "LEARN MORE"
+
+#: lib/class-wp-smush-ui.php:1237
+msgid "GET SMUSH PRO"
+msgstr "GET SMUSH PRO"
+
+#: lib/class-wp-smush-ui.php:818
+msgid "Skip re-smushing the images"
+msgstr "Skip re-smushing the images"
+
+#: lib/class-wp-smush-ui.php:738
+msgid "Click to start Bulk Smushing images in Media Library"
+msgstr "Click to start Bulk Smushing images in Media Library"
+
+#: lib/class-wp-smush-dir.php:107
+msgid "Select a directory you'd like to Smush."
+msgstr "Select a directory you'd like to Smush."
+
+#: lib/class-wp-smush-admin.php:638
+msgid "%s%d%s Attachment(s) were skipped."
+msgstr "%s%d%s Attachment(s) were skipped."
+
+#: lib/class-wp-smush-admin.php:614
+msgid "You've exceeded Bulk Smush limit of %d images at once for standard users. Click on Bulk Smush to continue."
+msgstr "You've exceeded Bulk Smush limit of %d images at once for standard users. Click on Bulk Smush to continue."
+
+#: lib/class-wp-smush-admin.php:598
+msgid "%s%d%s Attachment(s) could not be smushed, as no ID was received."
+msgstr "%s%d%s Attachment(s) could not be smushed, as no ID was received."
+
+#: lib/class-wp-smush-admin.php:423
+msgid "Give us a moment while we sync the stats."
+msgstr "Give us a moment while we sync the stats."
+
+#: lib/class-wp-smush.php:744
+msgid "Skipped due to a timeout error. You can increase the request timeout to make sure Smush has enough time to process larger files. `define('WP_SMUSH_API_TIMEOUT', 150);`."
+msgstr "Skipped due to a timeout error. You can increase the request timeout to make sure Smush has enough time to process larger files. `define('WP_SMUSH_API_TIMEOUT', 150);`."
+
+#: lib/class-wp-smush-ui.php:1217
+msgid "Note: For this process to happen automatically you need automatic smushing enabled."
+msgstr "Note: For this process to happen automatically you need automatic smushing enabled."
+
+#: lib/class-wp-smush-ui.php:1214
+msgid "Note: Any PNGs with transparency will be ignored. Smush will only convert PNGs if it results in a smaller file size. The resulting file will have a new filename and extension (JPEG), and any hard-coded URLs on your site that contain the original PNG filename will need to be updated."
+msgstr "Note: Any PNGs with transparency will be ignored. Smush will only convert PNGs if it results in a smaller file size. The resulting file will have a new filename and extension (JPEG), and any hard-coded URLs on your site that contain the original PNG filename will need to be updated."
+
+#: lib/class-wp-smush-ui.php:1211
+msgid "Note: This data, called EXIF, adds to the size of the image. While this information might be important to photographers, it’s unnecessary for most users and safe to remove."
+msgstr "Note: This data, called EXIF, adds to the size of the image. While this information might be important to photographers, it’s unnecessary for most users and safe to remove."
+
+#: lib/class-wp-smush-ui.php:1097
+msgid "Every time you upload an image to your site, WordPress generates a resized version of that image for every default and/or custom image size that your theme has registered. This means there are multiple versions of your images in your media library.%sChoose the images size/s below that you would like optimized:%s"
+msgstr "Every time you upload an image to your site, WordPress generates a resized version of that image for every default and/or custom image size that your theme has registered. This means there are multiple versions of your images in your media library.%sChoose the images size/s below that you would like optimised:%s"
+
+#: lib/class-wp-smush-ui.php:1050
+msgid "Smush will automatically check for any images that need re-smushing."
+msgstr "Smush will automatically check for any images that need re-smushing."
+
+#: lib/class-wp-smush-ui.php:1001
+msgid "Smush Pro gives you all these extra settings and absolutely no limits on smushing your images! Did we mention Smush Pro also gives you up to 2x better compression too? – %sTry it all free with a WPMU DEV membership today!%s"
+msgstr "Smush Pro gives you all these extra settings and absolutely no limits on smushing your images! Did we mention Smush Pro also gives you up to 2x better compression too? – %sTry it all free with a WPMU DEV membership today!%s"
+
+#: lib/class-wp-smush-ui.php:925
+msgid "Thanks for upgrading Smush!"
+msgstr "Thanks for upgrading Smush!"
+
+#: lib/class-wp-smush-ui.php:923 lib/class-wp-smush-ui.php:927
+msgid "Try Smush Pro Free"
+msgstr "Try Smush Pro Free"
+
+#: lib/class-wp-smush-ui.php:922
+msgid "And hey, if you do, you can join WPMU DEV for a free 30 day trial and get access to even more features!"
+msgstr "And hey, if you do, you can join WPMU DEV for a free 30 day trial and get access to even more features!"
+
+#: lib/class-wp-smush-ui.php:780
+msgid "Stop current bulk smush process."
+msgstr "Stop current bulk smush process."
+
+#: lib/class-wp-smush-ui.php:707
+msgid "DISMISS"
+msgstr "DISMISS"
+
+#: lib/class-wp-smush-ui.php:703
+msgid "Enable %sResize Original Images%s to scale big images down to a reasonable size and save a ton of space."
+msgstr "Enable %sResize Original Images%s to scale big images down to a reasonable size and save a ton of space."
+
+#: lib/class-wp-smush-ui.php:700
+msgid "Make sure your images are the right size for your theme. %sLearn more%s."
+msgstr "Make sure your images are the right size for your theme. %sLearn more%s."
+
+#: lib/class-wp-smush-ui.php:698
+msgid "Enable %sSuper-smush%s for advanced lossy compression to optimise images further with almost no visible drop in quality."
+msgstr "Enable %sSuper-smush%s for advanced lossy compression to optimise images further with almost no visible drop in quality."
+
+#: lib/class-wp-smush-ui.php:696
+msgid "Upgrade to Smush Pro for advanced lossy compression. %sTry pro free%s."
+msgstr "Upgrade to Smush Pro for advanced lossy compression. %sTry pro free%s."
+
+#: lib/class-wp-smush-ui.php:693
+msgid "Still having trouble with PageSpeed tests? Give these a go…"
+msgstr "Still having trouble with PageSpeed tests? Give these a go…"
+
+#: lib/class-wp-smush-ui.php:538
+msgid "Save a ton of space by not storing over-sized images on your server."
+msgstr "Save a ton of space by not storing over-sized images on your server."
+
+#: lib/class-wp-smush-ui.php:394
+msgid "By default, Smush only compresses your cropped image sizes, not your original full-size images."
+msgstr "By default, Smush only compresses your cropped image sizes, not your original full-size images."
+
+#: lib/class-wp-smush-ui.php:283
+msgid "PNG to JPEG savings"
+msgstr "PNG to JPEG savings"
+
+#: lib/class-wp-smush-ui.php:274
+msgid "No resize savings available"
+msgstr "No resize savings available"
+
+#: lib/class-wp-smush-ui.php:268 lib/class-wp-smush-ui.php:271
+msgid "Save storage space by resizing your full sized uploads down to a maximum size. %sEnable image resizing%s"
+msgstr "Save storage space by resizing your full sized uploads down to a maximum size. %sEnable image resizing%s"
+
+#: lib/class-wp-smush-ui.php:260
+msgid "Resize savings"
+msgstr "Resize savings"
+
+#: lib/class-wp-smush-ui.php:241 lib/class-wp-smush-ui.php:244
+msgid "Compress images up to 2x more than regular smush with almost no visible drop in quality. %sEnable Super-smush%s"
+msgstr "Compress images up to 2x more than regular smush with almost no visible drop in quality. %sEnable Super-smush%s"
+
+#: lib/class-wp-smush-ui.php:234
+msgid "Super-smushed savings"
+msgstr "Super-smushed savings"
+
+#: lib/class-wp-smush-ui.php:218
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:505
+msgid "Total savings"
+msgstr "Total savings"
+
+#: lib/class-wp-smush-ui.php:210
+msgid "Images resized"
+msgstr "Images resized"
+
+#: lib/class-wp-smush-ui.php:203
+msgid "Attachments smushed"
+msgstr "Attachments smushed"
+
+#: lib/class-wp-smush-ui.php:194
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:499
+msgid "Images smushed"
+msgstr "Images smushed"
+
+#: lib/class-wp-smush-ui.php:123
+msgid "Get Started"
+msgstr "Get Started"
+
+#: lib/class-wp-smush-ui.php:73
+msgid "Welcome to Smush - Winner of Torque Plugin Madness 2017! Let's quickly set up the basics for you, then you can fine tune each setting as you go - our recommendations are on by default."
+msgstr "Welcome to Smush - Winner of Torque Plugin Madness 2017! Let's quickly set up the basics for you, then you can fine tune each setting as you go - our recommendations are on by default."
+
+#: lib/class-wp-smush-s3.php:181
+msgid "We can see you have WP Offload S3 installed with the <strong>Remove Files From Server</strong> option activated. If you want to optimize your S3 images you'll need to <a href='%s'><strong>upgrade to Smush Pro</strong></a>"
+msgstr "We can see you have WP Offload S3 installed with the <strong>Remove Files From Server</strong> option activated. If you want to optimise your S3 images you'll need to <a href='%s'><strong>upgrade to Smush Pro</strong></a>"
+
+#: lib/class-wp-smush-s3.php:178
+msgid "We can see you have WP Offload S3 installed with the <strong>Remove Files From Server</strong> option activated. If you want to optimize your S3 images you'll need to enable the <a href='%s'><strong>Amazon S3 Support</strong></a> feature in Smush's settings."
+msgstr "We can see you have WP Offload S3 installed with the <strong>Remove Files From Server</strong> option activated. If you want to optimise your S3 images you'll need to enable the <a href='%s'><strong>Amazon S3 Support</strong></a> feature in Smush's settings."
+
+#: lib/class-wp-smush-s3.php:124
+msgid "Amazon S3 support is active."
+msgstr "Amazon S3 support is active."
+
+#: lib/class-wp-smush-s3.php:62
+msgid "Storing your image on S3 buckets using %sWP Offload S3%s? Smush can detect and smush those assets for you, including when you're removing files from your host server."
+msgstr "Storing your image on S3 buckets using %sWP Offload S3%s? Smush can detect and smush those assets for you, including when you're removing files from your host server."
+
+#: lib/class-wp-smush-s3.php:61
+msgid "Amazon S3"
+msgstr "Amazon S3"
+
+#: lib/class-wp-smush-s3.php:60
+msgid "Enable Amazon S3 support"
+msgstr "Enable Amazon S3 support"
+
+#: lib/class-wp-smush-nextgen.php:81
+msgid "NextGen Gallery"
+msgstr "NextGen Gallery"
+
+#: lib/class-wp-smush-dir.php:107
+msgid "Choose directory"
+msgstr "Choose directory"
+
+#: lib/class-wp-smush-dir.php:105
+msgid "Smush images that aren't located in your uploads folder."
+msgstr "Smush images that aren't located in your uploads folder."
+
+#: lib/class-wp-smush-dir.php:91
+msgid "Directory-smush savings"
+msgstr "Directory-smush savings"
+
+#: lib/class-wp-smush-admin.php:1409
+msgid "We haven’t found any images in your media library yet so there’s no smushing to be done! Once you upload images, reload this page and start playing!"
+msgstr "We haven’t found any images in your media library yet so there’s no smushing to be done! Once you upload images, reload this page and start playing!"
+
+#: lib/class-wp-smush-admin.php:711
+msgid "%s%d%s Attachment(s) were not smushed due to a timeout error, You can increase the request timeout to make sure Smush has enough time to process larger files. `define('WP_SMUSH_API_TIMEOUT', 150);`"
+msgstr "%s%d%s Attachment(s) were not smushed due to a timeout error, You can increase the request timeout to make sure Smush has enough time to process larger files. `define('WP_SMUSH_API_TIMEOUT', 150);`"
+
+#: lib/class-wp-smush-admin.php:422 lib/class-wp-smush-ui.php:72
+msgid "QUICK SETUP"
+msgstr "QUICK SETUP"
+
+#: lib/class-wp-smush-admin.php:271
+msgid "When you compress a PNG file, Smush will check if converting the file to JPEG will further reduce its size."
+msgstr "When you compress a PNG file, Smush will check if converting the file to JPEG will further reduce its size."
+
+#: lib/class-wp-smush-admin.php:270
+msgid "PNG to JPEG conversion"
+msgstr "PNG to JPEG conversion"
+
+#: lib/class-wp-smush-admin.php:269
+msgid "Auto-convert PNGs to JPEGs (lossy)"
+msgstr "Auto-convert PNGs to JPEGs (lossy)"
+
+#: lib/class-wp-smush-admin.php:266
+msgid "Save your original full-size images separately so you can restore them at any point. Note: Keeping a copy of your original files can significantly increase the size of your uploads folder by nearly twice as much."
+msgstr "Save your original full-size images separately so you can restore them at any point. Note: Keeping a copy of your original files can significantly increase the size of your uploads folder by nearly twice as much."
+
+#: lib/class-wp-smush-admin.php:264
+msgid "Make a copy of my full size images"
+msgstr "Make a copy of my full size images"
+
+#: lib/class-wp-smush-admin.php:259
+msgid "Resize my full size images"
+msgstr "Resize my full size images"
+
+#: lib/class-wp-smush-admin.php:255
+msgid "EXIF data"
+msgstr "EXIF data"
+
+#: lib/class-wp-smush-admin.php:251
+msgid "Every time you upload an image to your site, WordPress generates a resized version of that image for every default and/or custom image size that your theme has registered. This means there are multiple versions of your images in your media library. By default, Smush only compresses these generated image. Activate this setting to also smush your original images. Note: Activating this setting doesn’t usually improve page speed."
+msgstr "Every time you upload an image to your site, WordPress generates a resized version of that image for every default and/or custom image size that your theme has registered. This means there are multiple versions of your images in your media library. By default, Smush only compresses these generated image. Activate this setting to also smush your original images. Note: Activating this setting doesn’t usually improve page speed."
+
+#: lib/class-wp-smush-admin.php:250 lib/class-wp-smush-admin.php:260
+#: lib/class-wp-smush-admin.php:265
+msgid "Full size images"
+msgstr "Full size images"
+
+#: lib/class-wp-smush-admin.php:245
+msgid "Super-smush"
+msgstr "Super-smush"
+
+#: lib/class-wp-smush-admin.php:241
+msgid "When you upload images to your site, Smush will automatically optimize them for you."
+msgstr "When you upload images to your site, Smush will automatically optimise them for you."
+
+#: lib/class-wp-smush-admin.php:240
+msgid "Automatic Smush"
+msgstr "Automatic Smush"
+
+#: lib/class-wp-smush-admin.php:236
+msgid "Choose whether you want to use network settings for all sub-sites or whether sub-site admins can control Smush’s settings."
+msgstr "Choose whether you want to use network settings for all sub-sites or whether sub-site admins can control Smush’s settings."
+
+#: lib/class-wp-smush-admin.php:235
+msgid "Multisite Control"
+msgstr "Multisite Control"
+
+#: lib/class-wp-smush-admin.php:234
+msgid "Use network settings for all the sub-sites."
+msgstr "Use network settings for all the sub-sites."
+
+#: lib/class-wp-smush-ui.php:314 lib/class-wp-smush-ui.php:366
+msgid "Join WPMU DEV to try Smush Pro for free."
+msgstr "Join WPMU DEV to try Smush Pro for free."
+
+#: lib/class-wp-smush-ui.php:314 lib/class-wp-smush-ui.php:366
+msgid "%sPRO FEATURE%s"
+msgstr "%sPRO FEATURE%s"
+
+#: lib/class-wp-smush-ui.php:776
+msgid "%s%d%s of your media attachments have been smushed."
+msgstr "%s%d%s of your media attachments have been smushed."
+
+#: lib/class-wp-smush-ui.php:1148
+msgid "Currently, your largest image size is set at %s%dpx wide %s %dpx high%s."
+msgstr "Currently, your largest image size is set at %s%dpx wide %s %dpx high%s."
+
+#: lib/class-wp-smush-ui.php:1145
+msgid "Max height"
+msgstr "Max height"
+
+#: lib/class-wp-smush-ui.php:1142
+msgid "Max width"
+msgstr "Max width"
+
+#: lib/class-wp-smush-s3.php:120
+msgid "It seems you haven't finished setting up WP Offload S3 yet. %sConfigure%s it now to enable Amazon S3 support."
+msgstr "It seems you haven't finished setting up WP Offload S3 yet. %sConfigure%s it now to enable Amazon S3 support."
+
+#: lib/class-wp-smush-s3.php:113
+msgid "We are having trouble interacting with WP Offload S3, make sure the plugin is activated. Or you can %sreport a bug%s."
+msgstr "We are having trouble interacting with WP Offload S3, make sure the plugin is activated. Or you can %sreport a bug%s."
+
+#: lib/class-wp-smush-dir.php:281
+msgid "All images for the selected directory are smushed and up to date. Awesome!"
+msgstr "All images for the selected directory are smushed and up to date. Awesome!"
+
+#: lib/class-wp-smush-dir.php:1267
+msgid "We were unable to retrieve the image list from last scan, please continue with the latest scan"
+msgstr "We were unable to retrieve the image list from last scan, please continue with the latest scan"
+
+#: lib/class-wp-smush-dir.php:1146
+msgid "Image couldn't be optimized"
+msgstr "Image couldn't be optimised"
+
+#: lib/class-wp-smush-dir.php:1133
+msgid "Could not find image id in last scanned images"
+msgstr "Could not find image ID in last scanned images"
+
+#: lib/class-wp-smush-dir.php:1099
+msgid "Incorrect image id"
+msgstr "Incorrect image ID"
+
+#: lib/class-wp-smush-dir.php:977
+msgid "Waiting.."
+msgstr "Waiting.."
+
+#: lib/class-wp-smush-dir.php:942
+msgid "%d images"
+msgstr "%d images"
+
+#: lib/class-wp-smush-dir.php:619
+msgid "We could not find any images in the selected directory."
+msgstr "We could not find any images in the selected directory."
+
+#: lib/class-wp-smush-dir.php:474
+msgid "Exclude directory from Smush List"
+msgstr "Exclude directory from Smush List"
+
+#: lib/class-wp-smush-dir.php:1376
+msgid "ADD DIRECTORY"
+msgstr "ADD DIRECTORY"
+
+#: lib/class-wp-smush-dir.php:1373
+msgid "Smush will also include any images in sub folders of your selected folder."
+msgstr "Smush will also include any images in sub folders of your selected folder."
+
+#: lib/class-wp-smush-dir.php:1369
+msgid "Choose the folder you wish to smush."
+msgstr "Choose the folder you wish to smush."
+
+#: lib/class-wp-smush-dir.php:1365
+msgid "Directory list"
+msgstr "Directory list"
+
+#: lib/class-wp-smush-dir.php:302
+msgid "CHOOSE DIRECTORY"
+msgstr "CHOOSE DIRECTORY"
+
+#: lib/class-wp-smush-dir.php:293
+msgid "Click to stop the directory smushing process."
+msgstr "Click to stop the directory smushing process."
+
+#: lib/class-wp-smush-dir.php:287
+msgid " %sUpgrade to pro%s to bulk smush all your directory images with one click. Free users can smush 50 images with each click."
+msgstr " %sUpgrade to pro%s to bulk smush all your directory images with one click. Free users can smush 50 images with each click."
+
+#: lib/class-wp-smush-dir.php:284
+msgid "%s/%s image(s) were successfully smushed, however %s image(s) could not be smushed due to an error."
+msgstr "%s/%s image(s) were successfully smushed, however %s image(s) could not be smushed due to an error."
+
+#: lib/class-wp-smush-dir.php:268
+msgid "In addition to smushing your media uploads, you may want to also smush images living outside your uploads directory. Simply add any directories you wish to smush and bulk smush away!"
+msgstr "In addition to smushing your media uploads, you may want to also smush images living outside your uploads directory. Simply add any directories you wish to smush and bulk smush away!"
+
+#: lib/class-wp-smush-dir.php:263
+msgid "DIRECTORY SMUSH"
+msgstr "DIRECTORY SMUSH"
+
+#: lib/class-wp-smush-dir.php:224
+msgid "RESUME LAST SCAN"
+msgstr "RESUME LAST SCAN"
+
+#: lib/class-wp-smush-dir.php:94
+msgid "Updating Stats"
+msgstr "Updating Stats"
+
+#: lib/class-wp-smush-admin.php:2015
+msgid "Welcome to the newest version of Smush! In this update we've added the ability to bulk smush images in directories outside your uploads folder."
+msgstr "Welcome to the newest version of Smush! In this update, we've added the ability to bulk smush images in directories outside your uploads folder."
+
+#: lib/class-wp-smush-admin.php:420
+msgid "Ajax Error"
+msgstr "Ajax Error"
+
+#: lib/class-wp-smush-admin.php:418
+msgid "images could not be smushed."
+msgstr "images could not be smushed."
+
+#: lib/class-wp-smush-admin.php:417
+msgid "image could not be smushed."
+msgstr "image could not be smushed."
+
+#: lib/class-wp-smush-admin.php:415
+msgid "Missing file path."
+msgstr "Missing file path."
+
+#: lib/class-wp-smush.php:1451
+msgid "When you upload an image to WordPress it automatically creates %s thumbnail sizes that are commonly used in your pages. WordPress also stores the original full-size image, but because these are not usually embedded on your site we don’t Smush them. Pro users can override this."
+msgstr "When you upload an image to WordPress it automatically creates %s thumbnail sizes that are commonly used in your pages. WordPress also stores the original full-size image, but because these are not usually embedded on your site we don’t Smush them. Pro users can override this."
+
+#: lib/class-wp-smush.php:1454
+msgid "Image couldn't be smushed as it exceeded the 1Mb size limit, Pro users can smush images with size up to 32Mb."
+msgstr "Image couldn't be smushed as it exceeded the 1Mb size limit, Pro users can smush images with size up to 32Mb."
+
+#: lib/class-wp-smush.php:1730
+msgid "Restore original image."
+msgstr "Restore original image."
+
+#: lib/class-wp-smush.php:1730
+msgid "Restore image"
+msgstr "Restore image"
+
+#: lib/class-wp-smush.php:1778
+msgid "Smush image including original file."
+msgstr "Smush image including original file."
+
+#: lib/class-wp-smush.php:1778
+msgid "Resmush image"
+msgstr "Resmush image"
+
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:416
+msgid "We haven’t found any images in your %sgallery%s yet, so there’s no smushing to be done! Once you upload images, reload this page and start playing!"
+msgstr "We haven’t found any images in your %sgallery%s yet, so there’s no smushing to be done! Once you upload images, reload this page and start playing!"
+
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:450
+msgid "Enable Super-smush in the %sSettings%s area to get even more savings with almost no visible drop in quality."
+msgstr "Enable Super-smush in the %sSettings%s area to get even more savings with almost no visible drop in quality."
+
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:465
+msgid "Smush individual images via your %sManage Galleries%s section"
+msgstr "Smush individual images via your %sManage Galleries%s section"
+
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:465
+msgid "Manage Galleries"
+msgstr "Manage Galleries"
+
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:529
+msgid "%sDISABLED%s"
+msgstr "%sDISABLED%s"
+
+#: lib/nextgen-integration/class-wp-smush-nextgen-bulk.php:31
+msgid "Smush request timed out. You can try setting a higher value ( > 60 ) for `WP_SMUSH_API_TIMEOUT`."
+msgstr "Smush request timed out. You can try setting a higher value ( > 60 ) for `WP_SMUSH_API_TIMEOUT`."
+
+#: lib/nextgen-integration/class-wp-smush-nextgen-stats.php:200
+msgid "Reduced by %s (  %01.1f%% )"
+msgstr "Reduced by %s (  %01.1f%% )"
+
+#: wp-smush.php:213
+msgid "Smush Free was deactivated. You have Smush Pro active!"
+msgstr "Smush Free was deactivated. You have Smush Pro active!"
+
+#: lib/class-wp-smush-ui.php:976
+msgid "Did you know Smush Pro delivers up to 2x better compression, allows you to smush your originals and removes any bulk smushing limits? – %sTry it absolutely FREE%s"
+msgstr "Did you know Smush Pro delivers up to 2x better compression, allows you to smush your originals and removes any bulk smushing limits? – %sTry it absolutely FREE%s"
+
+#: lib/class-wp-smush-ui.php:976 lib/class-wp-smush-ui.php:1001
+msgid "Try Smush Pro for FREE"
+msgstr "Try Smush Pro for FREE"
+
+#: lib/class-wp-smush-ui.php:1024
+msgid "Validating.."
+msgstr "Validating.."
+
+#: lib/class-wp-smush-ui.php:1026
+msgid "It looks like Smush couldn’t verify your WPMU DEV membership so Pro features have been disabled for now. If you think this is an error, run a %sre-check%s or get in touch with our %ssupport team%s."
+msgstr "It looks like Smush couldn’t verify your WPMU DEV membership so Pro features have been disabled for now. If you think this is an error, run a %sre-check%s or get in touch with our %ssupport team%s."
+
+#: lib/class-wp-smush-ui.php:1048
+msgid "UPDATE SETTINGS"
+msgstr "UPDATE SETTINGS"
+
+#: lib/class-wp-smush-ui.php:1076
+msgid "Smush settings were updated, performing a quick scan to check if any of the images need to be Smushed again."
+msgstr "Smush settings were updated, performing a quick scan to check if any of the images need to be Smushed again."
+
+#: lib/class-wp-smush.php:240
+msgid "Skipped (%s), image not found. Attachment: %s"
+msgstr "Skipped (%s), image not found. Attachment: %s"
+
+#: lib/class-wp-smush.php:243
+msgid "Skipped (%s), size limit exceeded. Attachment: %s"
+msgstr "Skipped (%s), size limit exceeded. Attachment: %s"
+
+#: lib/class-wp-smush.php:1048
+msgid "by %s %s"
+msgstr "by %s %s"
+
+#: lib/class-wp-smush.php:1084
+msgid "Detailed stats for all the image sizes"
+msgstr "Detailed stats for all the image sizes"
+
+#: lib/class-wp-smush.php:1054
+msgid "<br /> Image Size: %s"
+msgstr "<br /> Image Size: %s"
+
+#: lib/class-wp-smush-backup.php:155 lib/class-wp-smush-nextgen.php:542
+msgid "Image not restored, Nonce verification failed."
+msgstr "Image not restored, Nonce verification failed."
+
+#: lib/class-wp-smush-backup.php:286 lib/class-wp-smush-nextgen.php:620
+msgid "Unable to restore image"
+msgstr "Unable to restore image"
+
+#: lib/class-wp-smush-nextgen.php:388
+msgid "We couldn't find the metadata for the image, possibly the image has been deleted."
+msgstr "We couldn't find the metadata for the image, possibly the image has been deleted."
+
+#: lib/class-wp-smush-nextgen.php:631
+msgid "We couldn't process the image, fields empty."
+msgstr "We couldn't process the image, fields empty."
+
+#: lib/class-wp-smush-nextgen.php:655
+msgid "Unable to smush image, %s"
+msgstr "Unable to smush image, %s"
+
+#: lib/class-wp-smush-share.php:25
+msgid "%s, you've smushed %s%d%s images and saved %s%s%s in total. Help your friends save bandwidth easily, and help me in my quest to Smush the internet!"
+msgstr "%s, you've smushed %s%d%s images and saved %s%s%s in total. Help your friends save bandwidth easily, and help me in my quest to Smush the internet!"
+
+#: lib/class-wp-smush-share.php:26
+msgid "I saved %s%s%s on my site with Smush ( %s ) - wanna make your website light and faster?"
+msgstr "I saved %s%s%s on my site with Smush ( %s ) - wanna make your website light and faster?"
+
+#: lib/class-wp-smush-share.php:34
+msgid "TWEET"
+msgstr "TWEET"
+
+#: lib/class-wp-smush-share.php:38
+msgid "SHARE"
+msgstr "SHARE"
+
+#: lib/class-wp-smush-share.php:42
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#: lib/class-wp-smush-ui.php:56
+msgid "Dismiss Welcome notice"
+msgstr "Dismiss Welcome notice"
+
+#: lib/class-wp-smush-ui.php:138
+msgid "Smush individual images via your %sMedia Library%s"
+msgstr "Smush individual images via your %sMedia Library%s"
+
+#: lib/class-wp-smush-ui.php:138
+msgid "Media Library"
+msgstr "Media Library"
+
+#: lib/class-wp-smush-dir.php:291 lib/class-wp-smush-ui.php:143
+#: lib/class-wp-smush-ui.php:713
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:429
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:470
+msgid "BULK SMUSH"
+msgstr "BULK SMUSH"
+
+#: lib/class-wp-smush-ui.php:157
+msgid "SETTINGS"
+msgstr "SETTINGS"
+
+#: lib/class-wp-smush-ui.php:172
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:487
+msgid "Lets you check if any images can be further optimized. Useful after changing settings."
+msgstr "Lets you check if any images can be further optimised. Useful after changing settings."
+
+#: lib/class-wp-smush-ui.php:172
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:487
+msgid "RE-CHECK IMAGES"
+msgstr "RE-CHECK IMAGES"
+
+#: lib/class-wp-smush-ui.php:173
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:488
+msgid "STATS"
+msgstr "STATS"
+
+#: lib/class-wp-smush-ui.php:184
+msgid "You've smushed %d images in total"
+msgstr "You've smushed %d images in total"
+
+#: lib/class-wp-smush-ui.php:318
+msgid "BASED ON AVERAGE SAVINGS IF YOU UPGRADE TO PRO"
+msgstr "BASED ON AVERAGE SAVINGS IF YOU UPGRADE TO PRO"
+
+#: lib/class-wp-smush-ui.php:318
+msgid "PRO SAVINGS ESTIMATE"
+msgstr "PRO SAVINGS ESTIMATE"
+
+#: lib/class-wp-smush-ui.php:368
+msgid "ADVANCED SETTINGS"
+msgstr "ADVANCED SETTINGS"
+
+#: lib/class-wp-smush-ui.php:1149
+msgid "Just to let you know, the width you've entered is less than your largest image and may result in pixelation."
+msgstr "Just to let you know, the width you've entered is less than your largest image and may result in pixelation."
+
+#: lib/class-wp-smush-ui.php:1150
+msgid "Just to let you know, the height you’ve entered is less than your largest image and may result in pixelation."
+msgstr "Just to let you know, the height you’ve entered is less than your largest image and may result in pixelation."
+
+#: lib/class-wp-smush-ui.php:679
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:414
+msgid "No attachments found - Upload some images"
+msgstr "No attachments found - Upload some images"
+
+#: lib/class-wp-smush-ui.php:681
+msgid "We haven’t found any images in your %smedia library%s yet so there’s no smushing to be done! Once you upload images, reload this page and start playing!"
+msgstr "We haven’t found any images in your %smedia library%s yet so there’s no smushing to be done! Once you upload images, reload this page and start playing!"
+
+#: lib/class-wp-smush-ui.php:684
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:419
+msgid "UPLOAD IMAGES"
+msgstr "UPLOAD IMAGES"
+
+#: lib/class-wp-smush-ui.php:689
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:424
+msgid "All images are smushed and up to date. Awesome!"
+msgstr "All images are smushed and up to date. Awesome!"
+
+#: lib/class-wp-smush-ui.php:730
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:435
+msgid "%s, you have %s%s%d%s attachment%s that needs smushing!"
+msgid_plural "%s, you have %s%s%d%s attachments%s that need smushing!"
+msgstr[0] "%s, you have %s%s%d%s attachment%s that needs smushing!"
+msgstr[1] "%s, you have %s%s%d%s attachments%s that need smushing!"
+
+#: lib/class-wp-smush-ui.php:732
+msgid " %sUpgrade to Pro%s to bulk smush all your images with one click."
+msgstr " %sUpgrade to Pro%s to bulk smush all your images with one click."
+
+#: lib/class-wp-smush-ui.php:733
+msgid " Free users can smush 50 images with each click."
+msgstr " Free users can smush 50 images with each click."
+
+#: lib/class-wp-smush-ui.php:743
+msgid "Tip: Enable Super-smush in the Settings area to get even more savings with almost no visible drop in quality."
+msgstr "Tip: Enable Super-smush in the Settings area to get even more savings with almost no visible drop in quality."
+
+#: lib/class-wp-smush-ui.php:765
+msgid "%sBulk smush is currently running.%s You need to keep this page open for the process to complete."
+msgstr "%sBulk smush is currently running.%s You need to keep this page open for the process to complete."
+
+#: lib/class-wp-smush-dir.php:294 lib/class-wp-smush-ui.php:780
+msgid "CANCEL"
+msgstr "CANCEL"
+
+#: lib/class-wp-smush-ui.php:817
+msgid "%s, you have %s%s%d%s attachment%s that needs re-compressing!"
+msgid_plural "%s, you have %s%s%d%s attachments%s that need re-compressing!"
+msgstr[0] "%s, you have %s%s%d%s attachment%s that needs re-compressing!"
+msgstr[1] "%s, you have %s%s%d%s attachments%s that need re-compressing!"
+
+#: lib/class-wp-smush-ui.php:838
+msgid "Your settings have been updated!"
+msgstr "Your settings have been updated!"
+
+#: lib/class-wp-smush-admin.php:422 lib/class-wp-smush-ui.php:818
+msgid "Skip"
+msgstr "Skip"
+
+#: lib/class-wp-smush-ui.php:873
+msgid "Automatic smushing is %senabled%s. Newly uploaded images will be automagically compressed."
+msgstr "Automatic smushing is %senabled%s. Newly uploaded images will be automagically compressed."
+
+#: lib/class-wp-smush-ui.php:873
+msgid "Automatic smushing is %sdisabled%s. Newly uploaded images will need to be manually smushed."
+msgstr "Automatic smushing is %sdisabled%s. Newly uploaded images will need to be manually smushed."
+
+#: lib/class-wp-smush-ui.php:921
+msgid "Thanks for installing Smush. We hope you like it!"
+msgstr "Thanks for installing Smush. We hope you like it!"
+
+#: lib/class-wp-smush-nextgen.php:80
+msgid "Enable NextGen Gallery integration"
+msgstr "Enable NextGen Gallery integration"
+
+#: lib/class-wp-smush-admin.php:409
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:175
+msgid "All images are fully optimized."
+msgstr "All images are fully optimised."
+
+#: lib/class-wp-smush-nextgen.php:82
+msgid "Allow smushing images directly through NextGen Gallery settings."
+msgstr "Allow smushing images directly through NextGen Gallery settings."
+
+#: lib/class-wp-smush-admin.php:411
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:177
+msgid "Smushing image.."
+msgstr "Smushing image.."
+
+#: lib/class-wp-smush-admin.php:410
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:176
+msgid "Restoring image.."
+msgstr "Restoring image.."
+
+#: lib/class-wp-smush-admin.php:412
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:178
+msgid "Checking images.."
+msgstr "Checking images.."
+
+#: lib/class-wp-smush-admin.php:413
+msgid "We successfully verified your membership, all the Pro features should work completely. "
+msgstr "We successfully verified your membership, all the Pro features should work completely. "
+
+#: lib/class-wp-smush-admin.php:414
+msgid "Your membership couldn't be verified."
+msgstr "Your membership couldn't be verified."
+
+#: lib/class-wp-smush-dir.php:1190 lib/class-wp-smush-dir.php:1323
+msgid "You've smushed %d images in total."
+msgstr "You've smushed %d images in total."
+
+#: lib/class-wp-smush-admin.php:786
+msgid "Attachment Skipped - Check `wp_smush_image` filter."
+msgstr "Attachment Skipped - Check `wp_smush_image` filter."
+
+#: lib/class-wp-smush-admin.php:1356
+msgid "Image not smushed, fields empty."
+msgstr "Image not smushed, fields empty."
+
+#: lib/class-wp-smush-admin.php:1363 lib/class-wp-smush-nextgen.php:638
+msgid "Image couldn't be smushed as the nonce verification failed, try reloading the page."
+msgstr "Image couldn't be smushed as the nonce verification failed, try reloading the page."
+
+#: lib/class-wp-smush-admin.php:1424
+msgid "Yay! All images are optimized as per your current settings."
+msgstr "Yay! All images are optimised as per your current settings."
+
+#: lib/class-wp-smush-admin.php:1619 lib/class-wp-smush-ui.php:845
+msgid "You have images that need smushing. %sBulk smush now!%s"
+msgstr "You have images that need smushing. %sBulk smush now!%s"
+
+#: lib/class-wp-smush-admin.php:2013
+msgid "Review your setting now."
+msgstr "Review your setting now."
+
+#: lib/class-wp-smush-admin.php:2018
+msgid " And as a multisite user, you can manage %sSmush settings%s globally across all sites!"
+msgstr " And as a multisite user, you can manage %sSmush settings%s globally across all sites!"
+
+#: lib/class-wp-smush-admin.php:2021
+msgid " %sFind out more here >>%s"
+msgstr " %sFind out more here >>%s"
+
+#: lib/class-wp-smush-backup.php:148 lib/class-wp-smush-nextgen.php:534
+msgid "Error in processing restore action, Fields empty."
+msgstr "Error in processing restore action, Fields empty."
+
+#: assets/shared-ui/plugin-ui.php:50
+msgid "Okay, we saved your changes!"
+msgstr "Okay, we saved your changes!"
+
+#: assets/shared-ui/plugin-ui.php:49
+msgid "Nothing found"
+msgstr "Nothing found"
+
+#: assets/shared-ui/plugin-ui.php:301 lib/class-wp-smush-ui.php:948
+msgid "Dismiss"
+msgstr "Dismiss"
+
+#: assets/shared-ui/plugin-ui.php:51
+msgid "Oops, we could not do this..."
+msgstr "Oops, we could not do this..."
+
+#: lib/class-wp-smush-admin.php:239
+msgid "Automatically smush my images on upload"
+msgstr "Automatically smush my images on upload"
+
+#: lib/class-wp-smush-admin.php:254
+msgid "Preserve my image EXIF data"
+msgstr "Preserve my image EXIF data"
+
+#: lib/class-wp-smush-admin.php:256
+msgid "EXIF data stores camera settings, focal length, date, time and location information in image files. EXIF data makes image files larger but if you are a photographer you may want to preserve this information."
+msgstr "EXIF data stores camera settings, focal length, date, time and location information in image files. EXIF data makes image files larger, but if you are a photographer you may want to preserve this information."
+
+#: lib/class-wp-smush-admin.php:244
+msgid "Super-smush my images"
+msgstr "Super-smush my images"
+
+#: lib/class-wp-smush-admin.php:246
+msgid "Compress images up to 2x more than regular smush with almost no visible drop in quality."
+msgstr "Compress images up to 2x more than regular smush with almost no visible drop in quality."
+
+#: lib/class-wp-smush-admin.php:249
+msgid "Smush my original full-size images"
+msgstr "Smush my original full-size images"
+
+#. Author URI of the plugin/theme
+msgid "https://premium.wpmudev.org/"
+msgstr "https://premium.wpmudev.org/"
+
+#. Author of the plugin/theme
+msgid "WPMU DEV"
+msgstr "WPMU DEV"
+
+#. Description of the plugin/theme
+msgid "Reduce image file sizes, improve performance and boost your SEO using the free <a href=\"https://premium.wpmudev.org/\">WPMU DEV</a> WordPress Smush API."
+msgstr "Reduce image file sizes, improve performance and boost your SEO using the free <a href=\"https://premium.wpmudev.org/\">WPMU DEV</a> WordPress Smush API."
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/wp-smushit/"
+msgstr "http://wordpress.org/extend/plugins/wp-smushit/"
+
+#: wp-smush.php:169
+msgid "Get Fast"
+msgstr "Get Fast"
+
+#: lib/class-wp-smush.php:1479
+#: lib/nextgen-integration/class-wp-smush-nextgen-stats.php:464
+msgid "Savings"
+msgstr "Savings"
+
+#: lib/class-wp-smush.php:1478
+#: lib/nextgen-integration/class-wp-smush-nextgen-stats.php:463
+msgid "Image size"
+msgstr "Image size"
+
+#: lib/class-wp-smush.php:1456
+msgid " Skipped"
+msgstr " Skipped"
+
+#: lib/class-wp-smush-admin.php:1172 lib/class-wp-smush.php:1137
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:294
+msgid "Smush Now!"
+msgstr "Smush Now!"
+
+#: lib/class-wp-smush.php:1131
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:288
+msgid "Not processed"
+msgstr "Not processed"
+
+#: lib/class-wp-smush.php:1084
+#: lib/nextgen-integration/class-wp-smush-nextgen-stats.php:231
+msgid "Smush stats"
+msgstr "Smush stats"
+
+#: lib/class-wp-smush.php:1044
+msgid "Reduced "
+msgstr "Reduced "
+
+#: lib/class-wp-smush.php:1044
+msgid "%d images reduced "
+msgstr "%d images reduced "
+
+#: lib/class-wp-smush-admin.php:419 lib/class-wp-smush.php:1030
+#: lib/class-wp-smush.php:1037
+#: lib/nextgen-integration/class-wp-smush-nextgen-stats.php:188
+#: lib/nextgen-integration/class-wp-smush-nextgen-stats.php:191
+msgid "Already Optimized"
+msgstr "Already Optimised"
+
+#: lib/class-wp-smush.php:797
+msgid "Image couldn't be smushed"
+msgstr "Image couldn't be smushed"
+
+#: lib/class-wp-smush.php:771
+msgid "Smush data corrupted, try again."
+msgstr "Smush data corrupted, try again."
+
+#: lib/class-wp-smush.php:754
+msgid "Error posting to API: %s %s"
+msgstr "Error posting to API: %s %s"
+
+#: lib/class-wp-smush.php:747
+msgid "Error posting to API: %s"
+msgstr "Error posting to API: %s"
+
+#: lib/class-wp-smush.php:261
+msgid "Unknown API error"
+msgstr "Unknown API error"
+
+#: lib/class-wp-smush.php:230
+msgid "%s is not writable"
+msgstr "%s is not writable"
+
+#: lib/class-wp-smush.php:227
+msgid "Could not find %s"
+msgstr "Could not find %s"
+
+#: lib/class-wp-smush.php:224
+msgid "File path is empty"
+msgstr "File path is empty"
+
+#: lib/class-wp-smush-admin.php:976
+msgid "<strong>%d of %d images</strong> were sent for smushing:"
+msgstr "<strong>%d of %d images</strong> were sent for smushing:"
+
+#: lib/class-wp-smush-admin.php:774 lib/class-wp-smush-nextgen.php:451
+msgid "No attachment ID was provided."
+msgstr "No attachment ID was provided."
+
+#: lib/class-wp-smush-admin.php:770 lib/class-wp-smush-nextgen.php:447
+msgid "You don't have permission to work with uploaded files."
+msgstr "You don't have permission to work with uploaded files."
+
+#: lib/class-wp-smush-admin.php:1193
+msgid "Settings"
+msgstr "Settings"
+
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:521
+msgid "Super-smushed images"
+msgstr "Super-smushed images"
+
+#: lib/class-wp-smush-admin.php:408
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:174
+msgid "{{errors}} image(s) were skipped due to an error."
+msgstr "{{errors}} image(s) were skipped due to an error."
+
+#: lib/class-wp-smush-admin.php:407
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:173
+msgid "Smush Now"
+msgstr "Smush Now"
+
+#: lib/class-wp-smush-admin.php:406 lib/class-wp-smush.php:1112
+#: lib/nextgen-integration/class-wp-smush-nextgen-admin.php:172
+#: lib/nextgen-integration/class-wp-smush-nextgen-stats.php:269
+msgid "Super-Smush"
+msgstr "Super-Smush"
+
+#: lib/class-wp-smush-admin.php:421
+msgid "All Done!"
+msgstr "All Done!"
+
+#: lib/class-wp-smush-admin.php:1166 lib/class-wp-smush.php:1118
+msgid "Smushing in progress.."
+msgstr "Smushing in progress.."
+
+#: extras/free-dashboard/module.php:430
+msgid "Rate %s"
+msgstr "Rate %s"
+
+#: extras/free-dashboard/module.php:412
+msgid "We've spent countless hours developing this free plugin for you, and we would really appreciate it if you dropped us a quick rating!"
+msgstr "We've spent countless hours developing this free plugin for you, and we would really appreciate it if you dropped us a quick rating!"
+
+#: extras/free-dashboard/module.php:412
+msgid "Hey %s, you've been using %s for a while now, and we hope you're happy with it."
+msgstr "Hey %s, you've been using %s for a while now, and we hope you're happy with it."
+
+#: extras/free-dashboard/module.php:396 extras/free-dashboard/module.php:435
+msgid "No thanks"
+msgstr "No thanks"
+
+#: assets/shared-ui/plugin-ui.php:272 extras/free-dashboard/module.php:395
+#: extras/free-dashboard/module.php:434 lib/class-wp-smush-ui.php:948
+msgid "Saving"
+msgstr "Saving"
+
+#: extras/free-dashboard/module.php:392 extras/free-dashboard/module.php:427
+msgid "Thanks :)"
+msgstr "Thanks :)"
+
+#: extras/free-dashboard/module.php:377
+msgid "We're happy that you've chosen to install %s! Are you interested in how to make the most of this plugin? How would you like a quick 5 day email crash course with actionable advice on building your membership site? Only the info you want, no subscription!"
+msgstr "We're happy that you've chosen to install %s! Are you interested in how to make the most of this plugin? How would you like a quick 5 day email crash course with actionable advice on building your membership site? Only the info you want, no subscription!"

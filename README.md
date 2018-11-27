@@ -46,3 +46,13 @@ You can ofcourse use this as middleware following Nuxt Docs below.
 ## Nuxt Docs
 
 For detailed explanation on how things work with Nuxt, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+
+## How to contribute
+All PRs are very welcome and much needed.
+Steps to contribute:
+- Fork development branch
+- Make your changes
+- Make a PR
+- PR is either approved or sent back
+- If PR is approved I'll include it in the next release
+

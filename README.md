@@ -14,6 +14,8 @@
 
 5. You can edit all the files and config freely. This is MIT licensed, but credit is welcome.
 
+Check how I used this in my blog at https://medium.com/@moustachedesign/creating-a-website-with-nuxt-js-and-wordpress-rest-api-51cf66599cf3
+
 
 ## Vuex config
 

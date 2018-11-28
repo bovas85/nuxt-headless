@@ -8,9 +8,11 @@
 
 2. Make sure you activate all the plugins and set Moustache Design as your active theme in wordpress (you can rename it if you want)
 
-3. Make sure assets/config.js reflects your configuration and endpoints for the WP rest api and wordpress url
+3. Set permalinks in wordpress to anything but the default (I suggest `/%postname%/`)
 
-4. You can edit all the files and config freely. This is MIT licensed, but credit is welcome.
+4. Make sure assets/config.js reflects your configuration and endpoints for the WP rest api and wordpress url
+
+5. You can edit all the files and config freely. This is MIT licensed, but credit is welcome.
 
 
 ## Vuex config

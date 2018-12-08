@@ -45,7 +45,7 @@ $ yarn generate # or npm run generate
 
 I suggest now for SSR websites using nodeJS, or Netlify for static sites (free hosting) using `yarn generate`
 
-You can ofcourse use this as middleware following Nuxt Docs below.
+You can of course use this as middleware following Nuxt Docs below.
 
 ## Nuxt Docs
 

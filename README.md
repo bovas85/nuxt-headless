@@ -10,9 +10,11 @@
 
 3. Set permalinks in wordpress to anything but the default (I suggest `/%postname%/`)
 
-4. Make sure assets/config.js reflects your configuration and endpoints for the WP rest api and wordpress url
+4. Make sure you set your CORS correctly to point to your website when in production
 
-5. You can edit all the files and config freely. This is MIT licensed, but credit is welcome.
+5. Make sure assets/config.js reflects your configuration and endpoints for the WP rest api and wordpress url
+
+6. You can edit all the files and config freely. This is MIT licensed, but credit is welcome.
 
 Check how I used this in my blog at https://medium.com/@moustachedesign/creating-a-website-with-nuxt-js-and-wordpress-rest-api-51cf66599cf3
 

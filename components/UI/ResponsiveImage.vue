@@ -1,10 +1,10 @@
 <template>
-  <div 
-    v-if="sources != null && image.length" 
-    class="responsive-img" 
+  <div
+    v-if="sources != null && image.length"
+    class="responsive-img"
     :class="{'disabled-hover': !hover, 'home': home}"
   >
-    <img 
+    <img
       :srcset="image"
       :alt="sources.alt"
       sizes="(max-width: 576px) 400px,
@@ -12,7 +12,7 @@
              (min-width: 1101px) 1100px,
              (min-width: 1921px) 2048px"
       :src="sources.sizes.thumbnail"
-    />
+    >
     <!-- <div class="overlay"></div> -->
   </div>
 </template>
@@ -38,25 +38,25 @@
       image () {
         if (this.$store.state.connect === "other") {
           return `${this.sources.small} 500w,
-                            ${this.sources.sizes.small} 1024w,
-                            ${this.sources.sizes.medium} 1920w,
-                            ${this.sources.sizes.ultra} 2048w`;
+                              ${this.sources.sizes.small} 1024w,
+                              ${this.sources.sizes.medium} 1920w,
+                              ${this.sources.sizes.ultra} 2048w`;
         } else if (this.$store.state.connect === "cellular") {
           return `${this.sources.small} 500w,
-                            ${this.sources.sizes.medium} 1024w,
-                            ${this.sources.sizes.medium} 1920w,
-                            ${this.sources.sizes.ultra} 2048w`;
+                              ${this.sources.sizes.medium} 1024w,
+                              ${this.sources.sizes.medium} 1920w,
+                              ${this.sources.sizes.ultra} 2048w`;
         } else {
           if (this.sources != null) {
             return `${this.sources.sizes.small} 500w,
-                              ${this.sources.sizes.medium} 1024w,
-                              ${this.sources.sizes.large} 1920w,
-                              ${this.sources.sizes.ultra} 2048w`;
+                                ${this.sources.sizes.medium} 1024w,
+                                ${this.sources.sizes.large} 1920w,
+                                ${this.sources.sizes.ultra} 2048w`;
           } else {
             return `https://placehold.it/150x150 500w,
-                              https://placehold.it/800x600 1024w,
-                              https://placehold.it/1200x720 1100w,
-                              https://placehold.it/2048x1080 2048w`;
+                                https://placehold.it/800x600 1024w,
+                                https://placehold.it/1200x720 1100w,
+                                https://placehold.it/2048x1080 2048w`;
           }
         }
       }
@@ -73,16 +73,6 @@
     overflow: hidden;
     transition: all 0.6s ease-in-out;
     .overlay {
-      // position: absolute;
-      // top: 0;
-      // left: 0;
-      // pointer-events: append;
-      // cursor: auto;
-      // right: 0;
-      // bottom: 0;
-      // opacity: 0;
-      // background: rgba(0, 0, 0, 0.5);
-      // transition: all 0.6s ease-in-out;
       display: none;
     }
     img {
@@ -122,11 +112,6 @@
       }
     }
     &.disabled-hover {
-      // animation: zoomIn 60s infinite;
-      // backface-visibility: hidden;
-      // transform: translateZ(0);
-      // perspective: 1000px;
-      // will-change: transform;
       cursor: auto;
       pointer-events: none;
       &:hover {

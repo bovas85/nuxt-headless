@@ -10,10 +10,10 @@
   export default {
     head () {
       return {
-        title: 'Page not Found'
-      }
+        title: "Page not Found"
+      };
     }
-  }
+  };
 </script>
 
 <style lang="scss" scoped>
@@ -21,14 +21,12 @@
     height: 100vh;
     height: calc(100vh - 180px); // footer visible
     background-color: $yellow;
-    background-image: url('/images/contact-mobile.png');
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center;
 
     @include media(sm) {
       background-size: 70%;
-      background-image: url('/images/contact-desktop.png');
     }
 
     .container {

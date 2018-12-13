@@ -136,21 +136,6 @@
         if (this.$store.state.homePage == null) return false
         return this.$store.state.homePage
       },
-      projects () {
-        if (!this.$store.state.projects.length) return false
-        return this.$store.state.projects.filter(project => {
-          return project.acf.status === 'true'
-        })
-      },
-      filteredProjects () {
-        if (!this.projects.length) return false
-        const order = get(this.acf, 'case_studies.order', [])
-        if (order) {
-          return this.projects.sort((a, b) => {
-            return order.indexOf(a.id) > order.indexOf(b.id)
-          })
-        } else return []
-      },
       acf () {
         if (this.$store.state.homePage == null) return false
         return this.$store.state.homePage.acf

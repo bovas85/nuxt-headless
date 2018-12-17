@@ -14,6 +14,7 @@ const Config = {
   url: '[http://your-url.com]',
   api: {
     homePage: '/wp/v2/pages/[page_id]',
+    // this url will hit an endpoint for contact form 7 plugin
     postFormContact: '/contact-form-7/v1/contact-forms/{form_id}/feedback'
   }
 }

@@ -2,6 +2,12 @@
 
 > Nuxt + WordPress REST API boilerplate
 
+# Use in production? 
+
+Please note this is a boilerplate, it contains some defaults you might want to pay attention to:
+- CORS - You should set this to work only on your website url when in production or staging, work locally on your machine for dev. 
+- Plugins and Theme, most of these can be removed, but you'll need ACF (free version is OK) to make it work. 
+
 ## Installation Steps
 
 1. Copy the contents of the /wordpress folder in your wordpress installation (make sure to edit wp-config.php)
@@ -10,7 +16,7 @@
 
 3. Set permalinks in wordpress to anything but the default (I suggest `/%postname%/`)
 
-4. Make sure you set your CORS correctly to point to your website when in production
+4. Make sure you set your CORS correctly to point to your website when in production/staging
 
 5. Make sure assets/config.js reflects your configuration and endpoints for the WP rest api and wordpress url
 

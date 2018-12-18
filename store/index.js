@@ -46,7 +46,7 @@ const createStore = () => {
       async nuxtServerInit ({ commit }, { app, route }) {
         // console.log('============= Server Init API calls =============')
         try {
-          // some data needed for all pages
+          // const data = app.$axios.$get('someurl') // fetch some data needed for all pages
           // commit('setData', data)
         } catch (e) {
           console.log('error with API', e)

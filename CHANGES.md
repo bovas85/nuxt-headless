@@ -10,11 +10,18 @@ All notable changes to this project will be documented in this file.
 - Summaries only
 - Any breaking changes
 
+> **[ 1.1.1 ]**
+
+- 21 - March - 2019
+  - Added demo api
+  - Added live demo link: https://nuxt-headless-lvllzsprpb.now.sh/
+
 > **[ 1.1.0 ]**
 
 - 21 - March - 2019
   - Nuxt updated to v2.5
   - Added postcss-nested
+  - Added more docs and comments
 
 > **[ 1.0.0 ]**
-  - stable release
+  - First release

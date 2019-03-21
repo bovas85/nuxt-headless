@@ -2,6 +2,8 @@
 
 > Nuxt + WordPress REST API boilerplate
 
+## [Live demo link](https://nuxt-headless-lvllzsprpb.now.sh)
+
 # Changes
 > **[ 1.1.0 ]**
 

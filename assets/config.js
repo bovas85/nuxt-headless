@@ -1,14 +1,14 @@
 'use strict'
 
-// configure this file following the example below. 
+export default {
 // these are the rest api endpoints and your wordpress url 
-const Config = {
+  appTitleShort: 'Nuxt Headless',
   appTitle: 'Nuxt Headless',
   appTitleShort: 'Nuxt-headless',
   appDescription: 'Nuxt Headless with Wordpress REST API',
   appThemeColor: '#ffffff ',
   appBgColor: '#00172c ',
-  appIcon: 'assets/app-icon.png',
+  appIcon: 'assets/icon.png',
   wpDomain: 'https://[api.wordpress_site.com]/wp-json',
   client: 'https://[api.wordpress_site.com]',
   url: '[http://your-url.com]',
@@ -19,5 +19,3 @@ const Config = {
     postFormContact: '/contact-form-7/v1/contact-forms/{form_id}/feedback'
   }
 }
-
-module.exports = Config

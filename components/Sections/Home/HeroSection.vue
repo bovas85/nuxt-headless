@@ -10,9 +10,6 @@
           <icon-arrow :fill="'black'" direction='down' name='arrow-down' :width="30" :height="40" />
         </div>
       </div>
-      <div class="rotating-text" v-scroll-to="{element:'.projects'}">
-        <img src="/images/rotating-text.png" alt="Check my Portfolio">
-      </div>
     </section>
 </template>
 
@@ -51,38 +48,6 @@
 
     @include media(lg) {
       background-position: center;
-    }
-
-    .rotating-text {
-      position: absolute;
-      cursor: pointer;
-      display: flex;
-      bottom: $gap * 2.5;
-      left: $gap;
-      width: 70px;
-      height: 70px;
-
-      @include media(sm) {
-        bottom: 80px;
-        right: 60px;
-        left: auto;
-        width: 100px;
-        height: 100px;
-        transform-origin: center;
-        animation: rotate 15s linear infinite;
-      }
-
-      img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-      }
-
-      @keyframes rotate {
-        100% {
-          transform: rotate(360deg);
-        }
-      }
     }
 
     .scroll-down {

@@ -35,13 +35,6 @@
     head () {
       return { title: 'Home' }
     },
-    async created () {
-      const projects = await this.$axios.get(
-        Config.wpDomain + Config.api.projects,
-        { useCache: true }
-      )
-      this.$store.commit('setProjects', projects.data)
-    },
     async mounted () {
       if (process.client) {
         this.$cookies.set('ab-testing', true, 30)

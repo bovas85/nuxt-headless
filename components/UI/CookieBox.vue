@@ -1,38 +1,46 @@
 <template>
   <div v-show="!hide" class="cookies" :class="{'active': show}">
     <div class="container">
-      <p>This site uses cookies. <nuxt-link to="/privacy-policy">Find out more.</nuxt-link> <span role="accept-cookie" @click="setCookie()" class="privacy-link" to="/privacy-policy">OK, Close</span></p>
+      <p>This site uses cookies.
+        <nuxt-link to="/privacy-policy">Find out more.</nuxt-link>
+        <span
+          role="accept-cookie"
+          @click="setCookie()"
+          class="privacy-link"
+          to="/privacy-policy"
+        >OK, Close</span>
+      </p>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'CookieBox',
+    name: "CookieBox",
     data () {
       return {
         hide: true,
         show: false
-      }
+      };
     },
     mounted () {
-      if (this.$localStorage.get('NuniCookie') != null) {
-        this.hide = true
-        this.show = false
+      if (this.$localStorage.get("NuniCookie") != null) {
+        this.hide = true;
+        this.show = false;
       } else {
         setTimeout(() => {
-          this.hide = false
-          this.show = true
-        }, 4000)
+          this.hide = false;
+          this.show = true;
+        }, 4000);
       }
     },
     methods: {
       setCookie () {
-        this.hide = true
-        this.$localStorage.set('NuniCookie', true)
+        this.hide = true;
+        this.$localStorage.set("NuniCookie", true);
       }
     }
-  }
+  };
 </script>
 
 <style lang="scss" scoped>

@@ -123,15 +123,12 @@ module.exports = {
       }
     ],
     script: [
-      // IE 11 polyfill for Array.find
-      {
-        src: 'https://cdn.polyfill.io/v2/polyfill.js?features=es6'
-      }
+      { src: 'https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver' }
     ]
   },
   /*
-  ** PWA Configuration
-  */
+   ** PWA Configuration
+   */
   manifest: {
     name: 'Nuxt Headless',
     short_name: 'Nuxt-headless',
@@ -157,10 +154,9 @@ module.exports = {
         }
       }
     },
-    postcss: [require('postcss-responsive-type')()],
-    analyze: {
-      analyzerMode: 'static',
-      openAnalyzer: true
+    postcss: {
+      'postcss-responsive-type': {},
+      'postcss-nested': {}
     },
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
@@ -185,15 +181,11 @@ module.exports = {
     }
   },
   generate: {
+    // return an array of strings of your dynamic pages
     fallback: '404.html',
     routes: function () {
-      return axios.get(`${Config.wpDomain}${Config.api.projects}`).then(res => {
-        const filtered = res.data.filter(project => {
-          return project.acf.status === 'true'
-        })
-        return filtered.map(project => {
-          return { route: '/' + project.slug, payload: project }
-        })
+      return axios.get(`${Config.wpDomain}${Config.api.yourPostsListEndpoint}`).then(res => {
+        return res.slug
       })
     }
   },
@@ -203,7 +195,7 @@ module.exports = {
     }
   },
   css: [
-    // node.js module but we specify the pre-processor
+    // main css file
     '@/assets/css/main.scss'
   ],
   /*
@@ -228,17 +220,34 @@ module.exports = {
         id: 'UA-xxxxxxx-3'
       }
     ],
-    ['nuxt-sass-resources-loader', '~/assets/css/variables.scss'] // load variables for all pages
+    '@nuxtjs/style-resources',
+    'nuxt-purgecss'
   ],
+  styleResources: {
+    // injects the variables in each component
+    scss: '~/assets/css/variables.scss'
+  },
+  purgeCSS: {
+    // whitelist of dynamic classes to
+    whitelist: [
+      'animated',
+    ],
+    // regex based whitelisting
+    whitelistPatterns: [/^page/, /^fade/, /image/, /^rotate/, /keyframe/]
+  },
   workbox: {
     runtimeCaching: [
       {
-        // Should be a regex string. Compiles into new RegExp('https://my-cdn.com/.*')
-        urlPattern: 'https://api.moustachedesign.xyz/.*',
-        // Defaults to `networkFirst` if omitted
-        handler: 'cacheFirst',
-        // Defaults to `GET` if omitted
-        method: 'GET'
+        urlPattern: 'https://api.wordpress.com/wp-content/uploads/.*',
+        handler: 'staleWhileRevalidate',
+        strategyOptions: {
+          cacheName: 'images',
+          cacheExpiration: {
+            maxEntries: 30,
+            maxAgeSeconds: 300
+          },
+          cacheableResponse: { statuses: [0, 200] }
+        }
       }
     ]
   },
@@ -250,20 +259,17 @@ module.exports = {
   },
   axios: {
     timeout: 6000,
-    debug: false,
-    headers: {
-      'Content-Type': 'multipart/form-data'
-    }
+    debug: false
   },
   plugins: [
     '~/plugins/axios.js',
     '~/plugins/store.js',
     { src: '~/plugins/vue-media.js', ssr: false },
-    { src: '~/plugins/vue-intersect', ssr: false },
     { src: '~/plugins/nuxt-swiper.js', ssr: false },
     { src: '~/plugins/vuelidate.js', ssr: true },
     { src: '~/plugins/vue-localstorage.js', ssr: false },
     { src: '~/plugins/vue-progressive-image.js', ssr: false },
-    { src: '~/plugins/vue-smooth-scroll.js', ssr: false }
+    { src: '~/plugins/vue-smooth-scroll.js', ssr: false },
+    { src: '~/plugins/hotjar.js', ssr: false }
   ]
 }

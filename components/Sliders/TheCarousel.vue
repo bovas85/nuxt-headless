@@ -1,16 +1,21 @@
 <template>
   <div class="carousel" v-if="data != null && data.length > 0">
-
-    <div @mouseover="hovering = true" @mouseleave="hovering = false" ref="Carousel" v-swiper:blogSwiper="swiperOption" >
+    <div
+      @mouseover="hovering = true"
+      @mouseleave="hovering = false"
+      ref="Carousel"
+      v-swiper:blogSwiper="swiperOption"
+    >
       <div class="app-carousel swiper-wrapper">
-        <div 
+        <div
           class="swiper-slide"
           v-if="item.acf.hero && item.acf.product"
           v-for="item in data"
           :key="item.id"
           @click="$router.push(item.slug)"
         >
-          <lazy-image class='image'
+          <LazyImage
+            class="image"
             :hover="true"
             :image="item.acf.hero.desktop_bg"
             type="'case_study'"
@@ -23,9 +28,8 @@
               <h4 class="subtitle">{{item.acf.category}}</h4>
               <button role="navigation" class="subtitle subtitle--show">Show Case Study</button>
             </div>
-          </lazy-image>
+          </LazyImage>
         </div>
-
       </div>
       <!-- slider arrows -->
       <div class="prev">Prev</div>
@@ -36,14 +40,14 @@
 
 <script>
   export default {
-    name: 'TheCarousel',
+    name: "TheCarousel",
     props: {
       data: {
         type: Array
       },
       location: {
         type: String,
-        default: ''
+        default: ""
       }
     },
     data () {
@@ -64,53 +68,57 @@
         nudgedVal: 0,
         swiperOption: {
           initialSlide: 1,
-          slidesPerView: 'auto',
+          slidesPerView: "auto",
           centeredSlides: true,
           spaceBetween: 32,
           breakpoints: {
             640: {
-              slidesPerView: 'auto',
+              slidesPerView: "auto",
               spaceBetween: 32
             },
             320: {
-              slidesPerView: 'auto',
+              slidesPerView: "auto",
               spaceBetween: 16
             }
           },
           autoplay: false,
           loop: false,
           paginationHide: false,
-          pagination: '.swiper-pagination'
+          pagination: ".swiper-pagination"
         }
-      }
+      };
     },
     mounted () {
-      document.querySelector('.prev').addEventListener(
-        'click',
-        event => {
-          event.preventDefault()
-          try {
-            this.$refs.Carousel.swiper.slidePrev()
-          } catch (e) {}
-        },
-        false
-      )
+      let prev = document.querySelector(".prev");
+      prev &&
+        prev.addEventListener(
+          "click",
+          event => {
+            event.preventDefault();
+            try {
+              this.$refs.Carousel.swiper.slidePrev();
+            } catch (e) {}
+          },
+          false
+        );
 
-      document.querySelector('.next').addEventListener(
-        'click',
-        event => {
-          event.preventDefault()
-          try {
-            this.$refs.Carousel.swiper.slideNext()
-          } catch (e) {}
-        },
-        false
-      )
+      let next = document.querySelector(".next");
+      next &&
+        next.addEventListener(
+          "click",
+          event => {
+            event.preventDefault();
+            try {
+              this.$refs.Carousel.swiper.slideNext();
+            } catch (e) {}
+          },
+          false
+        );
     },
     components: {
-      LazyImage: () => import('@/components/UI/LazyImage')
+      LazyImage: () => import("@/components/UI/LazyImage")
     }
-  }
+  };
 </script>
 
 <style lang="scss" scoped>

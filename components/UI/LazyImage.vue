@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
     v-if="image.url != null && imageMobile.url != null"
     class="lazy-image"
     :class="[{'hover-disabled': !hover, 'contain': contain}, computedClass]"
@@ -57,7 +57,11 @@
         />
       </vue-media>
     </no-ssr>
-    <div v-show="onHover || type !== 'case_study'" class="text-container" :class="{'on-hover': onHover, 'mobile-visible': hoverFixed}">
+    <div
+      v-show="onHover || type !== 'case_study'"
+      class="text-container"
+      :class="{'on-hover': onHover, 'mobile-visible': hoverFixed}"
+    >
       <nuxt-link v-if="link && title" :to="type === 'case_study' ? `/${link}` : link" class="text"></nuxt-link>
     </div>
     <slot></slot>
@@ -66,7 +70,7 @@
 
 <script>
   export default {
-    name: 'LazyImage',
+    name: "LazyImage",
     props: {
       image: {
         type: [Object, Boolean]
@@ -74,7 +78,7 @@
       imageMobile: {
         type: [Object, Boolean]
       },
-      title: '',
+      title: "",
       link: {
         default: false
       },
@@ -83,7 +87,7 @@
       },
       type: {
         type: String,
-        default: ''
+        default: ""
       },
       home: {
         type: Boolean,
@@ -99,11 +103,11 @@
       },
       position: {
         type: String,
-        default: 'center'
+        default: "center"
       },
       positionMobile: {
         type: String,
-        default: 'center'
+        default: "center"
       },
       contain: {
         type: Boolean,
@@ -124,42 +128,42 @@
     data () {
       return {
         loaded: false
-      }
+      };
     },
     methods: {
       capture (event) {
-        return false
+        return false;
       },
       imageLoaded (event) {
-        this.loaded = true
+        this.loaded = true;
       }
     },
     computed: {
       computedClass () {
-        if (this.$store.state.window < 577) return this.positionMobile
-        else return this.position
+        if (this.$store.state.window < 577) return this.positionMobile;
+        else return this.position;
       },
       getImage () {
         if (this.isThumb) {
-          return this.image.sizes.small
+          return this.image.sizes.small;
         } else if (
-          this.$store.state.connection === 'cellular' ||
-          this.$store.state.connection === 'other'
+          this.$store.state.connection === "cellular" ||
+          this.$store.state.connection === "other"
         ) {
-          return this.image.sizes.medium
-        } else return false
+          return this.image.sizes.medium;
+        } else return false;
       },
 
       thumbnail () {
         if (this.noPlaceHolder) {
-          return false
+          return false;
         }
         if (this.image != null) {
-          return this.image.sizes.thumbnail
-        } else return 'https://placehold.it/150x150'
+          return this.image.sizes.thumbnail;
+        } else return "https://placehold.it/150x150";
       }
     }
-  }
+  };
 </script>
 
 <style lang="scss">

@@ -1,6 +1,6 @@
 .fade-enter-active,
 .fade-leave-active {
-  transition: all .8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .fade-enter,
@@ -15,7 +15,7 @@
 }
 
 .rotate {
-  transition: opacity .6s ease-in-out;
+  transition: opacity 0.6s ease-in-out;
   position: absolute;
   height: 36px;
   width: 36px;
@@ -43,7 +43,7 @@
 /* ---------------------------------- */
 
 .color-cycle:hover .char {
-  animation: color-cycle 1s cubic-bezier(.5, 0, .5, 1) infinite alternate;
+  animation: color-cycle 1s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate;
   animation-delay: calc(0.03s * var(--char-index));
   animation-duration: calc(0.04s * calc(var(--char-total)));
 }
@@ -68,7 +68,7 @@
 .pop-out-color {
   .char {
     color: #000;
-    animation-timing-function: cubic-bezier(.5, 0, .5, 1), linear;
+    animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1), linear;
     animation-iteration-count: infinite;
     animation-duration: calc(0.08s * calc(var(--char-total)));
     animation-delay: calc(0.08s * var(--char-index));
@@ -111,29 +111,33 @@
 /* ---------------------------------- */
 
 .page-enter-active {
-  animation: acrossIn .40s ease-out both;
+  animation: acrossIn 0.4s ease-out both;
 }
 
 .page-leave-active {
   display: block;
-  animation: acrossOut .80s ease-in both;
+  animation: acrossOut 0.4s ease-in both;
 }
 
 @keyframes acrossIn {
   0% {
-    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+    // transform: translate3d(0, 100%, 0);
   }
   100% {
-    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    // transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes acrossOut {
   0% {
-    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    // transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+    // transform: translate3d(0, -100%, 0);
   }
 }
 

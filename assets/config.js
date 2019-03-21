@@ -12,6 +12,7 @@ const Config = {
   wpDomain: 'https://[api.wordpress_site.com]/wp-json',
   client: 'https://[api.wordpress_site.com]',
   url: '[http://your-url.com]',
+  loadDbName: 'starter_wp',
   api: {
     homePage: '/wp/v2/pages/[page_id]',
     // this url will hit an endpoint for contact form 7 plugin
@@ -19,4 +20,4 @@ const Config = {
   }
 }
 
-export default Config
+module.exports = Config

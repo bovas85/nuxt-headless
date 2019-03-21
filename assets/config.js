@@ -13,7 +13,7 @@ export default {
   // these are the rest api endpoints and your wordpress url 
   client: `https://${apiEndpoint}`, 
   wpDomain: `https://${apiEndpoint}/wp-json`,
-  url: 'https://nuxt-headless-lvllzsprpb.now.sh', // your website url
+  url: 'https://nuxt-headless.netlify.com/', // your website url
   loadDbName: '[starter_wp]', // db name if needed
   api: {
     homePage: '/wp/v2/pages/8', // the [page_id] from WordPress

@@ -14,7 +14,7 @@ All notable changes to this project will be documented in this file.
 
 - 21 - March - 2019
   - Added demo api
-  - Added live demo link: https://nuxt-headless-lvllzsprpb.now.sh/
+  - Added live demo link: https://nuxt-headless.netlify.com/
 
 > **[ 1.1.0 ]**
 

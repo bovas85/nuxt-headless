@@ -2,6 +2,14 @@
 
 > Nuxt + WordPress REST API boilerplate
 
+# Changes
+> **[ 1.1.0 ]**
+
+- 21 - March - 2019
+  - Nuxt updated to v2.5
+  - Added postcss-nested
+  - added more docs and comments
+
 # Use in production? 
 
 Please note this is a boilerplate, it contains some defaults you might want to pay attention to:

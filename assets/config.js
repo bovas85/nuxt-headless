@@ -1,21 +1,23 @@
 'use strict'
 
+const apiEndpoint = '[api.wordpress_site.com]' // change [api.wordpress_site.com] to your wordpress url
+
 export default {
-// these are the rest api endpoints and your wordpress url 
   appTitleShort: 'Nuxt Headless',
-  appTitle: 'Nuxt Headless',
+  appTitle: 'Nuxt Headless boilerplate',
   appTitleShort: 'Nuxt-headless',
   appDescription: 'Nuxt Headless with Wordpress REST API',
   appThemeColor: '#ffffff ',
   appBgColor: '#00172c ',
   appIcon: 'assets/icon.png',
-  wpDomain: 'https://[api.wordpress_site.com]/wp-json',
-  client: 'https://[api.wordpress_site.com]',
-  url: '[http://your-url.com]',
-  loadDbName: 'starter_wp',
+  // these are the rest api endpoints and your wordpress url 
+  client: `https://${apiEndpoint}`, 
+  wpDomain: `https://${apiEndpoint}/wp-json`,
+  url: '[http://your-website-url.com]', // your website url
+  loadDbName: '[starter_wp]', // db name if needed
   api: {
-    homePage: '/wp/v2/pages/[page_id]',
+    homePage: '/wp/v2/pages/[page_id]', // the [page_id] from WordPress
     // this url will hit an endpoint for contact form 7 plugin
-    postFormContact: '/contact-form-7/v1/contact-forms/{form_id}/feedback'
+    postFormContact: '/contact-form-7/v1/contact-forms/[form_id]/feedback' // change {form_id} with the contact form 7 id provided
   }
 }

@@ -184,9 +184,11 @@ module.exports = {
     // return an array of strings of your dynamic pages
     fallback: '404.html',
     routes: function () {
-      return axios.get(`${Config.wpDomain}${Config.api.yourPostsListEndpoint}`).then(res => {
-        return res.slug
-      })
+      // returns an array of strings for each dynamic page found
+      // return axios.get(`${Config.wpDomain}${Config.api.yourPostsListEndpoint}`).then(res => {
+      //   return res.slug
+      // })
+      return []
     }
   },
   render: {
@@ -270,6 +272,6 @@ module.exports = {
     { src: '~/plugins/vue-localstorage.js', ssr: false },
     { src: '~/plugins/vue-progressive-image.js', ssr: false },
     { src: '~/plugins/vue-smooth-scroll.js', ssr: false },
-    { src: '~/plugins/hotjar.js', ssr: false }
+    // { src: '~/plugins/hotjar.js', ssr: false }
   ]
 }

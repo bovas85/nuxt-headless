@@ -1,5 +1,7 @@
 # Nuxt Headless
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bovas85/nuxt-headless.svg)](https://greenkeeper.io/)
+
 > Nuxt + WordPress REST API boilerplate
 
 ## [Live demo link](https://nuxt-headless.netlify.com/)

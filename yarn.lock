@@ -3471,6 +3471,13 @@ dom-walk@^0.1.0:
   resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.1.tgz#672226dc74c8f799ad35307df936aba11acd6018"
   integrity sha1-ZyIm3HTI95mtNTB9+TaroRrNYBg=
 
+dom7@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-2.1.3.tgz#a736f9c3bfbc4ca039a81cd095f97d1d7f3de19c"
+  integrity sha512-QTxHHDox+M6ZFz1zHPAHZKI3JOHY5iY4i9BK2uctlggxKQwRhO3q3HHFq1BKsT25Bm/ySSj70K6Wk/G4bs9rMQ==
+  dependencies:
+    ssr-window "^1.0.1"
+
 domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
@@ -8405,6 +8412,11 @@ sshpk@^1.7.0:
     safer-buffer "^2.0.2"
     tweetnacl "~0.14.0"
 
+ssr-window@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-1.0.1.tgz#30752a6a4666e7767f0b7e6aa6fc2fdbd0d9b369"
+  integrity sha512-dgFqB+f00LJTEgb6UXhx0h+SrG50LJvti2yMKMqAgzfUmUXZrLSv2fjULF7AWGwK25EXu8+smLR3jYsJQChPsg==
+
 ssri@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
@@ -8667,10 +8679,13 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-swiper@^3.4.2:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-3.4.2.tgz#39d6b410b1a39833e1f72d3b72999df5f5e38392"
-  integrity sha1-Oda0ELGjmDPh9y07cpmd9fXjg5I=
+swiper@^4.0.7:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.5.0.tgz#4d870bec4f5abe2fb259325849dd2641c9243c0d"
+  integrity sha512-jRCd/CGet9kaHwthHdd/sL/YU8CI157PWLyItnIcn/o/jP4haVky3zTF6f9F3JDpmQIw7jdWihISiYx0/oTHsg==
+  dependencies:
+    dom7 "^2.1.3"
+    ssr-window "^1.0.1"
 
 table@^5.2.3:
   version "5.2.3"
@@ -9240,12 +9255,13 @@ vue-analytics@^5.16.2:
   resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.16.2.tgz#37724aeec71bb830b1cf2d52a969cf190ef120c1"
   integrity sha512-5JKGnVF33VHlXFREzht9z3Z11N4IA8vXNnpvYeAf72rEUyAuuU9Q9kX34bULW2CxMrahr8m06IB8+91GX0Ruag==
 
-vue-awesome-swiper@2.6.7:
-  version "2.6.7"
-  resolved "https://registry.yarnpkg.com/vue-awesome-swiper/-/vue-awesome-swiper-2.6.7.tgz#23b12cf107503305c267df3c7c2903fb39896cd0"
-  integrity sha512-kUmCds5HTcV9Uz0eYnvajbxpVgAKQFrX0r+akk8XtuUouI5e2ImhO7aZ8iVhTLE4hwKwoyFP8jekAa0JlNqifA==
+vue-awesome-swiper@3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/vue-awesome-swiper/-/vue-awesome-swiper-3.1.3.tgz#05500b501ffb3fec9bf7eb9985bcf4ae8360ed9e"
+  integrity sha512-E7suzkyApO8vNZbgdEnjSmnpsmQZyRvSVXJ7sey3XYwKPOkLhH3+GnHroBw+5PZIQXvWBwdCeQsPG1xQ1r1Rhg==
   dependencies:
-    swiper "^3.4.2"
+    object-assign "^4.1.1"
+    swiper "^4.0.7"
 
 vue-eslint-parser@^5.0.0:
   version "5.0.0"
@@ -9307,10 +9323,10 @@ vue-no-ssr@^1.1.1:
   resolved "https://registry.yarnpkg.com/vue-no-ssr/-/vue-no-ssr-1.1.1.tgz#875f3be6fb0ae41568a837f3ac1a80eaa137b998"
   integrity sha512-ZMjqRpWabMPqPc7gIrG0Nw6vRf1+itwf0Itft7LbMXs2g3Zs/NFmevjZGN1x7K3Q95GmIjWbQZTVerxiBxI+0g==
 
-vue-progressive-image@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/vue-progressive-image/-/vue-progressive-image-2.5.0.tgz#810e19b2a664491ad998e55c1f90bae42a16d683"
-  integrity sha512-YPTRzF/ewZQlPuYfdp3NZ/pc6FyiaKbNFkZYzFJ/JVL6G8UeHiSCKGD2KMKM+GYLRa9TMB3oCM1w995Cxe6a0A==
+vue-progressive-image@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/vue-progressive-image/-/vue-progressive-image-3.2.0.tgz#a6443f78bda87846f94e900b119e7ed0b6f3365f"
+  integrity sha512-D1DSBOIw2nAJHTDT2aVn2lDROKGd4XvCIIH5JY2t5yjNcDppRXzqXRqrGYRFcRbtA+6XV17s55VszFFItiNLcg==
 
 vue-router@^3.0.2:
   version "3.0.2"

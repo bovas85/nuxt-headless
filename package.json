@@ -4,6 +4,13 @@
   "description": "Nuxt Headless",
   "author": "Alessandro Giordo - <16958684+bovas85@users.noreply.github.com>",
   "private": true,
+  "greenkeeper": {
+    "ignore": [
+      "scrollama",
+      "vue-awesome-swiper",
+      "vue-progressive-image"
+    ]
+  },
   "dependencies": {
     "@nuxtjs/axios": "^5.4.1",
     "@nuxtjs/google-analytics": "^2.2.0",
@@ -49,7 +56,7 @@
     "node-sass": "^4.11.0",
     "nuxt-purgecss": "^0.2.1",
     "nuxt-start": "^2.5.0",
-    "opn": "^5.5.0",
+    "opn": "^6.0.0",
     "postcss-loader": "^3.0.0",
     "postcss-nested": "^4.1.2",
     "postcss-responsive-type": "^1.0.0",

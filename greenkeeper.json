@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "wordpress/wp-content/plugins/better-rest-api-featured-images/package.json"
+      ]
+    }
+  }
+}

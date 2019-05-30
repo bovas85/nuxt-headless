@@ -1,16 +1,16 @@
 <template>
   <section v-if="acf" class="section hero step" :style="`background-image: url('${bgImage}')`">
-      <div class="container is-flex-column" :class="{'animated': animateHeader}">
-        <h1 class="jumbo">{{acf.hero.title}}</h1>
-        <h3>{{acf.hero.description}}</h3>
+    <div class="container is-flex-column" :class="{'animated': animateHeader}">
+      <h1 class="jumbo">{{acf.hero.title}}</h1>
+      <h3>{{acf.hero.description}}</h3>
+    </div>
+    <div v-scroll-to="{element:'.who-i-am'}" class="scroll-down">
+      <p>scroll</p>
+      <div class="scroll-down__arrow">
+        <icon-arrow :fill="'black'" direction='down' name='arrow-down' :width="30" :height="40" />
       </div>
-      <div v-scroll-to="{element:'.who-i-am'}" class="scroll-down">
-        <p>scroll</p>
-        <div class="scroll-down__arrow">
-          <icon-arrow :fill="'black'" direction='down' name='arrow-down' :width="30" :height="40" />
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 </template>
 
 <script>

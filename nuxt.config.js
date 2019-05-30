@@ -186,7 +186,7 @@ module.exports = {
     routes: function () {
       // returns an array of strings for each dynamic page found
       // return axios.get(`${Config.wpDomain}${Config.api.yourPostsListEndpoint}`).then(res => {
-      //   return res.slug
+      //   return res.data.slug
       // })
       return []
     }
@@ -213,7 +213,7 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/pwa',
-    '@nuxtjs/axios',
+    '@nuxt/http',
     '@nuxtjs/sitemap',
     'cookie-universal-nuxt',
     [
@@ -259,19 +259,16 @@ module.exports = {
     cacheTime: 1000 * 60 * 15,
     exclude: ['/.git']
   },
-  axios: {
-    timeout: 6000,
-    debug: false
+  http: {
+    retry: 3
   },
   plugins: [
-    '~/plugins/axios.js',
     '~/plugins/store.js',
     { src: '~/plugins/vue-media.js', ssr: false },
     { src: '~/plugins/nuxt-swiper.js', ssr: false },
     { src: '~/plugins/vuelidate.js', ssr: true },
     { src: '~/plugins/vue-localstorage.js', ssr: false },
     { src: '~/plugins/vue-progressive-image.js', ssr: false },
-    { src: '~/plugins/vue-smooth-scroll.js', ssr: false },
-    // { src: '~/plugins/hotjar.js', ssr: false }
+    { src: '~/plugins/vue-smooth-scroll.js', ssr: false }
   ]
 }

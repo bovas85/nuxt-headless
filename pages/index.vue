@@ -1,5 +1,5 @@
 <template>
-  <main class="home">
+  <main class="home" v-if='acf'>
     <hero-section
       :acf="acf"
       :animateHeader="animateHeader"
@@ -17,12 +17,9 @@
 
   export default {
     scrollToTop: true,
-    async fetch ({app, store}) {
-      const home = await app.$axios.get(
-            Config.wpDomain + Config.api.homePage,
-            { useCache: true }
-          )
-      store.commit('setHomepage', home.data)
+    async fetch ({ app, store }) {
+      const home = await app.$http.$get(Config.wpDomain + Config.api.homePage)
+      store.commit('setHomepage', home)
     },
     data () {
       return {
@@ -37,12 +34,8 @@
     },
     async mounted () {
       if (process.client) {
-        this.$cookies.set('ab-testing', true, 30)
-        const home = await this.$axios.get(
-          Config.wpDomain + Config.api.homePage,
-          { useCache: true }
-        )
-        this.$store.commit('setHomepage', home.data)
+        const home = await this.$http.$get(Config.wpDomain + Config.api.homePage)
+        this.$store.commit('setHomepage', home)
         setTimeout(() => {
           this.animateHeader = true
           this.handleScroll()
@@ -72,34 +65,40 @@
         }
       },
       handleScroll () {
-        if (window.innerWidth > 577) {
-          scroller = this.scrollama()
-          steps = null
-          steps = scroller
-            .setup({
-              step: '.step',
-              offset: 0.6,
-              debug: false
-            })
-            .onStepEnter(this.handleStepEnter)
-            .onStepExit(this.showMenu)
+        const step = document.querySelector('.step')
+        if (step) {
 
-          steps.resize()
-          steps.enable()
+          if (window.innerWidth > 577) {
+            scroller = this.scrollama()
+            steps = null
+            steps = scroller
+              .setup({
+                step,
+                offset: 0.6,
+                debug: false
+              })
+              .onStepEnter(this.handleStepEnter)
+              .onStepExit(this.showMenu)
+  
+            steps.resize()
+            steps.enable()
+          } else {
+            scroller = this.scrollama()
+            steps = null
+            steps = scroller
+              .setup({
+                step,
+                offset: 0.9,
+                debug: false
+              })
+              .onStepEnter(this.handleStepEnter)
+              .onStepExit(this.showMenu)
+  
+            steps.resize()
+            steps.enable()
+          }
         } else {
-          scroller = this.scrollama()
-          steps = null
-          steps = scroller
-            .setup({
-              step: '.step',
-              offset: 0.9,
-              debug: false
-            })
-            .onStepEnter(this.handleStepEnter)
-            .onStepExit(this.showMenu)
-
-          steps.resize()
-          steps.enable()
+          setTimeout(() => this.handleScroll(), 600)
         }
 
         window.addEventListener(

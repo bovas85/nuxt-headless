@@ -2,6 +2,7 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/bovas85/nuxt-headless.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/bovas85/nuxt-headless.svg?branch=master)](https://travis-ci.org/bovas85/nuxt-headless)
+[![libera manifesto](https://img.shields.io/badge/libera-manifesto-lightgrey.svg)](https://liberamanifesto.com)
 
 > Nuxt + WordPress REST API boilerplate
 

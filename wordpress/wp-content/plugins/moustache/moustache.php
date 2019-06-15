@@ -270,8 +270,8 @@ function contact_form_func( $data ) {
   $yourEmail = $data['your-email'];
   $yourMessage = $data['your-message'];
   
-  $to = 'bovas85@gmail.com';
-  $subject = "Nunziella contact form submission from ".$yourName;
+  $to = 'your@email.com';
+  $subject = "Contact form submission from ".$yourName;
   
   $email_message  = "From: ".$yourName."<br/>";
   $email_message .= "Email: ".$yourEmail."<br/>";

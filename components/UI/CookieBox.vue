@@ -4,7 +4,6 @@
       <p>This site uses cookies.
         <nuxt-link to="/privacy-policy">Find out more.</nuxt-link>
         <span
-          role="accept-cookie"
           @click="setCookie()"
           class="privacy-link"
           to="/privacy-policy"
@@ -24,7 +23,7 @@
       };
     },
     mounted () {
-      if (this.$localStorage.get("NuniCookie") != null) {
+      if (this.$localStorage.get("CookieConset") != null) {
         this.hide = true;
         this.show = false;
       } else {
@@ -37,7 +36,7 @@
     methods: {
       setCookie () {
         this.hide = true;
-        this.$localStorage.set("NuniCookie", true);
+        this.$localStorage.set("CookieConset", true);
       }
     }
   };

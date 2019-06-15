@@ -63,8 +63,7 @@
   }
 }
 
-/* ---------------------------------- */
-
+/* purgecss start ignore */
 .pop-out-color {
   .char {
     color: #000;
@@ -97,6 +96,7 @@
     animation-name: pop-char-out2, color-cycle;
   }
 }
+
 @keyframes pop-char-out2 {
   0%,
   70%,
@@ -107,8 +107,6 @@
     transform: translate(0.025em, -0.05em);
   }
 }
-
-/* ---------------------------------- */
 
 .page-enter-active {
   animation: acrossIn 0.4s ease-out both;
@@ -122,22 +120,18 @@
 @keyframes acrossIn {
   0% {
     opacity: 0;
-    // transform: translate3d(0, 100%, 0);
   }
   100% {
     opacity: 1;
-    // transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes acrossOut {
   0% {
     opacity: 1;
-    // transform: translate3d(0, 0, 0);
   }
   100% {
     opacity: 0;
-    // transform: translate3d(0, -100%, 0);
   }
 }
 
@@ -371,3 +365,19 @@
     opacity: 1;
   }
 }
+
+.lazyload,
+.lazyloading {
+  filter: blur(30px);
+  transition: filter .3s ease-in-out;
+}
+
+.lazyloaded {
+  filter: blur(0);
+}
+
+img.lazyload:not([src]) {
+	visibility: hidden;
+}
+/* purgecss end ignore */
+

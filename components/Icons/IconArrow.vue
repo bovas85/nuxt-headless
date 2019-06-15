@@ -1,18 +1,24 @@
 <template>
-    <div :class="direction" class="svg">
-        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 100 100" :width="width" :height="height">
-          <path :style="{'color': fill}" :fill="fill" :stroke="fill" d="M50 92l16-29.1M50 92L34 62.9" class="st0"/>
-        </svg>
-    </div>
+  <div :class="direction" class="svg">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" :width="width" :height="height">
+      <path
+        :style="{'color': fill}"
+        :fill="fill"
+        :stroke="fill"
+        d="M50 92l16-29.1M50 92L34 62.9"
+        class="st0"
+      ></path>
+    </svg>
+  </div>
 </template>
 
 <script>
   export default {
-    name: 'IconArrow',
+    name: "IconArrow",
     props: {
       fill: {
         type: String,
-        default: 'white'
+        default: "white"
       },
       width: {
         type: Number,
@@ -26,16 +32,16 @@
         type: String,
         validator: value => {
           // The value must match one of these strings
-          return ['left', 'right', 'up', 'down'].indexOf(value) !== -1
+          return ["left", "right", "up", "down"].indexOf(value) !== -1;
         },
-        default: 'down'
+        default: "down"
       },
       name: {
         type: String,
-        default: 'arrow'
+        default: "arrow"
       }
     }
-  }
+  };
 </script>
 
 <style scoped lang="scss">
@@ -50,7 +56,7 @@
     text-align: right;
 
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 12px;
       display: block;

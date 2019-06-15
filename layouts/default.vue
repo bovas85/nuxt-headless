@@ -1,23 +1,22 @@
 <template>
   <div class="app">
-    <cookie-box />
-    <the-nav />
+    <cookie-box/>
+    <the-nav/>
     <nuxt/>
-    <the-footer />
+    <the-footer/>
   </div>
 </template>
 
 <script>
-  import TheNav from '@/components/Nav/TheNav'
-  import TheFooter from '@/components/Footers/TheFooter'
+  import TheNav from "@/components/Nav/TheNav";
 
   export default {
     components: {
       TheNav,
-      TheFooter,
-      CookieBox: () => import('@/components/UI/CookieBox')
+      TheFooter: () => import("@/components/Footers/TheFooter"),
+      CookieBox: () => import("@/components/UI/CookieBox")
     }
-  }
+  };
 </script>
 
 <style>

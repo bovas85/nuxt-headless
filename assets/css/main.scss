@@ -1,7 +1,7 @@
 /*!
- * Naked Ideas CSS Grid Framework (https://nakedideas.com)
+ * CSS Grid Framework
  * Copyright 2017-2018 Alessandro Giordo
- * Licensed under MIT (https://styleguide.nakedtesting.com/license)
+ * Licensed under MIT
  */
 @import '~bulma/sass/utilities/_all';
 
@@ -15,7 +15,7 @@ $desktop: 1024px !default;
 $widescreen: 1200px !default;
 $fullhd: 1392px !default;
 
-@import '~bulma/sass/base/helpers';
+// @import '~bulma/sass/base/helpers';
 
 @import './variables';
 @import './grid_base';

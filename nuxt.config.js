@@ -1,13 +1,13 @@
-const Config = require('./assets/config')
-const axios = require('axios')
-const opn = require('opn')
+import Config from './assets/config'
+import axios from 'axios'
+import open from 'open'
 
-module.exports = {
+export default {
   mode: 'universal',
   /*
-  ** Headers
-  ** Common headers are already provided by @nuxtjs/pwa preset
-  */
+   ** Headers
+   ** Common headers are already provided by @nuxtjs/pwa preset
+   */
   head: {
     titleTemplate: titleChunk => {
       // If undefined or blank then we don't need the hyphen
@@ -123,7 +123,12 @@ module.exports = {
       }
     ],
     script: [
-      { src: 'https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver' }
+      {
+        defer: true,
+        body: true,
+        src:
+          'https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver'
+      }
     ]
   },
   /*
@@ -138,13 +143,27 @@ module.exports = {
     description: ''
   },
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
-    extractCSS: true,
+    // hardSource: process.env.NODE_ENV === 'development',
     optimization: {
+      runtimeChunk: true,
       splitChunks: {
+        chunks: 'async',
+        minSize: 30000,
+        maxSize: 0,
         cacheGroups: {
+          vendors: {
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10,
+            enforce: true
+          },
+          default: {
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true
+          },
           styles: {
             name: 'styles',
             test: /\.(css|vue)$/,
@@ -155,14 +174,16 @@ module.exports = {
       }
     },
     postcss: {
-      'postcss-responsive-type': {},
-      'postcss-nested': {}
+      plugins: {
+        'postcss-responsive-type': {},
+        'postcss-nested': {}
+      }
     },
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         /*
-        ** Run ESLint on save
-        */
+         ** Run ESLint on save
+         */
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -177,8 +198,13 @@ module.exports = {
   },
   hooks: {
     listen (server, { host, port }) {
-      opn(`http://${host}:${port}`)
+      if (process.env.NODE_ENV !== 'production') {
+        open(`http://${host}:${port}`)
+      }
     }
+  },
+  http: {
+    retry: 3
   },
   generate: {
     // return an array of strings of your dynamic pages
@@ -201,16 +227,16 @@ module.exports = {
     '@/assets/css/main.scss'
   ],
   /*
-  ** Customize the progress-bar style
-  */
+   ** Customize the progress-bar style
+   */
   loading: {
     color: '#f4a261',
     height: '4px',
     failedColor: '#DF4661'
   },
   /*
-  ** Modules
-  */
+   ** Modules
+   */
   modules: [
     '@nuxtjs/pwa',
     '@nuxt/http',
@@ -222,20 +248,12 @@ module.exports = {
         id: 'UA-xxxxxxx-3'
       }
     ],
-    '@nuxtjs/style-resources',
-    'nuxt-purgecss'
+    '@nuxtjs/component-cache',
+    '@nuxtjs/style-resources'
   ],
   styleResources: {
     // injects the variables in each component
     scss: '~/assets/css/variables.scss'
-  },
-  purgeCSS: {
-    // whitelist of dynamic classes to
-    whitelist: [
-      'animated',
-    ],
-    // regex based whitelisting
-    whitelistPatterns: [/^page/, /^fade/, /image/, /^rotate/, /keyframe/]
   },
   workbox: {
     runtimeCaching: [
@@ -264,11 +282,12 @@ module.exports = {
   },
   plugins: [
     '~/plugins/store.js',
-    { src: '~/plugins/vue-media.js', ssr: false },
-    { src: '~/plugins/nuxt-swiper.js', ssr: false },
-    { src: '~/plugins/vuelidate.js', ssr: true },
-    { src: '~/plugins/vue-localstorage.js', ssr: false },
-    { src: '~/plugins/vue-progressive-image.js', ssr: false },
-    { src: '~/plugins/vue-smooth-scroll.js', ssr: false }
+    '~/plugins/vuelidate.js',
+    '~/plugins/lazysizes.client.js',
+    '~/plugins/vue-media.client.js',
+    '~/plugins/vue-localstorage.client.js',
+    '~/plugins/vue-smooth-scroll.client.js',
+    '~/plugins/splitting.client.js',
+    '~/plugins/hotjar.client.js'
   ]
 }

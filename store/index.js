@@ -1,4 +1,3 @@
-import Vuex from 'vuex'
 import Config from '~/assets/config.js'
 
 export const strict = false
@@ -8,8 +7,10 @@ export const state = () => ({
   window: 320,
   connection: null,
   navOpen: false,
+  current: null,
   modalOpen: false,
-  menuScrolled: false
+  menuScrolled: false,
+  menuScrolledDone: false
 })
 
 export const mutations = {
@@ -19,9 +20,13 @@ export const mutations = {
   },
   hideMenuBg (state) {
     state.menuScrolled = false
+    state.menuScrolledDone = false
   },
   showMenuBg (state) {
     state.menuScrolled = true
+  },
+  showMenuBgDone (state) {
+    state.menuScrolledDone = true
   },
   openMenu (state) {
     if (process.browser) {
@@ -43,8 +48,16 @@ export const mutations = {
     state.connection = type
   }
 }
-
 export const actions = {
+  // we need to set timeouts to both states for the delay to kick in
+  async showMenu ({ commit }) {
+    await setTimeout(() => {
+      commit('showMenuBg')
+    }, 200)
+    await setTimeout(() => {
+      commit('showMenuBgDone')
+    }, 600)
+  },
   resetScroll ({ commit }) {
     if (process.browser) {
       let body = document.querySelector('body')

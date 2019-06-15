@@ -28,7 +28,7 @@
       },
       mobileHeight: {
         type: [Number, String],
-        default: 31
+        default: 48
       },
       fill: {
         type: String,

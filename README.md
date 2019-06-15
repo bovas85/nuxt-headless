@@ -9,6 +9,13 @@
 ## [Live demo link](https://nuxt-headless.netlify.com/)
 
 # Changes
+> **[ 1.2.0 ]**
+
+- 15 - June - 2019
+  - Nuxt updated to v2.8.1
+  - Updated LazyImage for better lazy loading
+  - Added Defer mixin
+
 > **[ 1.1.0 ]**
 
 - 21 - March - 2019

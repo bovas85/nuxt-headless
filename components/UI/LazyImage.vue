@@ -4,7 +4,7 @@
     class="lazy-image"
     :class="[{'hover-disabled': !hover, 'contain': contain}, computedClass]"
   >
-    <no-ssr>
+    <client-only>
       <vue-media :query="{maxWidth: 576}">
         <picture>
           <source
@@ -31,8 +31,8 @@
           />
         </picture>
       </vue-media>
-    </no-ssr>
-    <no-ssr>
+    </client-only>
+    <client-only>
       <vue-media :query="({minWidth: 577, maxWidth: 1200})">
         <picture>
           <source
@@ -58,8 +58,8 @@
           />
         </picture>
       </vue-media>
-    </no-ssr>
-    <no-ssr>
+    </client-only>
+    <client-only>
       <vue-media :query="({minWidth: 1201, maxWidth: 1920})">
         <picture>
           <source
@@ -85,8 +85,8 @@
           />
         </picture>
       </vue-media>
-    </no-ssr>
-    <no-ssr>
+    </client-only>
+    <client-only>
       <vue-media :query="{minWidth: 1921}">
         <picture>
           <source
@@ -112,7 +112,7 @@
           />
         </picture>
       </vue-media>
-    </no-ssr>
+    </client-only>
     <slot></slot>
   </div>
 </template>

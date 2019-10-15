@@ -33,7 +33,7 @@
       </nav>
     </div>
 
-    <no-ssr>
+    <client-only>
       <vue-media :query="{maxWidth: 1024}">
         <div
           style="z-index: 9999"
@@ -43,7 +43,7 @@
           />
         </div>
       </vue-media>
-    </no-ssr>
+    </client-only>
   </div>
 
 </template>

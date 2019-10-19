@@ -1,7 +1,7 @@
 <template>
   <div class="newsletter-container">
     <div :class="{'footer-newsletter': footer}">
-        <no-ssr>
+        <client-only>
             <fade-transition group tag="div">
                 <div key="notSuccess" v-if="!success" class="field">
                     <form name="newsletterForm" @submit.prevent :class="{'form-wrapper': !footer}">
@@ -24,7 +24,7 @@
                     </div>
                 </div>
             </fade-transition>
-        </no-ssr>
+        </client-only>
 
         <div class="validation">
             <p v-show="error" class="help is-danger">You have entered an invalid email address.

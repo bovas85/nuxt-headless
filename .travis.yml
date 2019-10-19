@@ -6,6 +6,7 @@ cache:
     - node_modules
 script:
   - npm install
-  - npm run generate
+  - npm install yarn -g
+  - yarn generate
 branches:
   only: master

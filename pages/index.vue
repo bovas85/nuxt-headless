@@ -10,7 +10,6 @@
   import Config from "~/assets/config";
   import get from "lodash/get";
   import Defer from "@/mixins/Defer";
-  let scroller, steps;
 
   export default {
     async fetch ({ app, store }) {
@@ -57,87 +56,9 @@
           this.animateWork = true;
           this.$store.dispatch("showMenu");
         }
-      },
-      handleStepEnter (response) {
-        switch (response.index) {
-          case 0:
-            this.hideMenu();
-            this.animateHeader = true;
-            break;
-          default:
-            break;
-        }
-      },
-      handleScroll () {
-        if (process.client) {
-          const step = document.querySelector(".step");
-
-          if (step && this.defer(5)) {
-            if (window.innerWidth > 577) {
-              scroller = this.scrollama();
-              steps = null;
-              steps = scroller
-                .setup({
-                  step: ".step",
-                  offset: 0.5,
-                  debug: false
-                })
-                .onStepEnter(this.handleStepEnter)
-                .onStepExit(this.showMenu);
-
-              steps.resize();
-              steps.enable();
-            } else {
-              scroller = this.scrollama();
-              steps = null;
-              steps = scroller
-                .setup({
-                  step: ".step",
-                  offset: 0.7,
-                  debug: false
-                })
-                .onStepEnter(this.handleStepEnter)
-                .onStepExit(this.showMenu);
-
-              steps.resize();
-              steps.enable();
-            }
-
-            window.addEventListener(
-              "resize",
-              this.scrollamaResize,
-              { passive: true },
-              false
-            );
-          } else {
-            setTimeout(() => {
-              this.handleScroll();
-            }, 600);
-          }
-        }
-      },
-      scrollamaResize: debounce(function () {
-        const step = document.querySelector(".step");
-        if (step && step.length) {
-          this.handleScroll();
-        }
-      }, 150)
-    },
-    beforeDestroy () {
-      if (typeof scroller !== "undefined") {
-        scroller.disable && scroller.disable();
       }
-      scroller = null;
-      steps = null;
-      window.removeEventListener("resize", this.scrollamaResize, false);
     },
     computed: {
-      scrollama () {
-        if (process.browser) {
-          let scrollama = require("scrollama");
-          return scrollama;
-        }
-      },
       homePage () {
         if (this.$store.state.homePage == null) return false;
         return this.$store.state.homePage;

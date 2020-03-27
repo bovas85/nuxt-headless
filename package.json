@@ -28,7 +28,7 @@
     ]
   },
   "dependencies": {
-    "@nuxt/http": "^0.3.8",
+    "@nuxt/http": "^0.4.0",
     "@nuxtjs/component-cache": "^1.1.5",
     "@nuxtjs/google-analytics": "^2.2.1",
     "@nuxtjs/proxy": "^1.3.3",

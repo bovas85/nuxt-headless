@@ -58,7 +58,7 @@
     "lodash": "^4.17.15",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.13.0",
-    "nuxt-purgecss": "^0.2.1",
+    "nuxt-purgecss": "^1.0.0",
     "nuxt-start": "^2.10.2",
     "open": "^7.0.0",
     "postcss-loader": "^3.0.0",

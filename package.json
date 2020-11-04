@@ -48,7 +48,8 @@
     "vue-localstorage": "^0.6.2",
     "vue-media": "^1.1.1",
     "vue-scrollto": "^2.20.0",
-    "vuelidate": "^0.7.6"
+    "vuelidate": "^0.7.6",
+    "snyk": "^1.424.1"
   },
   "devDependencies": {
     "axios": "^0.21.0",
@@ -66,8 +67,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-nested": "^4.2.1",
     "postcss-responsive-type": "^1.0.0",
-    "sass-loader": "^10.0.5",
-    "snyk": "^1.424.1"
+    "sass-loader": "^10.0.5"
   },
   "snyk": true
 }

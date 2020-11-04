@@ -1,6 +1,6 @@
-import Config from '~/assets/config.js'
+import Config from "~/assets/config.js";
 
-export const strict = false
+export const strict = false;
 
 export const state = () => ({
   homePage: [],
@@ -11,60 +11,61 @@ export const state = () => ({
   modalOpen: false,
   menuScrolled: false,
   menuScrolledDone: false
-})
+});
 
 export const mutations = {
-  resetMenus (state) {
-    state.modalOpen = false
-    state.navOpen = false
+  resetMenus(state) {
+    state.modalOpen = false;
+    state.navOpen = false;
   },
-  hideMenuBg (state) {
-    state.menuScrolled = false
-    state.menuScrolledDone = false
+  hideMenuBg(state) {
+    state.menuScrolled = false;
+    state.menuScrolledDone = false;
   },
-  showMenuBg (state) {
-    state.menuScrolled = true
+  showMenuBg(state) {
+    state.menuScrolled = true;
   },
-  showMenuBgDone (state) {
-    state.menuScrolledDone = true
+  showMenuBgDone(state) {
+    state.menuScrolledDone = true;
   },
-  openMenu (state) {
+  toggleMenu(state) {
     if (process.browser) {
-      state.navOpen = true
-      state.modalOpen = true
-      let body = document.querySelector('body')
+      state.navOpen = !state.navOpen;
+      state.modalOpen = !state.modalOpen;
+      let body = document.querySelector("body");
       if (body) {
-        body.style.overflow = 'hidden'
+        body.style.overflow =
+          body.style.overflow === "hidden" ? "visible" : "hidden";
       }
     }
   },
-  setHomepage (state, obj) {
-    state.homePage = obj
+  setHomepage(state, obj) {
+    state.homePage = obj;
   },
-  windowResize (state, size) {
-    state.window = size
+  windowResize(state, size) {
+    state.window = size;
   },
-  setConnection (state, type) {
-    state.connection = type
+  setConnection(state, type) {
+    state.connection = type;
   }
-}
+};
 export const actions = {
   // we need to set timeouts to both states for the delay to kick in
-  async showMenu ({ commit }) {
+  async showMenu({ commit }) {
     await setTimeout(() => {
-      commit('showMenuBg')
-    }, 200)
+      commit("showMenuBg");
+    }, 200);
     await setTimeout(() => {
-      commit('showMenuBgDone')
-    }, 600)
+      commit("showMenuBgDone");
+    }, 600);
   },
-  resetScroll ({ commit }) {
+  resetScroll({ commit }) {
     if (process.browser) {
-      let body = document.querySelector('body')
+      let body = document.querySelector("body");
       if (body) {
-        body.style.overflow = 'auto'
+        body.style.overflow = "auto";
       }
     }
-    commit('resetMenus')
+    commit("resetMenus");
   }
-}
+};

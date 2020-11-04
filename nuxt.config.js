@@ -1,9 +1,9 @@
-import Config from './assets/config'
-import axios from 'axios'
-import open from 'open'
+import Config from "./assets/config";
+
+import axios from "axios";
+import open from "open";
 
 export default {
-  mode: 'universal',
   /*
    ** Headers
    ** Common headers are already provided by @nuxtjs/pwa preset
@@ -11,115 +11,115 @@ export default {
   head: {
     titleTemplate: titleChunk => {
       // If undefined or blank then we don't need the hyphen
-      return titleChunk ? `${titleChunk} - Nuxt Headless` : 'Nuxt Headless'
+      return titleChunk ? `${titleChunk} - Nuxt Headless` : "Nuxt Headless";
     },
     htmlAttrs: {
-      lang: 'en'
+      lang: "en"
     },
     meta: [
-      { charset: 'utf-8' },
+      { charset: "utf-8" },
       {
-        hid: 'viewport',
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        hid: "viewport",
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
       },
-      { name: 'msapplication-TileColor', content: '#ffffff' },
-      { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
-      { name: 'theme-color', content: '#ffffff' },
+      { name: "msapplication-TileColor", content: "#ffffff" },
+      { name: "msapplication-TileImage", content: "/ms-icon-144x144.png" },
+      { name: "theme-color", content: "#ffffff" },
       {
-        hid: 'description',
-        name: 'description',
-        content: 'Nuxt Headless'
-      },
-      {
-        hid: 'keywords',
-        name: 'keywords',
-        content: 'Nuxt, headless, CMS, Vue, Vue.js, Nuxt.js'
+        hid: "description",
+        name: "description",
+        content: "Nuxt Headless"
       },
       {
-        hid: 'image',
-        name: 'image',
-        content: 'https://nuxt-headless.netlify.com/images/seo.png'
-      },
-      { hid: 'name', itemprop: 'name', content: 'Nuxt Headless' },
-      {
-        hid: 'description',
-        itemprop: 'description',
-        content: 'Nuxt Headless'
+        hid: "keywords",
+        name: "keywords",
+        content: "Nuxt, headless, CMS, Vue, Vue.js, Nuxt.js"
       },
       {
-        hid: 'image',
-        itemprop: 'image',
-        content: 'https://nuxt-headless.netlify.com/images/seo.png'
+        hid: "image",
+        name: "image",
+        content: "https://nuxt-headless.netlify.com/images/seo.png"
+      },
+      { hid: "name", itemprop: "name", content: "Nuxt Headless" },
+      {
+        hid: "description",
+        itemprop: "description",
+        content: "Nuxt Headless"
       },
       {
-        hid: 'twitter:card',
-        name: 'twitter:card',
-        content: 'summary_large_image'
+        hid: "image",
+        itemprop: "image",
+        content: "https://nuxt-headless.netlify.com/images/seo.png"
       },
       {
-        hid: 'twitter:title',
-        name: 'twitter:title',
-        content: 'Nuxt Headless'
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary_large_image"
       },
       {
-        hid: 'twitter:description',
-        name: 'twitter:description',
-        content: 'Nuxt Headless'
-      },
-      { hid: 'twitter:site', name: 'twitter:site', content: '@moustacheDsign' },
-      {
-        hid: 'twitter:creator',
-        name: 'twitter:creator',
-        content: '@moustacheDsign'
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: "Nuxt Headless"
       },
       {
-        hid: 'twitter:image',
-        name: 'twitter:image',
-        content: 'https://nuxt-headless.netlify.com/images/seo.png'
+        hid: "twitter:description",
+        name: "twitter:description",
+        content: "Nuxt Headless"
+      },
+      { hid: "twitter:site", name: "twitter:site", content: "@moustacheDsign" },
+      {
+        hid: "twitter:creator",
+        name: "twitter:creator",
+        content: "@moustacheDsign"
       },
       {
-        hid: 'twitter:image:alt',
-        name: 'twitter:image:alt',
-        content: 'My Website Image'
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: "https://nuxt-headless.netlify.com/images/seo.png"
       },
       {
-        hid: 'og:title',
-        property: 'og:title',
-        content: 'Nuxt Headless'
-      },
-      { hid: 'og:url', property: 'og:url', content: Config.url },
-      {
-        hid: 'og:site_name',
-        property: 'og:site_name',
-        content: 'Nuxt Headless Website'
+        hid: "twitter:image:alt",
+        name: "twitter:image:alt",
+        content: "My Website Image"
       },
       {
-        hid: 'og:description',
-        property: 'og:description',
-        content: 'Nuxt Headless'
+        hid: "og:title",
+        property: "og:title",
+        content: "Nuxt Headless"
       },
-      { hid: 'og:locale', property: 'og:locale', content: 'en_GB' },
-      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: "og:url", property: "og:url", content: Config.url },
       {
-        hid: 'og:image',
-        property: 'og:image',
-        content: 'https://nuxt-headless.netlify.com/images/seo.png'
-      },
-      {
-        hid: 'og:image:url',
-        property: 'og:image:url',
-        content: 'https://nuxt-headless.netlify.com/images/seo.png'
+        hid: "og:site_name",
+        property: "og:site_name",
+        content: "Nuxt Headless Website"
       },
       {
-        hid: 'og:image:width',
-        property: 'og:image:width',
-        content: '1200'
+        hid: "og:description",
+        property: "og:description",
+        content: "Nuxt Headless"
+      },
+      { hid: "og:locale", property: "og:locale", content: "en_GB" },
+      { hid: "og:type", property: "og:type", content: "website" },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "https://nuxt-headless.netlify.com/images/seo.png"
       },
       {
-        hid: 'og:image:height',
-        property: 'og:image:height',
-        content: '628'
+        hid: "og:image:url",
+        property: "og:image:url",
+        content: "https://nuxt-headless.netlify.com/images/seo.png"
+      },
+      {
+        hid: "og:image:width",
+        property: "og:image:width",
+        content: "1200"
+      },
+      {
+        hid: "og:image:height",
+        property: "og:image:height",
+        content: "628"
       }
     ],
     script: [
@@ -127,7 +127,7 @@ export default {
         defer: true,
         body: true,
         src:
-          'https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver'
+          "https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"
       }
     ]
   },
@@ -135,12 +135,12 @@ export default {
    ** PWA Configuration
    */
   manifest: {
-    name: 'Nuxt Headless',
-    short_name: 'Nuxt-headless',
-    theme_color: '#000000',
-    background_color: '#f2d636',
-    display: 'standalone',
-    description: ''
+    name: "Nuxt Headless",
+    short_name: "Nuxt-headless",
+    theme_color: "#000000",
+    background_color: "#f2d636",
+    display: "standalone",
+    description: ""
   },
   /*
    ** Build configuration
@@ -150,7 +150,7 @@ export default {
     optimization: {
       runtimeChunk: true,
       splitChunks: {
-        chunks: 'async',
+        chunks: "async",
         minSize: 30000,
         maxSize: 0,
         cacheGroups: {
@@ -165,9 +165,9 @@ export default {
             reuseExistingChunk: true
           },
           styles: {
-            name: 'styles',
+            name: "styles",
             test: /\.(css|vue)$/,
-            chunks: 'all',
+            chunks: "all",
             enforce: true
           }
         }
@@ -175,31 +175,30 @@ export default {
     },
     postcss: {
       plugins: {
-        'postcss-responsive-type': {},
-        'postcss-nested': {}
+        "postcss-responsive-type": {}
       }
     },
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         /*
          ** Run ESLint on save
          */
         config.module.rules.push({
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
           exclude: /(node_modules)/,
           options: {
             // fix: true
           }
-        })
+        });
       }
     }
   },
   hooks: {
-    listen (server, { host, port }) {
-      if (process.env.NODE_ENV !== 'production') {
-        open(`http://${host}:${port}`)
+    listen(server, { host, port }) {
+      if (process.env.NODE_ENV !== "production") {
+        open(`http://${host}:${port}`);
       }
     }
   },
@@ -208,13 +207,13 @@ export default {
   },
   generate: {
     // return an array of strings of your dynamic pages
-    fallback: '404.html',
-    routes: function () {
+    fallback: "404.html",
+    routes: function() {
       // returns an array of strings for each dynamic page found
       // return axios.get(`${Config.wpDomain}${Config.api.yourPostsListEndpoint}`).then(res => {
       //   return res.data.slug
       // })
-      return []
+      return [];
     }
   },
   render: {
@@ -224,44 +223,44 @@ export default {
   },
   css: [
     // main css file
-    '@/assets/css/main.scss'
+    "@/assets/css/main.scss"
   ],
   /*
    ** Customize the progress-bar style
    */
   loading: {
-    color: '#f4a261',
-    height: '4px',
-    failedColor: '#DF4661'
+    color: "#f4a261",
+    height: "4px",
+    failedColor: "#DF4661"
   },
   /*
    ** Modules
    */
   modules: [
-    '@nuxtjs/pwa',
-    '@nuxt/http',
-    '@nuxtjs/sitemap',
-    'cookie-universal-nuxt',
+    "@nuxtjs/pwa",
+    "@nuxt/http",
+    "@nuxtjs/sitemap",
+    "cookie-universal-nuxt",
     [
-      '@nuxtjs/google-analytics',
+      "@nuxtjs/google-analytics",
       {
-        id: 'UA-xxxxxxx-3'
+        id: "UA-xxxxxxx-3"
       }
     ],
-    '@nuxtjs/component-cache',
-    '@nuxtjs/style-resources'
+    "@nuxtjs/component-cache",
+    "@nuxtjs/style-resources"
   ],
   styleResources: {
     // injects the variables in each component
-    scss: '~/assets/css/variables.scss'
+    scss: "~/assets/css/variables.scss"
   },
   workbox: {
     runtimeCaching: [
       {
-        urlPattern: 'https://api.wordpress.com/wp-content/uploads/.*',
-        handler: 'staleWhileRevalidate',
+        urlPattern: "https://api.wordpress.com/wp-content/uploads/.*",
+        handler: "staleWhileRevalidate",
         strategyOptions: {
-          cacheName: 'images',
+          cacheName: "images",
           cacheExpiration: {
             maxEntries: 30,
             maxAgeSeconds: 300
@@ -272,22 +271,22 @@ export default {
     ]
   },
   sitemap: {
-    path: '/sitemap.xml',
-    hostname: 'https://nuxt-headless.netlify.com',
+    path: "/sitemap.xml",
+    hostname: "https://nuxt-headless.netlify.com",
     cacheTime: 1000 * 60 * 15,
-    exclude: ['/.git']
+    exclude: ["/.git"]
   },
   http: {
     retry: 3
   },
   plugins: [
-    '~/plugins/store.js',
-    '~/plugins/vuelidate.js',
-    '~/plugins/lazysizes.client.js',
-    '~/plugins/vue-media.client.js',
-    '~/plugins/vue-localstorage.client.js',
-    '~/plugins/vue-smooth-scroll.client.js',
-    '~/plugins/splitting.client.js',
-    '~/plugins/hotjar.client.js'
+    "~/plugins/store.js",
+    "~/plugins/vuelidate.js",
+    "~/plugins/lazysizes.client.js",
+    "~/plugins/vue-media.client.js",
+    "~/plugins/vue-localstorage.client.js",
+    "~/plugins/vue-smooth-scroll.client.js",
+    "~/plugins/splitting.client.js",
+    "~/plugins/hotjar.client.js"
   ]
-}
+};

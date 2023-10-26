@@ -1317,27 +1317,32 @@ function wp_kses_html_error($string) {
  *
  * @since 1.0.0
  *
- * @param string $string            Content to check for bad protocols
+ * @param string $content            Content to check for bad protocols
  * @param string $allowed_protocols Allowed protocols
  * @return string Sanitized content
  */
-function wp_kses_bad_protocol_once($string, $allowed_protocols, $count = 1 ) {
-	$string2 = preg_split( '/:|&#0*58;|&#x0*3a;/i', $string, 2 );
-	if ( isset($string2[1]) && ! preg_match('%/\?%', $string2[0]) ) {
-		$string = trim( $string2[1] );
-		$protocol = wp_kses_bad_protocol_once2( $string2[0], $allowed_protocols );
-		if ( 'feed:' == $protocol ) {
-			if ( $count > 2 )
+function wp_kses_bad_protocol_once( $content, $allowed_protocols, $count = 1 ) {
+	$content  = preg_replace( '/(&#0*58(?![;0-9])|&#x0*3a(?![;a-f0-9]))/i', '$1;', $content );
+	$content2 = preg_split( '/:|&#0*58;|&#x0*3a;|&colon;/i', $content, 2 );
+
+	if ( isset( $content2[1] ) && ! preg_match( '%/\?%', $content2[0] ) ) {
+		$content  = trim( $content2[1] );
+		$protocol = wp_kses_bad_protocol_once2( $content2[0], $allowed_protocols );
+		if ( 'feed:' === $protocol ) {
+			if ( $count > 2 ) {
 				return '';
-			$string = wp_kses_bad_protocol_once( $string, $allowed_protocols, ++$count );
-			if ( empty( $string ) )
-				return $string;
+			}
+			$content = wp_kses_bad_protocol_once( $content, $allowed_protocols, ++$count );
+			if ( empty( $content ) ) {
+				return $content;
+			}
 		}
-		$string = $protocol . $string;
+		$content = $protocol . $content;
 	}
 
-	return $string;
+	return $content;
 }
+
 
 /**
  * Callback for wp_kses_bad_protocol_once() regular expression.

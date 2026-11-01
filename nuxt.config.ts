@@ -16,6 +16,13 @@ export default defineNuxtConfig({
     '@nuxt/eslint'
   ],
 
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      failOnError: false
+    }
+  },
+
   components: [
     {
       path: '~/components',

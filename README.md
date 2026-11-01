@@ -20,6 +20,23 @@
 
 ---
 
+## 📖 Tutorial & Architecture Guide
+
+A complete, updated walkthrough is published on Medium:  
+👉 **[Creating a Website with Nuxt.js and WordPress REST API](https://medium.com/@bike.challenge/creating-a-website-with-nuxt-js-and-wordpress-rest-api-cf37c6f4bc2b)**
+
+It covers:
+- Why choose Headless WordPress + Nuxt 4 for clients and marketing teams
+- Nuxt 2 vs Nuxt 4 architecture and migration comparison
+- Server-side rendering (SSR) & hydration with `useAsyncData`
+- Decoupled content modeling with Advanced Custom Fields (ACF)
+- Responsive images using custom WordPress sizes and native `<picture>`
+- Static generation (SSG) vs Node.js / Edge SSR deployments
+
+*(An offline Markdown version is also available in [`docs/blog-article-nuxt4.md`](docs/blog-article-nuxt4.md)).*
+
+---
+
 ## Getting Started
 
 ### 1. Requirements

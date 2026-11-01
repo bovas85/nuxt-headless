@@ -5,6 +5,11 @@ export default defineNuxtConfig({
     compatibilityVersion: 4
   },
 
+  devServer: {
+    host: '0.0.0.0',
+    port: 3000
+  },
+
   modules: [
     '@pinia/nuxt',
     '@vueuse/nuxt',

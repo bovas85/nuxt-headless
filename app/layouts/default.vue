@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <TheCookieBox />
+    <CookieBox />
     <TheNav />
     <slot />
     <TheFooter />

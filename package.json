@@ -10,13 +10,13 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate && rm -rf dist && cp -r .output/public dist",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "typecheck": "vue-tsc --noEmit",
     "lint:all": "yarn lint && yarn typecheck",
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@nuxt/eslint": "^1.17.0",
     "@pinia/nuxt": "^1.0.3",
     "@vuelidate/core": "^2.0.3",
     "@vuelidate/validators": "^2.0.4",
@@ -31,7 +31,6 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.17.0",
     "@types/node": "^26.6.6",
     "eslint": "^9.21.0",
     "prettier": "^3.5.2",

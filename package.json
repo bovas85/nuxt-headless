@@ -1,73 +1,45 @@
 {
   "name": "nuxt-headless",
-  "version": "2.0.0",
-  "description": "Nuxt Headless",
+  "version": "3.0.0",
+  "type": "module",
+  "description": "Nuxt 4 Headless with WordPress REST API",
   "author": "Alessandro Giordo - <16958684+bovas85@users.noreply.github.com>",
   "private": false,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nuxt --modern",
-    "build": "cross-env NODE_ENV=production nuxt build --modern",
-    "start": "cross-env NODE_ENV=production nuxt-start --modern",
-    "startProd": "cross-env NODE_ENV=production nuxt-start --modern",
-    "generate": "nuxt generate --modern",
-    "staging": "cross-env NODE_ENV=development now --public",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint",
-    "snyk-protect": "snyk protect",
-    "prepare": "yarn run snyk-protect"
-  },
-  "browserslist": [
-    "last 1 version",
-    "> 1%",
-    "maintained node versions",
-    "not dead",
-    "not ie > 0"
-  ],
-  "greenkeeper": {
-    "ignore": [
-      "scrollama",
-      "vue-awesome-swiper"
-    ]
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "typecheck": "vue-tsc --noEmit",
+    "lint:all": "yarn lint && yarn typecheck",
+    "format": "prettier --write ."
   },
   "dependencies": {
-    "@nuxt/http": "^0.6.0",
-    "@nuxtjs/component-cache": "^1.1.6",
-    "@nuxtjs/google-analytics": "^2.4.0",
-    "@nuxtjs/proxy": "^2.0.1",
-    "@nuxtjs/pwa": "^3.2.2",
-    "@nuxtjs/sitemap": "^2.4.0",
-    "@nuxtjs/style-resources": "^1.0.0",
-    "bulma": "^0.9.1",
-    "cookie-universal-nuxt": "^2.1.4",
-    "intersection-observer": "^0.11.0",
-    "lazysizes": "^5.2.2",
-    "nuxt": "^2.15.0",
-    "splitting": "^1.0.6",
-    "vue-awesome-swiper": "2.6.7",
-    "vue-intersect": "^1.1.6",
-    "vue-localstorage": "^0.6.2",
-    "vue-media": "^1.1.1",
-    "vue-scrollto": "^2.20.0",
-    "vuelidate": "^0.7.6",
-    "snyk": "^1.1064.0"
+    "@pinia/nuxt": "^1.0.3",
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
+    "@vueuse/core": "^12.8.2",
+    "@vueuse/nuxt": "^12.8.2",
+    "bulma": "0.9.4",
+    "nuxt": "^4.6.3",
+    "pinia": "^3.0.1",
+    "splitting": "^1.1.0",
+    "swiper": "^11.2.5",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "axios": "^0.30.0",
-    "babel-eslint": "^10.1.0",
-    "cross-env": "^7.0.2",
-    "eslint": "^7.12.1",
-    "eslint-loader": "^4.0.2",
-    "eslint-plugin-vue": "^7.1.0",
-    "lodash": "^4.17.20",
-    "node-fetch": "^2.6.1",
-    "node-sass": "^5.0.0",
-    "nuxt-purgecss": "^1.0.0",
-    "nuxt-start": "^2.14.7",
-    "open": "^7.3.0",
-    "postcss-loader": "^3.0.0",
-    "postcss-nested": "^4.2.1",
-    "postcss-responsive-type": "^1.0.0",
-    "sass-loader": "^10.0.5"
+    "@nuxt/eslint": "^1.17.0",
+    "@types/node": "^26.6.6",
+    "eslint": "^9.21.0",
+    "prettier": "^3.5.2",
+    "sass": "^1.85.1",
+    "typescript": "^5.7.3",
+    "vue-tsc": "^2.2.8"
   },
-  "snyk": true
+  "volta": {
+    "node": "22.14.0"
+  }
 }

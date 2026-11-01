@@ -1,6 +1,0 @@
-/**
- * Fix SVGs not showing correctly as featured images.
- */
-#postimagediv .inside .svg img {
-    width: 100%;
-}

@@ -1,33 +1,38 @@
-# dependencies
-node_modules/*
-dist
-build/*
-package-lock.json
-.htaccess
-.idea
+# Dependencies
+node_modules
+.pnp
+.pnp.js
 
-# logs
-npm-debug.log
-logs
-logs/*
-
-# Nuxt build
+# Nuxt / Nitro build outputs
 .nuxt
+.output
+.nitro
+dist
+build
 
-# trash
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment & local files
+.env
+.env.*
+!.env.example
+
+# OS files
 .DS_Store
 Thumbs.db
 
-# Intellij idea
+# IDE files
 .idea
-*iml
-
-npm_output.txt
-generate_pending
-
-# VSCode
 .vscode
+*.sublime-project
+*.sublime-workspace
+*.iml
 
-# Generated files
-sw.*
-
+# WordPress uploads / local db
+wordpress/wp-content/uploads/
+wordpress/db_data/

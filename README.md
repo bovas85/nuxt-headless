@@ -1,6 +1,9 @@
 # Nuxt 4 Headless (WordPress REST API)
 
 > Modern, blazing fast Nuxt 4 + WordPress REST API starter boilerplate.
+> Based on the architecture and guide: [Creating a Website with Nuxt.js and WordPress REST API](https://medium.com/@bike.challenge/creating-a-website-with-nuxt-js-and-wordpress-rest-api-cf37c6f4bc2b) by Alessandro Giordo.
+
+---
 
 ## Features
 
@@ -21,7 +24,7 @@
 
 ### 1. Requirements
 - Node.js `^22.0.0` or `^24.0.0` (LTS recommended)
-- Yarn 1.x or modern package manager
+- Yarn 1.x (or pnpm / npm)
 
 ### 2. Install Dependencies
 ```bash
@@ -38,13 +41,29 @@ docker compose up -d
 Visit `http://localhost:8080` to complete WordPress setup. In WordPress Admin:
 1. Activate the **Moustache Design** theme (`themes/moustache`).
 2. Activate the **Moustache Design** plugin (`plugins/moustache`).
-3. Set permalinks to **Post name** in **Settings > Permalinks**.
+3. Set permalinks to **Post name** in **Settings > Permalinks** (`/%postname%/`).
+
+> 📖 **Full WordPress Onboarding Guide**: See [`wordpress/README.md`](wordpress/README.md) for required plugins, ACF field setup, CORS configuration, and REST API details.
 
 ### 4. Development Server
 ```bash
 yarn dev
 ```
 Open `http://localhost:3000` to view the application with instant HMR.
+
+---
+
+## WordPress Plugins & Backend Architecture
+
+To power the headless frontend, WordPress requires the following plugins and settings:
+
+- **Advanced Custom Fields (ACF)** (*Required*): Powers dynamic page layouts and Hero sections. Ensure **"Show in REST API"** is enabled on field groups.
+- **WP REST API Menus** (*Recommended*): Exposes `/wp-json/menus/v1/menus` for dynamic navigation menus.
+- **Contact Form 7** (*Optional*): Handles contact form submissions via `/wp-json/contact-form-7/v1/contact-forms/:id/feedback`. (The bundled `plugins/moustache` also provides an endpoint at `/wp-json/forms/contact`).
+- **WP REST Cache** (*Recommended*): Caches REST JSON responses for ultra-fast SSR responses and static site generation (`yarn generate`).
+- **Safe SVG** (*Recommended*): Allows uploading SVG icons and logos to WordPress media.
+
+For detailed setup instructions, field group schemas, and CORS config, read the [WordPress Headless Setup Guide](wordpress/README.md).
 
 ---
 
@@ -58,6 +77,8 @@ NUXT_PUBLIC_WP_DOMAIN=https://api.yourdomain.com/wp-json
 NUXT_PUBLIC_CLIENT_URL=https://api.yourdomain.com
 NUXT_PUBLIC_SITE_URL=https://yourdomain.com
 ```
+
+*Note: If WordPress is unreachable or during initial setup, Nuxt automatically falls back to built-in mock data so frontend development is never blocked.*
 
 ---
 

@@ -158,27 +158,27 @@
 <p>A few years ago, I wrote about coupling WordPress as a headless CMS with Nuxt.js. Back then, the ecosystem was Nuxt 2, Vue 2 (Options API), Webpack 4, Vuex, Axios, and WordPress REST API v2 plugins.</p>
 <p>Since then, the web ecosystem has undergone massive leaps forward:</p>
 <li><strong>Nuxt 4</strong> introduces a dedicated <code>app/</code> directory convention, Nitro server engine, fine-grained payload extraction, and instant Vite HMR.</li>
-<li><strong>Vue 3.5+</strong> standardizes on <code><script setup lang="ts"></code>, Composition API, and built-in reactivity primitives.</li>
+<li><strong>Vue 3.5+</strong> standardizes on <code>&lt;script setup lang="ts"&gt;</code>, Composition API, and built-in reactivity primitives.</li>
 <li><strong>Pinia</strong> has officially replaced Vuex for typed, modular state management.</li>
 <li><strong>WordPress</strong> natively supports REST API toggles for custom fields in modern ACF (Advanced Custom Fields), reducing reliance on legacy glue plugins.</li>
 <p>If you are building a website today where your clients demand the comfort of the WordPress admin panel, but you want modern frontend architecture (zero-bloat HTML, Lighthouse 100s, instant page transitions, and effortless SSG or Edge SSR deployment), <strong>Nuxt 4 + WordPress REST API</strong> remains one of the most practical and productive stacks available.</p>
-<p>In this guide, we'll walk through how the modern architecture works using the updated open-source boilerplate: <a href="https://github.com/bovas85/nuxt-headless"><code>bovas85/nuxt-headless</code></a>.</p>
+<p>In this guide, we'll walk through how the modern architecture works using the updated open-source boilerplate: <a href="https://github.com/bovas85/nuxt-headless" target="_blank" rel="noopener"><code>bovas85/nuxt-headless</code></a>.</p>
 <hr />
 <h2>Why Headless WordPress with Nuxt 4?</h2>
 <li><strong>Client Comfort</strong>: Non-technical clients and marketing teams already know how to publish posts, upload images, and edit pages in WordPress. You do not need to train them on a proprietary headless CMS or headless SaaS dashboard with per-seat pricing.</li>
-<li><strong>Speed & Security</strong>: The public-facing frontend is an optimized Nuxt 4 application. Visitors never touch your PHP server directly. WordPress can even be hidden behind a VPN, basic auth, or private subnet.</li>
-<li><strong>SEO & Core Web Vitals</strong>: With Nuxt 4's server engine (Nitro) and <code>useAsyncData</code>, pages are pre-rendered with complete semantic HTML, open graph tags, and zero layout shift.</li>
+<li><strong>Speed &amp; Security</strong>: The public-facing frontend is an optimized Nuxt 4 application. Visitors never touch your PHP server directly. WordPress can even be hidden behind a VPN, basic auth, or private subnet.</li>
+<li><strong>SEO &amp; Core Web Vitals</strong>: With Nuxt 4's server engine (Nitro) and <code>useAsyncData</code>, pages are pre-rendered with complete semantic HTML, open graph tags, and zero layout shift.</li>
 <li><strong>Developer Happiness</strong>: Vite builds in milliseconds, TypeScript provides strict type checking, and Pinia gives you typed stores without string mutation boilerplate.</li>
 <hr />
 <h2>The Stack at a Glance</h2>
 <table>
 <thead><tr><th>Layer</th><th>Legacy (Nuxt 2)</th><th>Modern (Nuxt 4)</th></tr></thead><tbody>
 <tr><td><strong>Framework</strong></td><td>Nuxt 2.14 / 2.15</td><td>Nuxt 4.6+ (<code>future: { compatibilityVersion: 4 }</code>)</td></tr>
-<tr><td><strong>Component Model</strong></td><td>Vue 2 Options API (<code>export default {}</code>)</td><td>Vue 3.5+ <code><script setup lang="ts"></code></td></tr>
+<tr><td><strong>Component Model</strong></td><td>Vue 2 Options API (<code>export default {}</code>)</td><td>Vue 3.5+ <code>&lt;script setup lang="ts"&gt;</code></td></tr>
 <tr><td><strong>Bundler</strong></td><td>Webpack 4</td><td>Vite 6</td></tr>
 <tr><td><strong>State Management</strong></td><td>Vuex 3 (<code>store/index.js</code> mutations)</td><td>Pinia (<code>@pinia/nuxt</code>)</td></tr>
 <tr><td><strong>Data Fetching</strong></td><td><code>@nuxtjs/axios</code> + <code>asyncData</code> / <code>nuxtServerInit</code></td><td>Native <code>$fetch</code> + <code>useAsyncData()</code> composable</td></tr>
-<tr><td><strong>Styling</strong></td><td>node-sass / legacy libsass</td><td>Dart Sass with <code>@use</code> & modern CSS <code>clamp()</code></td></tr>
+<tr><td><strong>Styling</strong></td><td>node-sass / legacy libsass</td><td>Dart Sass with <code>@use</code> &amp; modern CSS <code>clamp()</code></td></tr>
 <tr><td><strong>Headless CMS</strong></td><td>WordPress 5.x + 6 separate plugins</td><td>WordPress 6.x + Docker Compose + ACF 6.x</td></tr>
 </tbody></table>
 <hr />
@@ -191,7 +191,7 @@ docker compose up -d</code></pre>
 <p>Your WordPress admin will be available at <code>http://localhost:8080/wp-admin</code>.</p>
 <h3>2. Configure Permalinks</h3>
 <p>By default, WordPress uses query strings (<code>/?p=123</code>). This will break REST API routing.</p>
-<li>Go to <strong>Settings > Permalinks</strong>.</li>
+<li>Go to <strong>Settings &gt; Permalinks</strong>.</li>
 <li>Choose <strong>Post name</strong> (<code>/%postname%/</code>).</li>
 <li>Click <strong>Save Changes</strong>.</li>
 <h3>3. Essential Plugins</h3>
@@ -200,9 +200,9 @@ docker compose up -d</code></pre>
 <li><strong>WP REST API Menus</strong> (<em>Recommended</em>): Exposes <code>/wp-json/menus/v1/menus</code> so Nuxt can fetch navigation dynamically.</li>
 <li><strong>Contact Form 7</strong> (<em>Optional</em>): Exposes <code>/wp-json/contact-form-7/v1/contact-forms/:id/feedback</code> for form handling.</li>
 <li><strong>WP REST Cache</strong> (<em>Recommended</em>): Caches JSON REST responses to make your build and SSR fetches blazing fast.</li>
-<h3>4. Custom Theme & Plugin</h3>
+<h3>4. Custom Theme &amp; Plugin</h3>
 <p>In the boilerplate repository, the <code>wordpress/</code> directory provides:</p>
-<li><strong><code>themes/moustache</code></strong>: Registers responsive image thumbnail sizes (<code>small</code> 600px, <code>medium</code> 1024px, <code>large</code> 1920px, <code>ultra</code> 2048px, <code>4k</code> 4096px) matching Nuxt's <code><ResponsiveImage /></code> and <code><AppImage /></code> components. It also adds a cache-skip filter for Contact Form 7 submissions.</li>
+<li><strong><code>themes/moustache</code></strong>: Registers responsive image thumbnail sizes (<code>small</code> 600px, <code>medium</code> 1024px, <code>large</code> 1920px, <code>ultra</code> 2048px, <code>4k</code> 4096px) matching Nuxt's <code>&lt;ResponsiveImage /&gt;</code> and <code>&lt;AppImage /&gt;</code> components. It also adds a cache-skip filter for Contact Form 7 submissions.</li>
 <li><strong><code>plugins/moustache</code></strong>: Registers a custom post type (<code>casestudies</code>) with REST support, meta query whitelist, and a lightweight standalone contact endpoint (<code>/wp-json/forms/contact</code>).</li>
 <hr />
 <h2>Step 2: Nuxt 4 Architecture</h2>
@@ -282,7 +282,7 @@ docker compose up -d</code></pre>
 }</code></pre>
 <p>Notice the <strong>graceful fallback</strong>: if a developer clones the repository before setting up their WordPress container, Nuxt does not throw a white screen of death—it renders a clean mock layout so frontend work can continue unimpeded.</p>
 <hr />
-<h2>Step 4: Page Rendering & SSR Hydration</h2>
+<h2>Step 4: Page Rendering &amp; SSR Hydration</h2>
 <p>In our page component (<code>app/pages/index.vue</code>), we consume this composable with Nuxt's <code>useAsyncData()</code>:</p>
 <pre><code class="language-vue">&lt;template&gt;
   &lt;main v-if="acf" class="home"&gt;
@@ -316,12 +316,12 @@ onMounted(() =&gt; {
 &lt;/script&gt;</code></pre>
 <h3>Why <code>useAsyncData</code> is Superior to Legacy <code>asyncData</code>:</h3>
 <li><strong>Server Fetch</strong>: Nuxt executes the request on your Node.js/Nitro server.</li>
-<li><strong>Payload Serialization</strong>: The JSON result is serialized into a <code><script id="__NUXT_DATA__"></code> payload in the rendered HTML.</li>
+<li><strong>Payload Serialization</strong>: The JSON result is serialized into a <code>&lt;script id="__NUXT_DATA__"&gt;</code> payload in the rendered HTML.</li>
 <li><strong>Instant Hydration</strong>: When the browser loads the page, it hydrates the Vue state from the embedded payload without issuing a redundant HTTP request to WordPress.</li>
 <hr />
 <h2>Step 5: Responsive Images with Modern Web Standards</h2>
 <p>In the past, developers often relied on JavaScript-heavy image lazy-loaders (<code>vue-lazyload</code>, <code>lazysizes</code>). </p>
-<p>Today, browsers have native support for <code><picture></code> elements and <code>loading="lazy"</code>. In the boilerplate's <code>app/components/UI/ResponsiveImage.vue</code>, we leverage the custom thumbnail sizes registered by the WordPress theme:</p>
+<p>Today, browsers have native support for <code>&lt;picture&gt;</code> elements and <code>loading="lazy"</code>. In the boilerplate's <code>app/components/UI/ResponsiveImage.vue</code>, we leverage the custom thumbnail sizes registered by the WordPress theme:</p>
 <pre><code class="language-vue">&lt;template&gt;
   &lt;picture&gt;
     &lt;!-- WebP or high-res desktop --&gt;
@@ -344,7 +344,7 @@ onMounted(() =&gt; {
 &lt;/template&gt;</code></pre>
 <p>This ensures mobile phones download lightweight 600px images while 4K displays receive crisp high-resolution assets, without layout shifts or third-party JS overhead.</p>
 <hr />
-<h2>Step 6: Deployment & Build Strategies</h2>
+<h2>Step 6: Deployment &amp; Build Strategies</h2>
 <p>Depending on your requirements, Nuxt 4 supports two primary deployment models:</p>
 <h3>1. Static Site Generation (SSG / Jamstack)</h3>
 <p>If your content doesn't change every minute, generate a purely static website:</p>
@@ -357,10 +357,10 @@ onMounted(() =&gt; {
 node .output/server/index.mjs</code></pre>
 <p>The lightweight Nitro server handles requests dynamically with blazing-fast response times.</p>
 <hr />
-<h2>Conclusion & Next Steps</h2>
+<h2>Conclusion &amp; Next Steps</h2>
 <p>Decoupling WordPress from the presentation layer gives you the best of both worlds: a proven, comfortable CMS for content teams, and an ultra-fast, modern developer experience with Nuxt 4.</p>
 <p>Check out the complete source code and starter kit on GitHub:</p>
-<p>👉 <strong><a href="https://github.com/bovas85/nuxt-headless">bovas85/nuxt-headless</a></strong></p>
+<p>👉 <strong><a href="https://github.com/bovas85/nuxt-headless" target="_blank" rel="noopener">bovas85/nuxt-headless</a></strong></p>
 <p>If you found this helpful, feel free to star the repo and join the discussion!</p>
   </article>
   <script>

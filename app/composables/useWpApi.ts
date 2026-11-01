@@ -4,8 +4,10 @@ export const useWpApi = () => {
   const clientUrl = config.public.clientUrl as string
 
   const fetchHomePage = async (pageId = '2') => {
+    const url = `${wpDomain}/wp/v2/pages/${pageId}`
+    console.info(`[useWpApi] Fetching homepage from ${url} (server: ${import.meta.server})`)
     try {
-      return await $fetch<Record<string, any>>(`${wpDomain}/wp/v2/pages/${pageId}`)
+      return await $fetch<Record<string, any>>(url)
     } catch (error) {
       console.warn(`[useWpApi] Could not fetch homepage from ${wpDomain}/wp/v2/pages/${pageId}:`, error)
       // Provide graceful fallback structure so UI can render even if WP backend is unreachable

@@ -11,7 +11,7 @@
           <span><NuxtLink to="#">Privacy Policy</NuxtLink></span>
           <p class="referral-link">
             Coded with ❤️ by
-            <a href="https://moustachedesign.xyz" target="_blank" rel="noopener noreferrer">Moustache Design</a>
+            <a href="https://moustachedesign.fyi" target="_blank" rel="noopener noreferrer">Moustache Design</a>
           </p>
         </div>
       </div>

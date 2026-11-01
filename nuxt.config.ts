@@ -60,8 +60,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      wpDomain: process.env.NUXT_PUBLIC_WP_DOMAIN || 'https://api.moustachedesign.xyz/wp-json',
-      clientUrl: process.env.NUXT_PUBLIC_CLIENT_URL || 'https://api.moustachedesign.xyz',
+      wpDomain: process.env.NUXT_PUBLIC_WP_DOMAIN || 'https://api.moustachedesign.fyi/wp-json',
+      clientUrl: process.env.NUXT_PUBLIC_CLIENT_URL || 'https://api.moustachedesign.fyi',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://nuxt-headless.netlify.com'
     }
   }

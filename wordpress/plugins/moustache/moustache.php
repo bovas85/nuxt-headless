@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Moustache Design
-Plugin URI: https://moustachedesign.xyz
+Plugin URI: https://moustachedesign.fyi
 Description: A plugin to keep custom code for Wordpress / Vue Sites
 Version: 1.0
 Author: Alessandro Giordo
-Author URI: https://moustachedesign.xyz
+Author URI: https://moustachedesign.fyi
 License: GPL2
 */
 

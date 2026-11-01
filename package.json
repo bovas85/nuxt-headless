@@ -8,7 +8,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate && rm -rf dist && cp -r .output/public dist",
+    "generate": "nuxt generate",
     "preview": "nuxt preview",
     "lint": "eslint .",
     "typecheck": "vue-tsc --noEmit",

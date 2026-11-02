@@ -1,0 +1,5 @@
+---
+engines:
+  markdownlint:
+    exclude_paths:
+      - ".github/instructions/**"

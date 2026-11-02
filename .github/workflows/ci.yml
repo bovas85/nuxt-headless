@@ -29,6 +29,9 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Generate Nuxt types
+        run: yarn nuxt prepare
+
       - name: Run ESLint & Typecheck
         run: yarn lint:all
 

@@ -13,7 +13,8 @@
     "lint": "eslint .",
     "typecheck": "vue-tsc --noEmit",
     "lint:all": "yarn lint && yarn typecheck",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "verify": "yarn nuxt prepare && yarn lint:all && yarn generate && node scripts/smoke-dist.mjs"
   },
   "dependencies": {
     "@nuxt/eslint": "^1.17.0",

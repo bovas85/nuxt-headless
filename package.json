@@ -24,7 +24,7 @@
     "@vueuse/core": "^12.8.2",
     "@vueuse/nuxt": "^12.8.2",
     "bulma": "0.9.4",
-    "nuxt": "^4.6.3",
+    "nuxt": "^4.6.4",
     "pinia": "^3.0.1",
     "splitting": "^1.1.0",
     "swiper": "^12.1.2",

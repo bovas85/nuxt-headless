@@ -1,0 +1,26 @@
+{
+  "config": {
+    "default": true,
+    "MD013": { "line_length": 80, "code_blocks": false, "tables": false },
+    "MD033": false,
+    "MD041": false
+  },
+  "ignores": [
+    ".autopilot",
+    ".autopilot/**",
+    ".github",
+    ".github/**",
+    ".nuxt",
+    ".nuxt/**",
+    ".output",
+    ".output/**",
+    ".worktree*",
+    ".worktree*/**",
+    "dist",
+    "dist/**",
+    "docs",
+    "docs/**",
+    "node_modules",
+    "node_modules/**"
+  ]
+}

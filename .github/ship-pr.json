@@ -1,0 +1,10 @@
+{
+  "reviewers": {
+    "low": [],
+    "medium": [],
+    "high": []
+  },
+  "humanApprovalFor": ["low", "medium", "high"],
+  "autoMergeFor": [],
+  "mergeMethod": "squash"
+}

@@ -1,0 +1,44 @@
+name: Deferred Cleanup
+description: Track deferred legacy code, feature flag, or migration cleanup with explicit verification gates
+title: "chore(cleanup): "
+labels: ["cleanup"]
+body:
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: P3 (default for deferred cleanup) or higher if blocking active work
+      options:
+        - P3
+        - P2
+        - P1
+        - P0
+    validations:
+      required: true
+  - type: textarea
+    id: what_to_clean
+    attributes:
+      label: What to clean up
+      description: Legacy code paths, unused feature flags, fallback shims, or stale assets to remove.
+    validations:
+      required: true
+  - type: textarea
+    id: ready_when
+    attributes:
+      label: Ready when
+      description: Exact condition that must hold before deletion is safe (e.g. flag enabled for 14 days with 0 errors).
+    validations:
+      required: true
+  - type: textarea
+    id: how_to_verify
+    attributes:
+      label: How to verify
+      description: Exact command, query, or check proving zero active callers or dependencies remain.
+      placeholder: "grep -rn 'legacyFlag' src/"
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Relevant files
+      description: Files, modules, tests, or config keys to delete once verified.

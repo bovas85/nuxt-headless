@@ -1,0 +1,56 @@
+name: Friction Log
+description: Report recurring developer, CI, or operational friction encountered during work
+title: "friction: "
+labels: ["friction"]
+body:
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: P0 (blocking now), P1 (costs time on most PRs), P2 (worth fixing), P3 (nice to have)
+      options:
+        - P2
+        - P1
+        - P0
+        - P3
+    validations:
+      required: true
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened
+      description: Concrete failure, workaround, or papercut observed.
+    validations:
+      required: true
+  - type: textarea
+    id: wanted
+    attributes:
+      label: What was wanted
+      description: Expected behavior or workflow.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: Exact command, workflow step, or trigger.
+    validations:
+      required: true
+  - type: input
+    id: cost
+    attributes:
+      label: What it cost
+      description: Time, retries, or manual intervention required.
+      placeholder: "~10m debugging / 3 CI retries"
+    validations:
+      required: true
+  - type: textarea
+    id: investigation
+    attributes:
+      label: Preliminary investigation
+      description: Root cause hypothesis or initial findings.
+  - type: textarea
+    id: files
+    attributes:
+      label: Relevant files
+      description: File paths, workflows, or PR/issue links.

@@ -1,0 +1,150 @@
+name: Errors to Issues
+
+on:
+  workflow_run:
+    workflows:
+      - "CI"
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  errors-to-issues:
+    name: Errors to Issues
+    if: >-
+      github.event.workflow_run.conclusion == 'failure' &&
+      github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: File deduped prioritized issue for failed main run
+        id: file-issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const run = context.payload.workflow_run;
+            const wfName = run.name || "Workflow";
+            const runUrl = run.html_url;
+            const marker = `errors-to-issues:${wfName}`;
+
+            const { data: openIssues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 50,
+            });
+
+            const existing = openIssues.find(
+              (i) =>
+                !i.pull_request &&
+                ((i.body && i.body.includes(marker)) ||
+                  i.title === `fix(ci): ${wfName} failed on main`),
+            );
+
+            let issueNumber;
+            let hasNeedsHuman = false;
+            if (existing) {
+              issueNumber = existing.number;
+              hasNeedsHuman = (existing.labels || []).some(
+                (l) => (l.name || "").toLowerCase() === "needs-human",
+              );
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: `Recurring failure on \`main\`: ${runUrl} (commit \`${run.head_sha.slice(0, 7)}\`).`,
+              });
+            } else {
+              const priority = wfName.includes("Deploy") ? "P0" : "P1";
+              const { data: created } = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `fix(ci): ${wfName} failed on main`,
+                labels: [priority, "agent-ready", "two-way-door", "complexity:moderate"],
+                body: [
+                  `<!-- ${marker} -->`,
+                  `## Failure Summary`,
+                  `- **Workflow:** ${wfName}`,
+                  `- **Run:** ${runUrl}`,
+                  `- **Commit:** \`${run.head_sha}\``,
+                  ``,
+                  `## Repro`,
+                  `Inspect workflow logs at ${runUrl} and reproduce locally with \`yarn verify\`.`,
+                ].join("\n"),
+              });
+              issueNumber = created.number;
+            }
+
+            const { data: openPrs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 30,
+            });
+            const hasOpenPr = openPrs.some(
+              (pr) => pr.body && pr.body.includes(`#${issueNumber}`),
+            );
+
+            core.setOutput("issue_number", String(issueNumber));
+            core.setOutput("should_fix", String(!hasNeedsHuman && !hasOpenPr));
+
+      - name: Check GEMINI_CLI_LLM and fix eligibility
+        id: check-env
+        if: steps.file-issue.outputs.should_fix == 'true'
+        env:
+          GEMINI_CLI_LLM: ${{ secrets.GEMINI_CLI_LLM }}
+        run: |
+          if [ -z "$GEMINI_CLI_LLM" ]; then
+            echo "GEMINI_CLI_LLM not configured; skipping automated fix PR."
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup Node
+        if: steps.check-env.outputs.enabled == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "yarn"
+
+      - name: Install dependencies
+        if: steps.check-env.outputs.enabled == 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Configure git identity for PR commits
+        if: steps.check-env.outputs.enabled == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Run Gemini CLI fix attempt
+        if: steps.check-env.outputs.enabled == 'true'
+        uses: google-github-actions/run-gemini-cli@f77273f4c914e4bf38440cf36a0369cb64a37489 # v0.1.22
+        env:
+          GEMINI_CLI_TRUST_WORKSPACE: "true"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FAILED_WORKFLOW_NAME: ${{ github.event.workflow_run.name }}
+          FAILED_RUN_ID: ${{ github.event.workflow_run.id }}
+          FAILED_RUN_URL: ${{ github.event.workflow_run.html_url }}
+          TRACKING_ISSUE: ${{ steps.file-issue.outputs.issue_number }}
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_CLI_LLM }}
+          gemini_model: "gemini-2.5-flash"
+          settings: |
+            {
+              "model": {
+                "maxSessionTurns": 30
+              }
+            }
+          prompt: |
+            Read AGENTS.md. The `main` workflow in env `FAILED_WORKFLOW_NAME` failed (run URL in `FAILED_RUN_URL`); issue #$TRACKING_ISSUE tracks it.
+            Inspect logs via `gh run view "$FAILED_RUN_ID" --log-failed`.
+            If the root cause is a clear code/test/config bug (not a missing secret or transient outage), fix it on a new branch, run `yarn verify`, and open ONE PR referencing #$TRACKING_ISSUE. Never push directly to main and never merge a PR.
